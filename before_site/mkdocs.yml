@@ -1,0 +1,27 @@
+site_name: 3DSoftViz
+site_url: http://team03-20.studenti.fiit.stuba.sk/docs
+plugins:
+- search
+- macros
+- awesome-pages
+- pdf-export:
+    media_type: print
+    combined: true
+    enabled_if_env: ENABLE_PDF_EXPORT
+theme:
+  name: 'material'
+  language: 'sk'
+  palette:
+    primary: 'grey'
+    accent: 'teal'
+  favicon: 'img\favicon.ico'
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+extra:
+  search:
+    language: 'sk'

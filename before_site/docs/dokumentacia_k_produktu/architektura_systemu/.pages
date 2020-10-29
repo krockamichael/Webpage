@@ -1,0 +1,5 @@
+title: 📐 Architektúra systému
+arrange:
+    - architektura_systemu.md
+    - komunikacia.md
+    - moduly_systemu

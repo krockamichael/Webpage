@@ -1,0 +1,15 @@
+title: 🗃️ Metodiky
+hide: true
+arrange:
+    - definitions_of_done.md
+    - definitions_of_ready.md
+    - ako_popisovat_polozky_v_azure_devops.md
+    - ako_komunikovat_v_time.md
+    - konvencie.md
+    - ako_logovat_z_kodu.md
+    - ako_verziovat_kod_a_pracovat_s_gitom.md
+    - ako_pisat_testy.md
+    - ako_pisat_dokumentaciu.md
+    - ako_vykonat_code_review.md
+    - metodika_iteracii.md
+    - metodika_riadenia_uloh.md

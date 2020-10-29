@@ -1,0 +1,45 @@
+# Metodika iterácií
+
+Počas každého šprintu máme štyri stretnutia, dve s vedúcim tímu a dve bez neho.
+
+Každé stretnutie začína Stand Upom. Aj keď by sa mal uskutočňovať každých
+24 hod., tento princíp uskutočňujeme 2x za týždeň vzhľadom na podmienky
+a rozvrh predmetu. V tejto diskusii scrum master dohliada na to, aby každý člen
+tímu (vrátane scrum mastra) zodpovedali na otázky:
+
+1. Na čom som pracoval za dobu od posledného stretnutia
+2. Na čom sa chystám pracovať
+3. Aké problémy mám v súvislosti s mojou úlohou
+
+#### 1. stretnutie (s vedúcim)
+V prvej časti tohto stretnutia ukončujeme predchádzajúci šprint. Vyhodnotíme
+celkovú iteráciu, zhodnotíme burndown chart (graf zobrazujúci množstvo práce,
+ktoré je nutné ešte dokončiť), v ideálnom prípade je jeho hodnota na nule.
+Prejdeme si s vedúcim tímu jednotlivé user stories, ktoré nám ohodnotí
+story pointami (vyhodnocuje, či sme splnili definition of done pre jednotlivé
+user stories). Po akceptovaní všetkých user stories vedúcim tímu môžeme iteráciu
+uzavrieť. V druhej časti stretnutia plánujeme nasledujúci šprint.
+Spoločne špecifikujeme user stories, ktoré sú súčasťou šprint backlogu
+a počas šprintu tieto user stories zásadne nemeníme. Pred zaraďovaním
+user stories do backlogu vyhodnocujeme jednotlivo každú user story príslušným
+bodovým ohodnotením (story points), ktoré určujú zložitosť a relatívnu
+časovú náročnosť konkrétnej úlohy. Každú user story si rozdelíme na tasky.
+V prípade, že toto nestihneme na stretnutí, **každý je povinný si rozdeliť svoje
+user stories, na ktorých bude pracovať na tasky, ešte v ten deň**.
+
+#### 2. stretnutie (bez vedúceho)
+Počas tohto stretnutia pracujeme na priradených taskoch a konzultujeme prípadné problémy.
+
+#### 3. stretnutie (s vedúcim)
+Na tomto stretnutí sa zameriavame na riešenie vzniknutých problémov počas prvej
+časti šprintu. V tejto fáze šprintu by už mali byť všetky user stories aspoň
+začaté. Venujeme sa tiež úprave backlogu. Vymýšľame nove user stories,
+ohodnocujeme ich a prioritizujeme.
+
+#### 4. stretnutie (bez vedúceho)
+Na poslednom stretnutí v iterácii vytvárame pod dohľadom scrum mastera
+retrospektívu, na ktorej zapíše každý člen tímu všetky pozitíva, negatíva
+a nápady na vylepšenie za uplynulý šprint. Po zapísaní týchto informácii do
+dokumentu je uverejnený na tímovej web stránke. Počas tohto stretnutia si tiež
+vyhodnotíme percentuálny podiel práce na jednotlivých user stories za uplynulý
+šprint. Ďalej pokračujeme samostatnou prácou na priradených taskoch.

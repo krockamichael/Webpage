@@ -1,0 +1,6 @@
+title: CI GitLab Images
+arrange:
+    - cpp.md
+    - lua.md
+    - doc_extra.md
+    - 3dsoftviz_remake

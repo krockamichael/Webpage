@@ -1,0 +1,163 @@
+# Luametrics
+
+V priečinku `luametrics/src/hypergraph` sa nachádzajú súbory zodpovedné za vyhľadávanie a uchová-
+vanie vzťahov v súbore do hypergrafovej dátovej štruktúry. Tu je taktiež využitá lua knižnica `hypergraph`. Podobne ako v LuaDB, objekty pre hrany, 
+uzly a výskyty sú definované v rovnomenných súboroch, pričom v súbore `graph.lua` je definovaný hypergraf a funkcie nad ním, ako pridanie alebo vymazanie hrán/uzlov.
+
+
+## Metriky
+
+Najvýznamenjšie úlohu v module LuaMetrics sú súbory obsiahnuté v priečinku `luametrics/src/metrics/capture`, kde sa počítajú jednotlivé metriky. 
+V tomto priečinku sa nachádza 11 súborov, komplexnejšie metriky sa počítajú v 5-och, ostatné slúžia na analýzu, rozdelenie kódu alebo na čiastkové metriky. (napr. na bloky, čo je používané pri zvýrazňovaní častí kódu alebo pri počítaní metriky toku informácii pre funkciu). 
+
+### LOC.lua 
+
+V tomto súbore sa počíta základná metrika, ktorou je počet riadkov kódu. Keďže funkcia doMetrics() nie je volaná rekurzívne, metriky sú počítané len pre priamych potomkov uzlu `   for key, value in pairs(children) do`. Konkrétne sa pre jednotlivé uzly počítajú riadky podľa podmienok, ktoré na základe tagu kontrolujú o aký typ riadku ide. Čiže je pre jeden uzol počítaný nielen základný počet riadkov (bez podmienok, ak nový riadok +1), ale aj počt riadkov komentárov, úplne prádznych riakov, počet neprázdnych riadkov a počet riadkov obsaujúcich vykonateľný kód. Každé počtídalo je vnorené do inej podmienky. Tieto výsledky sú zapísané v tabuľke pre `node.metrics.moduleDefinitions[exec].LOC.`
+
+``` lua
+     addCount(LOC, 'lines', value.metrics.LOC.lines)
+     addCount(LOC, 'lines_comment', value.metrics.LOC.lines_comment)
+     addCount(LOC, 'lines_blank', value.metrics.LOC.lines_blank)
+     addCount(LOC, 'lines_nonempty', value.metrics.LOC.lines_nonempty)
+     addCount(LOC, 'lines_code', value.metrics.LOC.lines_code)
+```
+
+
+### infoflow.lua
+
+V tomto súbore je počítaná metrika toku informácií pre funkciu. Pri výpočte tohto druhu metriky je potrebné analyzovať vzťahy danej funkcie k dátam na jej
+vstupe, pri jej výstupe a vzťah k dátam s ktorými funkcia pracuje. V tomto súbore sú využívané výstupy zo súboru block.lua Na ukážke nižšie sa do uzlu zapisuje, či ide o premennú, z ktorej sa číta alebo do ktorej sa zapisuje, táto informácia je dôležitá pri výpočte metriky toku informácií.
+``` lua hl_lines="7 8 9 10 11"
+local function newVariable(node, text, secondary_nodes, isRead)
+        
+    if (locals_stack[text]==nil) then                           -- if variable was not defined before - it belongs to the 'remotes' variables
+        addItemToArray(remotes_stack, text, node)
+        addItemToHighlightArray(highlight_remote, node, secondary_nodes)
+    
+        if (isRead) then -- variable is read from
+            node.isRead = true
+        else -- write                                           
+            node.isWritten = true
+        end
+    else
+        table.insert(locals_stack[text], node)                  -- the variable is local - table was defined before
+                                                                -- insert it into the table (table holds froup of nodes corresponding to the variable with the same text)
+        addItemToHighlightArray(highlight_local, node, secondary_nodes) 
+    end
+    
+    if (moduleMetrics) then
+        table.insert(moduleMetrics.variables, node)
+    end
+    
+end
+
+```
+ Na riadku 2 je zvýraznené priradenia konkrétnej metriky na príslušné miesto *infoflow.information_flow* v abstraktnom syntaktickom strome funkcii. Je vypočítaná podľa vzťahu pre vyvážený tok informácii *infoflow = počet_premmených_do_kt_sa_zapisuje ∗ (počet_premmených_z_kt_sa_číta + pocet_výstupov_z_funkcie)<sup>2</sup>* V *metrics* sa takisto uchovávajú aj všetky počítadlá využité na výpočet metrík. Komplexita rozhrania je vypočítaná ako ako súčet argumentov a return statementov.
+
+
+``` lua hl_lines="2 5"
+    funcAST.metrics.infoflow = {}
+    funcAST.metrics.infoflow.information_flow = (#v_in * (#v_out + return_counter))^2
+    funcAST.metrics.infoflow.arguments_in = in_counter
+    funcAST.metrics.infoflow.arguments_out = return_counter
+    funcAST.metrics.infoflow.interface_complexity = in_counter + return_counter
+    funcAST.metrics.infoflow.used_nodes = usedNodes 
+```
+
+### cyclomatic.lua
+
+V tomto module je využitý výstup z modulu ```statements.lua```, ktorý do metrík zapíše zoznam príkazov spolu s jeho početnosťou. 
+Metriky sú postupne spočítavané pridávaním čiastočných zložitostí volaním pomocnej funkcie.
+``` lua
+local function add(node, name, count)
+    count = count or 0
+
+    if (not node.metrics) then node.metrics = {} end
+    if (not node.metrics.cyclomatic) then node.metrics.cyclomatic = {} end
+    
+    if (node.metrics.cyclomatic[name]) then
+        node.metrics.cyclomatic[name] = node.metrics.cyclomatic[name] + count
+    else
+        node.metrics.cyclomatic[name] = count 
+    end
+    
+end
+
+```
+Argumentami sú uzol (funkcia), meno ('decisions','decisions_all','conditions','conditions_all') a samotná "zložitosť" (väčšinou 1, niekedy počet výskytov if_else v prípade výrazu začínajúcim if.
+Horné a dolné ohraničenie pre uzol je zapísané vo funkciách *setUpperBound* a *setLowerBound*.
+
+### halstead.lua
+
+V tomto súbore sa do metrík zapísajú tzv. Halsteadove metriky. 
+
+``` lua hl_lines="4"
+    if (node.metrics == nil) then node.metrics = {} end
+    if (node.metrics.halstead == nil) then node.metrics.halstead = {} end
+    
+    calculateHalstead(node.metrics.halstead, operators, operands)
+
+    ...
+
+    metricsHalstead.operators = operators
+    metricsHalstead.operands = operands
+    
+    metricsHalstead.number_of_operators = number_of_operators
+    metricsHalstead.number_of_operands = number_of_operands
+    metricsHalstead.unique_operands = unique_operands
+    metricsHalstead.unique_operators = unique_operators
+    
+    metricsHalstead.LTH = number_of_operators + number_of_operands
+    metricsHalstead.VOC = unique_operands + unique_operators
+    metricsHalstead.DIF = (unique_operators / 2) * (number_of_operands/unique_operands)
+    
+    metricsHalstead.VOL = metricsHalstead.LTH * (math.log(metricsHalstead.VOC) / math.log(2) )
+    metricsHalstead.EFF = metricsHalstead.DIF * metricsHalstead.VOL
+    metricsHalstead.BUG = metricsHalstead.VOL/3000
+    metricsHalstead.time = metricsHalstead.EFF / 18
+
+
+```
+Táto metrika ukladá operátory, operandy a zapisuje do metrík nielen tieto zoznamy, ale i ich početnosti, početnosti unikátnych operandov a operátorov. Tieto údaje ďalej využíva na počítanie halsteadových metrík dosadením do príslušných vzťahov. Podobne ako pri LOC aj tieto metriky sa počítajú nielen pre funkcie, ale aj pre moduly.
+
+### document_metrics.lua
+
+V tomto súbore sa počítajú metriky dokumentácie, teda komentárov v kóde. Do metrík sa zapisujú metriky ako počet zdokumentovaných a počet nezdokumentovaných funkcií/tabuliek a pomer týchto množín. Ďalšou metrikou sú počty informatívnych komentárov rozdelených podľa druhu. 
+``` lua
+COMMENT = function(data)
+    data.parsed=comments.Parse(data.text)
+    if(data.parsed and data.parsed.style=="custom")then
+        if(data.parsed.type == "todo")then
+            table.insert(TODOs,data)
+        end
+        if(data.parsed.type == "bug")then
+            table.insert(BUGs,data)
+        end
+        if(data.parsed.type == "question")then
+            table.insert(QUESTIONs,data)
+        end
+        if(data.parsed.type == "fixme")then
+            table.insert(FIXMEs,data)
+        end
+        if(data.parsed.type == "how")then
+            table.insert(HOWs,data)
+        end
+        if(data.parsed.type == "info")then
+            table.insert(INFOs,data)
+        end
+    end
+
+return data
+``` 
+Počty zdokumentovaných rsp. nezdokumentovaných funkcii sa počíta pomocou jednoduchých cyklov ako je vidieť nižšie. 
+``` lua hl_lines="3 4 5 6"
+if(data.metrics.functionDefinitions ~=nil) then
+        for k,v in pairs(data.metrics.functionDefinitions) do
+            if(v.documented==1)then
+                data.metrics.documentMetrics.documentedFunctionsCounter = data.metrics.documentMetrics.documentedFunctionsCounter +1
+            else
+                data.metrics.documentMetrics.nondocumentedFunctionsCounter = data.metrics.documentMetrics.nondocumentedFunctionsCounter +1
+            end
+        end
+    end
+```

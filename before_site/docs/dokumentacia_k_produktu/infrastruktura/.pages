@@ -1,0 +1,6 @@
+title: 🛠️ Infraštruktúra
+arrange:
+    - build
+    - ci
+    - testy
+    - podporne_nastroje

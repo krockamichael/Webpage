@@ -1,0 +1,49 @@
+# Úvod
+Repozitáre 3dsoftvis_remake, LuaGraph, LuaInterface, LuaDB, LuaMeg, LuaMetrics a LuaGit majú plne vybudovanú CI infraštruktúru.
+Táto infraštruktúra slúži na kontrolu, či je vyvíjaný projekt vo funkčnom stave a pripravený na dodanie zákazníkovi.
+Infraštruktúra sa stará o build projektu a všetkých jeho variantov spúšťaním automatizovaných jednotkových testov,
+inštrumentálnych testov, analyzovaním pokryia kódu testami a zverejňovaním ich výsledkov na GitLab-e.
+Taktiež analyzuje zdrojový kód a jeho kvalitu pomocou nástroja Lint a ohlasuje možné sémantické problémy.
+Ďalej sa stará o generovanie dokumentácie.
+Na generovanie dokumentácie z Markdown súborov je vytvorená samostatná pipeline - MkDocs.
+Jednotlivé pipeline sú umiestnené v príslušných repozitároch a jedná sa o súbory `.gitlab-ci.yml`.
+
+## Ako fungujú pipelines
+Pipelines sú najvyššou súčasťou CI, dodania a zavádzania produktu.
+Medzi základné časti pipeline patria:
+
+- Etapy, ktoré určujú, ktoré úlohy sa majú kedy spustiť. Napríklad testy sa spustia až po úspešnej kompilácii kódu.
+- Úlohy, ktoré definujú postupnosť príkazov. Napríklad kompilácia kódu alebo testovanie.
+
+Viac informácií je možné nájsť na stránke [GitLab Docs](https://docs.gitlab.com/ee/ci/pipelines.html)
+
+### Premenné (variables)
+Premenná je dynamicky pomenovaná hodnota, ktorá môže ovplyvniť spôsob správania jednotlivých procesov.
+Sú súčasťou prostredia, v ktorom prebieha daný proces.
+Premenné sú užitočné na prispôsobenie úloh v pipeline GitLab CI / CD.
+
+Viac informácií je možné nájsť na stránke [GitLab Docs](https://docs.gitlab.com/ee/ci/variables/)
+
+### Etapy (stages)
+Pipeline je zbierka úloh rozdelených do rôznych etáp.
+Všetky úlohy v tej istej etape prebiehajú súčasne a ďalšia etapa sa začína iba vtedy, ak všetky úlohy z predchádzajúcej etapy boli úspešne ukončené.
+Akonáhle úloha zlyhá, celá pipeline zlyhá. Ak je úloha označená ako manuálna, zlyhanie nespôsobí zlyhanie pipeline.
+Etapy sú iba logickým rozdelením medzi dávkami úloh, pri ktorých nemá zmysel vykonávať ďalšiu úlohu, pokiaľ predchádzajúca zlyhala.
+Žiadna práca by nemala mať závislosť od inej práce v rovnakej etape. Naproti tomu ďalšie etapy môžu používať výsledky predchádzajúcich.
+
+### before_script
+before_script sa používa na definovanie postupnosti príkazov, ktoré by sa mali spustiť pred každou úlohou vrátane nasadenia, ale až po obnove akýchkoľvek artefaktov z predchádzajúcej etapy.
+
+Skripty špecifikované v skripte `before_script` sú spojené s akýmikoľvek skriptami špecifikovanými v hlavnom skripte a vykonávajú sa spoločne v jednom prostredí.
+
+### Artefakty
+Artefakty slúžia na export vygenerovaných súborov z etapy, ako napríklad kompiláty, reporty z testov, HTML stránky, dokumentácie, a pod.
+
+## Aktuálne pokryté repozitáre
+ - 3DSoftVis_Remake
+ - LuaInterface
+ - LuaGraph
+ - LuaDB
+ - LuaMeg
+ - LuaMetrics
+ - LuaGit

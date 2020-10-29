@@ -1,0 +1,28 @@
+# Basic
+
+Image slúži na zreťazené spracovanie, konkrétne generovanie a export dokumentácie zo zdrojového kódu prostredníctvom nástroja `Doxygen`. Image je založený na Ubuntu 18.04 a obsahuje nainštalované závislosti potrebné na vytvorenie dokumentácie a jej export na vzdialený server.
+
+## Závislosti
+`build-essential` - informatívny zoznam balíkov potrebných na zostavovanie
+
+`gnupg` - implementácia štandardu PGP na šifrovanie a podpisovanie údajov a komunikácií
+
+`ca-certificates` - balík obsahujúci certifikačné autority, dodávané s prehliadačmi Mozilla - umožňuje kontrolovať autenticitu SSL spojení
+
+`wget` - program na sťahovanie súborov prostredníctvom protokolov HTTP, HTTPS, FTP, FTPS
+
+`gcc` - súbor kompilátorov projektu GNU (C/C++)
+
+`cmake` - nástroj pre multiplatformové zostavenie projektu - vytvára adresárovú štruktúru a pripravuje zdrojové súbory pre zostavenie kompilátormi príslušného operačného systému
+
+`make` - nástroj pre automatizované zostavenie vykonateľných programov alebo knižníc zo zdrojových kódov - vstupom je tzv. Makefile súbor, ktorý obsahuje pokyny pre vytvorenie výsledného programu
+
+`openssh-client` - secure-shell klient pre zabezpečený prístup k vzdialeným zariadeniam
+
+`git` - distribuovaný verziovací systém
+
+`graphviz` - nástroj pre reprezentáciu štrukturálnych informácií vo forme diagramov
+
+`doxygen` - nástroj na automatické generovanie dokumentácie zo zdrojového kódu
+
+`rsync` - nástroj na syschronizáciu a prenos súborov medzi vzdialenými systémami

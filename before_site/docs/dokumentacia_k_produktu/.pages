@@ -1,0 +1,10 @@
+title: 📦 Dokumentácia k produktu
+arrange:
+    - uvod.md
+    - globalne_ciele_projektu
+    - architektura_systemu
+    - infrastruktura
+    - funkcionalita_systemu
+    - prirucky
+    - dokumentacia_k_zdrojovemu_kodu.md
+    - caste_problemy.md

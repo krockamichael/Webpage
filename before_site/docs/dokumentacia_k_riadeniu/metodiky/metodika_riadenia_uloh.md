@@ -1,0 +1,94 @@
+# Metodika riadenia úloh
+
+Na riadenie úloh používame nástroj Azure DevOps.
+
+##### Životný proces User Story
+
+1. Backlog
+
+    Po identifikovaní sa user story pridá do backlogu a nachádza sa
+    v stave *New*. User stories, ktoré sa nachádzajú v backlogu nemusia mať
+    kompletný alebo vôbec nejaký opis, nie sú rozdelené na tasky ani nie je
+    ohodnotená ich zložitosť. User stories, ktoré sa nachádzajú v backlogu nám
+    slúžia hlavne ako zdroj nápadov a funkcionality, ktorú by sme chceli niekedy
+    v projekte mať.
+
+2. Ready to plan
+
+    User stories, ktoré majú pridaný opis, sa presúvajú do stavu *Ready to plan*.
+    Nad user stories, ktoré sa nachádzajú v tomto stave, sa môžeme hlbšie zamýšľať,
+    rozdeľovať ich na tasky a ohodnocovať ich zložitosť.
+
+3. Plan done
+
+    V prípade, že už má user story pridaný opis, je rozdelená na jednotlivé tasky
+    a je odhadnutá jej zložitosť, môžeme ju presunúť do stavu *Planned*.
+    Znamená to, že user story je pripravená na to, aby mohla byť vybraná do šprintu.
+
+4. Ready to develop
+
+    User stories, ktoré boli vybrané do šprintu, sa presúvajú do stavu
+    *Ready to develop*. Ako tím sa zaväzujeme, že tieto stories budú do konca
+    šprintu v stave *To accept*. Každá user story v tomto stave musí byť niekomu
+    priradená. Ten, komu je user story priradená, je potom zodpovedný za
+    jej dokončenie. To znamená, že dbá na to, aby ľudia participujúci na tejto
+    user story, začali na nej včas pracovať, prípadne pomáha riešiť vzniknuté problémy.
+
+5. Develop doing
+
+    Akonáhle sa na user story začne pracovať (aspoň jeden z jej taskov je v stave *In Progress*),
+    presúva sa do stavu *In development*.
+
+6. Ready to review
+
+    Po dokončení všetkých taskov prislúchajúcich k danej user story sa táto
+    story presúva do stavu *Ready to review*. Akonáhle je user story v tomto stave,
+    je potrebné, aby niekto skontroloval prácu, ktorá sa na tejto story vykonala.
+    To sa môže udiať dvomi spôsobmi. Prvý spôsob je že ten, kto je zodpovedný
+    za danú user story vytvorí task na review a priradí ho niekomu na kontrolu.
+    Druhá možnosť je, že user story nie je nikomu priradená na kontrolu.
+    V takomto prípade bude robiť review ten, kto má aktuálne čas alebo schopnosti
+    na review. Reviewer si sám vytvorí task na review a priradí si ho.
+
+7. In review
+
+    Akonáhle začne reviewer pracovať na kontrole user story, presúva sa
+    do stavu *In review*. V tomto stave zostáva do momentu, kým reviewer nedokončí
+    kontrolu. To znamená, že všetky tasky sú dokončené a spĺňajú definition of done.
+    Zároveň sú splené akceptačné kritériá danej user story a všetky zapracované
+    zmeny sú mergnuté v develop vetve príslušného repozitára. V prípade, že toto
+    všetko je splnené, presúva sa user story do stavu *To accept*.
+    V opačnom prípade sa user story presúva naspäť do stavu *In development*
+    a je potrebné opraviť nájdené nedostatky.
+
+8. To accept
+
+    User stories, ktoré prešli review sa nachádzajú v stave *To accept*.
+    V tomto stave zostávajú až do momentu ich akceptovania alebo neakceptovania
+    product ownerom. V prípade neakceptovania sa user story presúva
+    do stavu *In development* a je potrebné zapracovať všetky nedostatky.
+
+9. Done
+
+    V prípade akceptovania product ownerom sa user story presúva do stavu *Done*.
+    Tento stav je konečný.
+
+#### Životný proces taskov v šprinte
+
+1. To Do
+
+    Všetky novo vytvorené tasky pre nejakú user story sa najprv nachádzajú
+    v stave *To Do*. Každý task v tomto stave je niekomu priradený,
+    má napísaný opis a odhadovanú časovú zložitosť v hodinách.
+
+2. In Progress
+
+    Po začatí práce na nejakom tasku sa tento task presúva do stavu *In progress*.
+    To, že sa task nachádza v tomto stave značí, že rozpracovaný.
+    Na takýchto taskoch môžeme a mali by sme upravovať zostávajúci čas dokončenia tasku.
+    Tento čas sa môže zvyšovať alebo znižovať podľa toho, či práca na tasku ubúda,
+    alebo sme narazili na nejaký problém a práca sa teda predĺži.
+
+3. Done
+
+    Po dokončení tasku sa presúva do stavu *Done*.
