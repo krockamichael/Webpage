@@ -1,0 +1,11 @@
+#footer {
+    min-height: 50px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #0a0800;
+}
