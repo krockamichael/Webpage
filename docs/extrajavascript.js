@@ -14,8 +14,9 @@ function onlyAlone() {
       elements[i].style.display = "none";
   }
 
-  for (i = 1; i <= 2; i++) {
-      let x = document.getElementById("meet_alone_" + i.toString());
+  var sections_for_team_meetings = 2
+  for (i = 1; i <= sections_for_team_meetings; i++) {
+      let x = document.getElementById("team_meet_" + i.toString());
       x.style.display = "block";
   }
 }
@@ -26,8 +27,9 @@ function onlyTogether() {
       elements[i].style.display = "none";
   }
 
-  for (i = 1; i <= 1; i++) {
-      let x = document.getElementById("meet_together_" + i.toString());
+  var sections_for_boss_meetings = 2
+  for (i = 1; i <= sections_for_boss_meetings; i++) {
+      let x = document.getElementById("boss_meet_" + i.toString());
       x.style.display = "block";
   }
 }
