@@ -14,7 +14,8 @@ function onlyAlone() {
       elements[i].style.display = "none";
   }
 
-  for (i = 1; i <= 2; i++) {
+  var sections_for_meetings_alone = 2
+  for (i = 1; i <= sections_for_meetings_alone; i++) {
       let x = document.getElementById("meet_alone_" + i.toString());
       x.style.display = "block";
   }
@@ -26,7 +27,8 @@ function onlyTogether() {
       elements[i].style.display = "none";
   }
 
-  for (i = 1; i <= 1; i++) {
+  var sections_for_meetings_together = 2
+  for (i = 1; i <= sections_for_meetings_together; i++) {
       let x = document.getElementById("meet_together_" + i.toString());
       x.style.display = "block";
   }
