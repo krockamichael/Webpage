@@ -2,27 +2,30 @@
 
 #### User story
 
-- Má zapísaný popis v tvare: ako … chcem spraviť … aby som mohol …
-- Má zapísané akceptačné kritériá, ktoré sú merateľné
-- Má zapísaný odhad zložitosti
-- Sú zapísané jednotlivé tasky pre túto user story
-- Je zaradená do epicu
+- Je splnená definition of ready 
+- Je priradená členovi teamu, ktorý ma na starosti jej dodanie/vyriešenie
+- Všetky tasky sú v stave Done
+- AC user story sú splnené 
+- Výsledok story je odprezentovaný teamu 
+- Product owner schválil na stretnutí schválenie user story
+
 
 #### Šprint
 
 - Všetky úlohy v šprinte spĺňajú definition of done
-- Projekt je je nasadený
+- Projekt je nasadený
 - Backlog je aktualizovaný
-- Šprint je zdokumentovaný
-- Šprint je označený ako úspešný product ownerom
+- Šprint je zdokumentovaný 
 - Na webovej stránke tímového projektu je nahrané sprint review, retrospektíva, export úloh a percentuálny podiel práce
+
 
 #### Web
 
-- Na webe sú všetký potrebné informácie o projekte a tíme
+- Na webe sú všetky potrebné informácie o projekte a tíme
 - Na webe sú všetky potrebné súbory (retrospektívy, šprint reporty)
 - Sú splnené akceptačné kritéria webu
 - Web je prístupný cez internet
+
 
 #### Analytická úloha
 
@@ -39,6 +42,7 @@
 - Kód je mergnutý do develop branche a schválený product ownerom
 - Kód je zdokumentovaný
 - Ak je to vhodné/potrebné používateľská príručka je aktualizovaná
+
 
 #### Úloha týkajúca sa infraštruktúry
 

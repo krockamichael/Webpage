@@ -1,9 +1,10 @@
 # Definitions of ready
 
 #### Epic
-- Má zapísaný opis, ktorý v širšom kontexte vysvetľuje, akú funkcionalitu má epic pridať do projektu
+- Má zapísaný opis, ktorý v širšom kontexte vysvetľuje prínos 
 - Je akceptovaný product ownerom
 - Má vytvorenú aspoň jednu feature
+
 
 #### Feature
 - Má zapísaný opis, ktorý užšie špecifikuje pridávanú funkcionalitu, čo presne má funkcionalita robiť
@@ -11,9 +12,10 @@
 - Je zaradená do epicu
 - Má vytvorenú aspoň jednu user story
 
+
 #### User story
-- Má zapísaný popis v tvare: ako … chcem spraviť … aby som mohol …
 - Má zapísané akceptačné kritériá, ktoré sú merateľné
 - Má zapísaný odhad zložitosti
 - Sú zapísané jednotlivé tasky pre túto user story
+- Tasky majú zapísané description
 - Je zaradená do feature a epicu
