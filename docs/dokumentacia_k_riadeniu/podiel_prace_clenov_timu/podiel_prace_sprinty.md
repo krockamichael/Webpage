@@ -1,79 +1,31 @@
-# 🎒 Podiel práce za jednotlivé šprinty v letnom semestri
+# 🎒 Podiel práce za jednotlivé šprinty v zimnom semestri
 
 ## Šprint 1
-
-| | **Počet priradených taskov** | **Počet dokončených taskov** |	**Počet hodín** |	**Percentá** |
-|-|------------------------------|------------------------------|-----------------|--------------|
-| Matúš	| 1	| 0	| 4	| 7.4% |
-| Martina	| 4	| 4	| 8	| 14.8% |
-| Jakub |	1	| 1	| 14 | 25.9% |
-| Ladislav | 9	| 9	| 10 | 18.5% |
-| Eva	| 1	| 0	| 6	| 11.1% |
-| Andrej | 2 | 2 | 5 | 9.3% |
-| Marek	| 1	| 1 | 3 | 5.6% |
-| Šimon	| 1	| 1	| 4	| 7.4% |
+|                    | **Počet naplánovaných taskov** | **Počet dodaných taskov**  | **Počet dodaných story pointov** | **Počet hodín** |	**Percentá** |
+|--------------------|--------------------------------|----------------------------|----------------------------------|-----------------|----------------|
+| Nikodém Adler	     | 2	                          | 2	                       | X	                              | 6               | 12.5%          |
+| Ivana Frankovičová | 2	                          | 2	                       | X	                              | 4               | 12.5%          |
+| Michael Kročka     | 3	                          | 3                          | X                                | 5               | 18.75%         |
+| Samuel Šouc        | 2	                          | 2	                       | X                                | 4               | 12.5%          |
+| Andrej Hoferica	 | 2	                          | 2	                       | X                      	      | 12              | 18.75%         |
+| Michal Jozefek     | 6	                          | 4                          | X                                | 3               | 25%            |
 
 ## Šprint 2
-
-| | **Počet priradených taskov** | **Počet dokončených taskov** |	**Počet hodín** |	**Percentá** |
-|-|------------------------------|------------------------------|-----------------|--------------|
-| Matúš |	2 |	1	| 3	| 6.9% |
-| Martina	| 3	| 0	| 5	| 11.6% |
-| Jakub	| 3 |	2 |	1 1	| 25.6% |
-| Ladislav	| 7	| 6	| 8	| 18.6% |
-| Eva	| 1	| 0	| 6	| 13.9% |
-| Andrej| 	1| 	0| 	3| 	6.9% |
-| Marek| 	1| 	0| 	2| 	4.6% |
-| Šimon	| 1	| 1	| 5	| 11.6% |
+|                    | **Počet naplánovaných taskov** | **Počet dodaných taskov**  | **Počet dodaných story pointov** | **Počet hodín** |	**Percentá** |
+|--------------------|--------------------------------|----------------------------|----------------------------------|-----------------|----------------|
+| Nikodém Adler	     | 4	                          | 4	                       | 9	                              | 6               | 16.66%         |
+| Ivana Frankovičová | 7	                          | 7	                       | 10	                              | 6               | 18.51%         |
+| Michael Kročka     | 14	                          | 14                         | 11                               | 8               | 20.37%         |
+| Samuel Šouc        | 14	                          | 14	                       | 7                                | 7               | 12.96%         |
+| Andrej Hoferica	 | 13	                          | 13	                       | 9                      	      | 4.5             | 16.66%         |
+| Michal Jozefek     | 5	                          | 5                          | 8                                | 4               | 14.81%         |
 
 ## Šprint 3
-
-| | **Počet priradených taskov** | **Počet dokončených taskov** |	**Počet hodín** |	**Percentá** |
-|-|------------------------------|------------------------------|-----------------|--------------|
-| Matúš	| 2	| 2	| 8 |	9% |
-| Martina |	14 |	14	| 12	| 13.5% |
-| Jakub	| 8	| 7	| 25	| 28.2% |
-| Ladislav |	13 |	13	| 8.5 |	9.6% |
-| Eva	| 2	| 1 |	9	| 10.1% |
-| Andrej |	1	| 1 |	7 | 7.9% |
-| Marek	| 2	| 1 |	9	| 10.1% |
-| Šimon	| 3 |	2	| 10	| 11.3% |
-
-## Šprint 4
-
-| | **Počet priradených taskov** | **Počet dokončených taskov** |	**Počet hodín** |	**Percentá** |
-|-|------------------------------|------------------------------|-----------------|--------------|
-| Matúš	| 4	| 1	| 15.5	| 13.3% |
-| Martina	| 6	| 6	| 14| 11.97%|
-| Jakub	| 5	| 3	| 40.7	| 34.8% |
-| Ladislav	| 20| 20	| 13.5	| 11.55% |
-| Eva	| 1	| 1	| 9.23 | 7.9% |
-| Andrej	| 4	| 1	| 8	| 6.8% |
-| Marek	| 1	| 0	| 3	| 2.57% |
-| Šimon	| 4	| 2	| 13 | 11.12% |
-
-## Šprint 5
-
-| | **Počet priradených taskov** | **Počet dokončených taskov** |	**Počet hodín** |	**Percentá** |
-|-|------------------------------|------------------------------|-----------------|--------------|
-| Matúš	| 3	| 1	| 8	| 9.2% |
-| Martina	| 7	| 3	| 13.5 | 15.5% |
-| Jakub	| 5	| 5	| 16 | 18.3% |
-| Ladislav	| 13	| 13	| 7.29	| 8.4% |
-| Eva	| 3	| 1	| 3.3	| 3.8% |
-| Andrej	| 5	| 2	| 15	| 17.2% |
-| Marek	| 6	| 1	| 12	| 13.8% |
-| Šimon	| 6	| 3	| 12	| 13.8% |
-
-## Šprint 6
-
-| | **Počet priradených taskov** | **Počet dokončených taskov** |	**Počet hodín** |	**Percentá** |
-|-|------------------------------|------------------------------|-----------------|--------------|
-| Matúš	| 5	| 3	| 12 | 13.3% |
-| Martina	| 5	| 4	| 13 | 14.4% |
-| Jakub	| 7	| 5 | 12 | 13.3% |
-| Ladislav | 7	| 7 |	10.5	| 11.7% |
-| Eva	| 8	| 6	| 14.5	| 16.1% |
-| Andrej	| 3	| 3	| 8	| 8.9% |
-| Marek	| 5	| 3	| 11	| 12.2% |
-| Šimon	| 3	| 1	| 9	| 10% |
+|                    | **Počet naplánovaných taskov** | **Počet dodaných taskov**  | **Počet dodaných story pointov** | **Počet hodín** |	**Percentá** |
+|--------------------|--------------------------------|----------------------------|----------------------------------|-----------------|----------------|
+| Nikodém Adler	     | 10	                          | 7	                       | 2	                              | X               | 8.33%          |
+| Ivana Frankovičová | 5	                          | 5	                       | 1	                              | 7               | 4.16%          |
+| Michael Kročka     | 10	                          | 10                         | 9                                | 14              | 37.5%          |
+| Samuel Šouc        | 11	                          | 11	                       | 2                                | 3               | 8.33%          |
+| Andrej Hoferica	 | 3	                          | 3	                       | 3                      	      | 5               | 12.5%          |
+| Michal Jozefek     | 8	                          | 8                          | 7                                | X               | 29.16%         |
