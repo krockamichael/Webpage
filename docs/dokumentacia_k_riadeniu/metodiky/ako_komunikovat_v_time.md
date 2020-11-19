@@ -28,7 +28,7 @@ do našich osobných e-mailových schránok. Prostredníctvom e-mailu komunikuje
 s tretími stranami, ktoré sa zapoja do procesu vývoja projektu.
 Za pravidelné sledovanie a odpovedanie na prijaté správy je zodpovedný manažér komunikácie.
 
-E-Mailová adresa: `tim05.2019.fiit@gmail.com`
+E-Mailová adresa: `fiit.tp.team3@gmail.com`
 
 #### Pravidlá komunikácie v kanáloch
 

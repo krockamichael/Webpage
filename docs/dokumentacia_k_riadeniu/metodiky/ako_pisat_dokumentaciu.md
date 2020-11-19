@@ -7,10 +7,7 @@ Celá dokumentácia sa delí na dve časti:
 1. **Dokumentácia k produktu** - zachytáva architektúru celého systému, opisuje jeho funkcionalitu a obsahuje tiež dokumentáciu zo zdrojových kódov
 2. **Dokumentácia k riadeniu** - dokumentuje procesy riadenia v projekte a jednotlivé metodiky
 
-Vygenerovaná dokumentácia sa nachádza na našej stránke <https://team05-19.studenti.fiit.stuba.sk/docs/projekt/develop/>.
-
-Dokumentácia sa generuje zvlásť pre každú vetvu.
-Zoznam vetiev s jednotlivými dokumentáciami môžete nájsť na <https://team05-19.studenti.fiit.stuba.sk/docs/projekt/>.
+Vygenerovaná dokumentácia sa nachádza na našej stránke <https://team03-20.studenti.fiit.stuba.sk/home.html>.
 
 ## Dokumentácia k produktu
 
