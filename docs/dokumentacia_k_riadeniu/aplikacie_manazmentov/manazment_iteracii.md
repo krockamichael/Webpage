@@ -1,5 +1,8 @@
 # Manažment iterácií
 
-Práca na projekte je rozdelená do dvojtýždňových iterácií, ktoré realizujeme podľa agilnej metodiky Scrum. V každej iterácii prebiehanie plánovanie, priebežná práca na vybraných úlohách a následná retrospektíva na zlepšenie procesov v tíme. Dôležitou súčasťou Scrumu sú pravidelné stretnutia všetkých členov tímu, ktoré realizujeme každý pondelok s product ownerom (vedúci tímu) a každý utorok/streda bez neho.
-
+Na projekte pracujeme podľa agilnej metodiky Scrum. Scrum je spôsob riadenia vývoja softvéru, ktorý je založený na báze 
+šprintov (iterácií). Jeden šprint trvá v našom projekte dva týždne. Každý šprint začíname jeho plánovaním, kedy si 
+zadefinujeme a rozdelíme úlohy na nasledujúce dva týždne a odhadneme ich zložitosť. Počas šprintu sa konajú tímové 
+stretnutia (pondelky a piatky) a každú stredu stretnutia s vedúcim projektu (product ownerom). Každý šprint končíme 
+retrospektívou, kde diskutujeme, čo je možné zlepšiť v nasledujúcich šprintoch.
 * [Metodika iterácií](../metodiky/metodika_iteracii.md)

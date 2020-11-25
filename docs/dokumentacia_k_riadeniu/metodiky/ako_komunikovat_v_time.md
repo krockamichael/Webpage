@@ -9,17 +9,14 @@ dokumenty pre našu internú organizáciu.
 #### Kanály
 
 - General
-- Dokumentácia
-- Kompilácia
-- Tímový plagát
+- Team Chat
+- Unity
+- CI
 - Webstránka
-- News
-- Osobné info o členoch
-- Other
-- Random
+- Testy
 
 Okrem vyššie definovaných kanálov využívame aj chat, ktorý slúži
-na neformálnu komunikáciu na rôzne témy (napr. kedy ideme na obed).
+na neformálnu komunikáciu na rôzne témy.
 
 #### E-Mailová komunikácia
 

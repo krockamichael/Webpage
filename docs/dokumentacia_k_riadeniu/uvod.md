@@ -1,18 +1,15 @@
 # 1️⃣ Úvod
 
-Tento dokument sa zaoberá tým, ako sa organizujeme v tíme. Poskytuje informácie k riadeniu 
-a rieši, aké máme pracovné procesy.
+Predmet Tímový projekt má za cieľ v praxi naučiť jednotlivé skupiny študentov pracovať ako jeden tím a riadiť tím agilne.
+Práca v tíme zahŕňa komunikáciu medzi členmi tímu, komunikáciu s product ownerom, organizované stretnutia, plánovanie a 
+rozdeľovanie úloh v projekte. 
 
-V našom tímovom projekte sa venujeme projektu VizReal. Tento projekt sa zaoberá vizualizáciou
- softvéru vo virtuálnej a rozšírenej realite.
+Náš tímový projekt VizReal sa venuje vizualizácii softvéru vo virtuálnej a rozšírenej realite. Vedúci tímového projektu
+a product owner, Ing. Peter Kapec, Phd., má za úlohu nás usmerňovať, aby náš tím správne fungoval a zadávať nám úlohy
+a požiadavky na softvér. 
 
-Hlavným cieľom tímového projektu je naučiť sa pracovať vo väčšej skupine ľudí (tíme) a správne
- sa riadiť. Zároveň je naším cieľom naučiť sa pracovať s nástrojmi na podporu manažmentu tímov.
-
-Vedúcim projektu je Ing. Peter Kapec, PhD., ktorý  nás má usmerňovať pri práci a pomáhať nám 
-pri tvorbe úloh alebo problémoch ktoré sa vyskytnú počas implementácie. Vedúci tímu zároveň 
-plní aj úlohu vlastníka produktu, čo znamená, že nám zadáva úlohy a požiadavky na systém.
-
-Dokument tiež obsahuje roly členov tímu a aplikácie manažmentov. Ďalej pokračuje opisom 
-šprintov a exportom jednotlivých úloh, ktoré boli analyzované alebo implementované v danom
-šprinte. Obsahuje aj metodiky, ktoré sú počas vývoja systému používané.
+V tomto dokumente sa pokúsime opísať riadenie nášho tímu. Dokument je rozdelený na kapitoly - kapitola 2 Roly členov tímu 
+predstaví náš tím, kapitola 3 Aplikácie manažmentov opíše jednotlivé manažmenty, ktorými sa riadime, kapitola 4 Sumarizácia 
+šprintov zhrnie prvé tri naše absolvované šprinty, kapitola 5 Motivačný dokument je dokument, ktorý sme odovzdávali 
+na začiatku semestra pri výbere tímového projektu a poslednou samostatnou kapitolou je kapitola Metodiky, ktorá pozostáva 
+z jednotlivých našich metodík, ktorými je potrebné sa riadiť. 

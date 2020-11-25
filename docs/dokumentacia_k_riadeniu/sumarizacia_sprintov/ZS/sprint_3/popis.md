@@ -1,5 +1,7 @@
-**Trvanie šprintu: 11.11.-25.11. 2019**
+**Trvanie šprintu: 04.11.-18.11. 2020**
 
-**Doručené story pointy: 53.5/63.5**
+**Doručené story pointy: 29**
 
-Do tohto šprintu boli zaradené prvé implementačné príbehy. Bolo implementované pridanie magnetu do scény z front-end strany a takisto bolo vytvorené UI pre magnety. Okrem toho sme sa venovali CI, dopĺňaním metodík a v neposlednom rade sme pokračovali v rozbehávaní aplikácie na macOS.
+V treťom šprinte sme sa venovali mergovaniu vetiev na GitLabe, riešili sa problémy so serverom a s GitLab runnerom na CI. 
+Okrem toho sa začal vytvárať tento dokument, riešili sa problémy s testami a dockerom a vytvoril sa skript na generovanie 
+LuaDB grafov. Analyzovali sa dll knižnice, kde sa zistilo, kde sa aké knižnice používajú a ako často.

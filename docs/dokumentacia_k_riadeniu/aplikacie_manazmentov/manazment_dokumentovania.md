@@ -1,16 +1,6 @@
 # Manažment dokumentovania
 
-Dokumentáciu udržiavame v samostatnom repozitári Dokumentácia na GitLab-e. Odtiaľ je dokumentácia automaticky generovaná na webovú stránku nášho tímu.
-
-Dokumentácia je členená na:
-
-- Architektúra systému
-- Infraštruktúra
-- Funkcionalita systému
-- Príručky
-- Dokumentácia k zdrojovému kódu
-- Časté problémy
-
-Dbáme na to, aby bola pravidelne aktualizovaná a aby boli aktuálne aj používateľské príručky. Pri písaní dokumentácie sa riadime príslušnou metodikou.
-
+Dokumentácia k projektu, ktorá sa generuje na stránku nášho tímu, je upravovaná na GitLabe. Je rozdelená na časti 
+Architektúra systému, Infraštruktúra, Funkcionalita systému, Príručky, Dokumentácia k zdrojovému kódu, Časté problémy. 
+Dokumentáciu sa snažíme udržiavať aktuálnu a pri jej upravovaní sa každý člen tímu riadi metodikou.
 * [Ako písať dokumentáciu](../metodiky/ako_pisat_dokumentaciu.md)

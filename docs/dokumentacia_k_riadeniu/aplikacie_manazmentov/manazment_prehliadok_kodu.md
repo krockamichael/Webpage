@@ -1,5 +1,6 @@
 # Manažment prehliadok kódu
 
-Prehliadky kódu vykonávame na Gitlab-e. Každá nová vetva, ktorá sa má mergnúť do develop vetvy, musí prejsť cez prehliadku kódu iným členom tímu. Pri prehliadke kódu je dôležité dbať na kvalitu a správnosť kódu, ale aj na to, či sú k pridanej funkcionalite napísané testy a, či sú zmeny zapracované v dokumentácii. Pri každej prehliadke sa autor merge requestu a člen, ktorému je merge request priradený riadia príslušnou metodikou.
-
+Nová funkcionalita vytvorená členom tímu musí prejsť kontrolou predtým, než sa naozaj pridá do projektu. Tieto kontroly 
+prebiehajú na GitLabe a vykonáva ich iný člen tímu. Pri prehliadke kódu sa kontroluje správnosť a funkčnosť kódu, jeho 
+kvalita, príslušné testy a spísaná dokumentácia.
 * [Ako vykonať code review](../metodiky/ako_vykonat_code_review.md)

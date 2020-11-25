@@ -6,6 +6,7 @@
 - Definuje víziu projektu
 
 #### Bc. Nikodém Adler
+- Team leader
 - Manažér vývoja
 - Unity developer
 
@@ -15,10 +16,7 @@
 
 #### Bc. Andrej Hoferica
 - Manažér testov
-
-#### Bc. Samuel Šouc
-- Backend developer
-- Dokumentarista
+- Tester
 
 #### Bc. Michal Jozefek
 - Scrum master
@@ -27,3 +25,7 @@
 #### Bc. Michael Kročka
 - Manažér webového sídla
 - Unity developer
+
+#### Bc. Samuel Šouc
+- Dokumentarista
+- Backend developer

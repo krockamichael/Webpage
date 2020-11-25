@@ -2,9 +2,11 @@
 
 |                  **Názov sekcie**                  |                     **Autor**                     |
 |:--------------------------------------------------:|:-------------------------------------------------:|
-| Úvod                                               | Martina Hanáková, Šimon Vároš                     |
-| Globálne ciele projektu                            | Šimon Vároš, Matúš Zeleňák                        |
-| Architektúra systému                               | Andrej Erdélsky, Jakub Blažej, Ladislav Zemko, Matúš Zeleňák |
-| Infraštruktúra                                     | Ladislav Zemko, Andrej Erdélsky, Jakub Blažej, Martina Hanáková |
-| Funkcionalita systému                              | Matúš Zeleňák, Šimon Vároš, Eva Nedeliaková, Jakub Blažej |
-| Príručky                                           | Jakub Blažej, Ladislav Zemko, Marek Krátky, Matúš Zeleňák |
+| Úvod                                               | Ivana Frankovičová, tímy z minulých rokov         |
+| Globálne ciele projektu                            | Ivana Frankovičová                                |
+| Architektúra systému                               | Ivana Frankovičová, tímy z minulých rokov         |
+| Infraštruktúra                                     | Ivana Frankovičová, tímy z minulých rokov         |
+| Funkcionalita systému                              | Ivana Frankovičová, tímy z minulých rokov         |
+| Príručky                                           | Ivana Frankovičová, tímy z minulých rokov         |
+| Dokumentácia k zdrojovému kódu                     | Ivana Frankovičová, tímy z minulých rokov         |
+| Časté problémy                                     | Ivana Frankovičová, tímy z minulých rokov         |

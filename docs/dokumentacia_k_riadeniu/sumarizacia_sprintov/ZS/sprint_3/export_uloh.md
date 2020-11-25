@@ -1,70 +1,68 @@
 # Export úloh
 
-| **ID** | **Work Item Type** | **Title** | **Assigned To** | **State** | **Effort** |
-|--------|--------------------|-----------|-----------------|-----------|------------|
-| 126 | Bug | Metodiky obsahujú podpis commitov | Jakub Blažej <TFS\xblazejj> | Done | 0.5 |  |
-| 128 | Bug | Číslovanie nadpisov v dokumentácii nesedí s obsahom | Jakub Blažej <TFS\xblazejj> | Done | 0.5 |  |
-| 130 | Bug | "Zmazať metodiku ""Ako písať metodiku""" | Jakub Blažej <TFS\xblazejj> | Done | 0.5 |  |
-| 92 | Epic | Magnety |  | In Progress |  |  |
-| 305 | Epic | Testy |  | New |  |  |
-| 314 | Epic | Webstránka |  | New |  |  |
-| 306 | Feature | Regresné testy |  | New |  |  |
-| 319 | Feature | Magnet s funkcionalitou |  | New |  |  |
-| 6 | Product Backlog Item | Skript pre automatické testovanie Lua rocks repozitárov | Bc. Eva Nedeliaková <TFS\xnedeliakova> | Done | 8 | |  |
-| 38 | Product Backlog Item | Optimalizácia LuaInterface CI | Jakub Blažej <TFS\xblazejj> | Done | 8 |  |
-| 120 | Product Backlog Item | Analyzovať a zdokumentovať použie logovacích modulov | Bc. Marek Krátky <TFS\xkratkym1> | In development | | 5 |  |
-| 131 | Product Backlog Item | Spojazdniť projekt na MAC | Bc. Ladislav Zemko <TFS\xzemko> | Done | 13 |  |
-| 142 | Product Backlog Item | Vytvoriť UI pre magnety | Bc. Šimon Vároš <TFS\xvaros> | Done | 5 |  |
-| 143 | Product Backlog Item | Pridať magnet do scény (frontend) | Matúš Zeleňák <TFS\xzelenakm1> | Done | 8 |  |
-| 148 | Product Backlog Item | Doplnenie metodiky písania testov | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done | 5 |  |
-| 176 | Product Backlog Item | Zapracovať pripomienky k metodikám | Bc. Martina Hanáková <TFS\xhanakova> | In development | 3 |  |
-| 196 | Product Backlog Item | Administratívne úlohy | Bc. Martina Hanáková <TFS\xhanakova> | In development | 2 |  |
-| 198 | Product Backlog Item | Dokumentácia k riadeniu - míľnik 1 | Bc. Martina Hanáková <TFS\xhanakova> | Done | 8 |  |
-| 134 | Task | Modifikovať modul Luapower | Bc. Ladislav Zemko <TFS\xzemko> | Done |  |  | 5
-| 135 | Task | Modifikovať CMakeLists.txt v 3dsoftvis projekte | Bc. Ladislav Zemko <TFS\xzemko> | Done |  |  | 1
-| 136 | Task | Kontrola funkčnosti modulu Luainterface | Bc. Ladislav Zemko <TFS\xzemko> | Done |  |  | 0.5
-| 137 | Task | Kontrola funkčnosti modulu Luagraph | Bc. Ladislav Zemko <TFS\xzemko> | Done |  |  | 0.5
-| 150 | Task | Zdokumentovanie písanie testov v jazyku v C++ | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done |  |  | 2
-| 151 | Task | Zdokumentovanie písanie testov v jazyku C# | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done |  |  | 1.5
-| 152 | Task | Zdokumentovanie písanie testov v jazyku Lua | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done |  |  | 2.5
-| 153 | Task | Zdokumentovanie písanie testov v jazyku Terra | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done |  |  | 3
-| 154 | Task | Spustenie testov | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done |  |  | 1
-| 155 | Task | Zjednotenie metodiky písania testov na gitlabe | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done |  |  | 2.5
-| 156 | Task | Nainštalovať balíky | Bc. Eva Nedeliaková <TFS\xnedeliakova> | Done |  |  |
-| 157 | Task | Vytvoriť skript | Bc. Eva Nedeliaková <TFS\xnedeliakova> | Done |  |  |
-| 160 | Task | Vytvorenie nového canvasu s príslušnými tlačidlami | Bc. Šimon Vároš <TFS\xvaros> | Done |  |  | 2
-| 161 | Task | Nastaviť prepínanie canvasov na tlačidlo | Bc. Šimon Vároš <TFS\xvaros> | Done |  |  | 2
-| 162 | Task | Responzívny canvas | Bc. Šimon Vároš <TFS\xvaros> | Done |  |  | 1
-| 163 | Task | Pripojiť skript s prázdnymi funkciami | Bc. Šimon Vároš <TFS\xvaros> | Done |  |  |
-| 164 | Task | Vytvoriť prefab pre magnet | Matúš Zeleňák <TFS\xzelenakm1> | Done |  |  | 5
-| 165 | Task | Nastavenie polohy a pridanie magnetu do scény | Matúš Zeleňák <TFS\xzelenakm1> | Done |  |  | 2
-| 166 | Task | Presunúť inštalácie balíkov do dockerfile | Jakub Blažej <TFS\xblazejj> | Done |  |  | 4
-| 167 | Task | Analýza logovania pre Lua | Bc. Marek Krátky <TFS\xkratkym1> | Done |  |  |
-| 170 | Task | Analýza logovania pre C++ | Bc. Marek Krátky <TFS\xkratkym1> | In Progress |  | 1 |
-| 171 | Task | Analýza logovania pre C# | Bc. Marek Krátky <TFS\xkratkym1> | In Progress |  | 1 |
-| 172 | Task | Spísanie dokumentácie pre všetky analyzované oblasti | Bc. Marek Krátky <TFS\xkratkym1> | In Progress |  | 1 |
-| 173 | Task | Opraviť číslovanie nadpisov | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 0.25
-| 174 | Task | Zmazať bod podpisovanie commitov | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 0.1
-| 175 | Task | Zmazať metodiku ako písať metodiku | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 0.1
-| 184 | Task | Doplniť Definitions of Done | Bc. Martina Hanáková <TFS\xhanakova> | In Progress |  | 0.1 | 0.5
-| 185 | Task | Upraviť metodiku na popisovanie položiek v Azure DevOps | Bc. Marek Krátky <TFS\xkratkym1> | In Progress |  |  |
-| 186 | Task | Doplnenie konvencií | Jakub Blažej <TFS\xblazejj> | To Do |  | 5 |
-| 187 | Task | Upraviť a doplniť metodiku na prácu s gitom | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 1
-| 189 | Task | Doplniť metodiku na robenie code review | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 0.75
-| 193 | Task | Upraviť zápisky zo stretnutí (8. týždeň) | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  |
-| 194 | Task | Upraviť zápisky zo stretnutí (9. týždeň) | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 0.25
-| 195 | Task | Spísať retrospektívu 3 | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 0.25
-| 197 | Task | Sprint review 3 | Bc. Eva Nedeliaková <TFS\xnedeliakova> | In Progress |  | 1.5 | 1.5
-| 199 | Task | Prečítať si pokyny | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 0.5
-| 200 | Task | Big picture k dokumentu inžinierske dielo | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 2.5
-| 201 | Task | Big picture k dokumentu riadenie projektu | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 2.5
-| 202 | Task | Spojenie častí dokumentu | Bc. Martina Hanáková <TFS\xhanakova> | Done |  |  | 1
-| 203 | Task | Modifikovať CMakeLists.txt v module LuaInterface | Bc. Ladislav Zemko <TFS\xzemko> | Done |  |  | 5
-| 324 | Task | Modifikovať CMakeLists.txt v LuaGraph module | Bc. Ladislav Zemko <TFS\xzemko> | Done |  |  | 2.5
-| 349 | Task | Review | Jakub Blažej <TFS\xblazejj> | Done |  |  |
-| 375 | Task | Panel pre upozornenia | Bc. Šimon Vároš <TFS\xvaros> | Done |  |  | 1
-| 376 | Task | Prepojiť s UI | Matúš Zeleňák <TFS\xzelenakm1> | Done |  |  | 1
-| 180 | Test Case | Doplniť Definitions of Done | Bc. Martina Hanáková <TFS\xhanakova> | Design |  |  |
-| 181 | Test Plan | Timovy projekt 2019_Stories_Sprint 3 | Bc. Martina Hanáková <TFS\xhanakova> | Active |  |  |
-| 182 | Test Suite | Timovy projekt 2019_Stories_Sprint 3 | Bc. Martina Hanáková <TFS\xhanakova> | In Progress |  |  |
-| 183 | Test Suite | 176 : Zapracovať pripomienky k metodikám | Bc. Martina Hanáková <TFS\xhanakova> | In Progress |  |  |
+| **ID** | **Work Item Type** | **Title** | **Assigned To** | **State** |
+|--------|--------------------|-----------|-----------------|-----------|
+|868	|Product Backlog Item|	Prvotné spustenie testov	|Done|	Bc. Andrej Hoferica|
+|869	|Task|	Spustiť test 'dir_files_spec.lua' z repozitáru luadb	|Done|	Bc. Andrej Hoferica|
+|870	|Task|	Modifikovať test tak, aby poskytoval viac DEBUG výpisov	|Done|	Bc. Andrej Hoferica|
+|871	|Task|	Vyriešiť problém s metódou describe()	|Done|	Bc. Andrej Hoferica|
+|859	|Product Backlog Item|	Asistencia pri instalicii CI	|Done|	Bc. Michal Jozefek|
+|860	|Task|	Instalacia CI na servery so Samom	|Done|	Bc. Michal Jozefek|
+|874	|Product Backlog Item|	Doplnenie informacií o CI do tabuľky repozitárov	|Done|	Bc. Samuel Šouc|
+|895	|Task|	Luadb	|Done|	Bc. Samuel Šouc|
+|896	|Task|	3dsv_remake	|Done|	Bc. Samuel Šouc|
+|897	|Task|	Luametrics	|Done|	Bc. Samuel Šouc|
+|898	|Task|	documentation	|Done|	Bc. Samuel Šouc|
+|899	|Task|	luameg	|Done|	Bc. Samuel Šouc|
+|900	|Task|	luatree	|Done|	Bc. Samuel Šouc|
+|901	|Task|	luagit	|Done|	Bc. Samuel Šouc|
+|902	|Task|	luagraph	|Done|	Bc. Samuel Šouc|
+|903	|Task|	luainterface	|Done|	Bc. Samuel Šouc|
+|884	|Product Backlog Item|	Výmena servera	|Done|	Bc. Michal Jozefek|
+|885	|Task|	Informovanie K.Kostala	|Done|	Bc. Michal Jozefek|
+|886	|Task|	Ziskat pristup od minuleho teamu	|Done|	Bc. Samuel Šouc|
+|889	|Task|	Zmena DNS	|Done|	Bc. Michal Jozefek|
+|890	|Task|	Napisat spravcom ohladom Virtualky minulorcneho teamu	|Done|	Bc. Michal Jozefek|
+|863	|Product Backlog Item|	Oprava Metodik z minuleho roka	|Done|	Bc. Michal Jozefek|
+|865	|Task|	Definition of Done	|Done|	Bc. Michal Jozefek|
+|866	|Task|	Definition of ready	|Done|	Bc. Michal Jozefek|
+|864	|Task|	Poslanie Misovi na stranku	|Done|	Bc. Michal Jozefek|
+|916	|Product Backlog Item|	Asistencia pri dokumentácia na odovzdanie	|Done|	Bc. Michael Kročka|
+|917	|Task|	Formálna úprava časti - Inžinierske dielo	|Done|	Bc. Michael Kročka|
+|918	|Task|	Formálna úprava časti - Riadenie projektu	|Done|	Bc. Michael Kročka|
+|919	|Task|	Doplnenie časti - Riadenie projektu - Motivačný dokument	|Done|	Bc. Michael Kročka|
+|910	|Product Backlog Item|	Identifikácia miest v C# kde su využité C++ importy	|Done|	Bc. Nikodém Adler|
+|905	|Task|	LuaObject	|Done|	Bc. Nikodém Adler|
+|906	|Task|	GraphObject	|Done|	Bc. Nikodém Adler|
+|907	|Task|	LuaEdge	|Done|	Bc. Nikodém Adler|
+|908	|Task|	LuaIncidence	|Done|	Bc. Nikodém Adler|
+|909	|Task|	LuaNode	|Done|	Bc. Nikodém Adler|
+|911	|Task|	LuaGraph	|Done|	Bc. Nikodém Adler|
+|912	|Task|	LuaInterface	|Done|	Bc. Nikodém Adler|
+|847	|Product Backlog Item|	3dsoftvis_remake	|Done|	Bc. Nikodém Adler|
+|875	|Task|	danis	|Done|	Bc. Nikodém Adler|
+|876	|Task|	borecky	|Done|	Bc. Nikodém Adler|
+|877	|Task|	stevlik	|To Do|	Bc. Nikodém Adler|
+|878	|Task|	karas	|To Do|	
+|879	|Task|	kulbak	|To Do|	
+|862	|Product Backlog Item|	Dokumentácia na odovzdanie	|Done|	Bc. Michal Jozefek|
+|883	|Task|	Zoznam na odovzdanie	|Done|	Bc. Michal Jozefek|
+|888	|Task|	Sformovanie dokumentu na odovzdanie	|Done|	Bc. Ivana Frankovičová|
+|848	|Product Backlog Item|	luadb	|Done|	Bc. Ivana Frankovičová|
+|880	|Task|	stevlik	|To Do|	
+|881	|Task|	kratky	|Done|	Bc. Ivana Frankovičová|
+|851	|Product Backlog Item|	Rozbehanie devenv	|Done|	Bc. Michael Kročka|
+|852	|Task|	Rozbehať devenv	|Done|	Bc. Michael Kročka|
+|854	|Task|	$'\r': command not found	|Done|	Bc. Michael Kročka|
+|857	|Task|	module 'lrdb_server' not found	|Done|	Bc. Michael Kročka|
+|872	|Product Backlog Item|	Skript - generovanie luadb grafov zo "spec"	|Done|	Bc. Michael Kročka|
+|858	|Task|	Vytvorenie skriptu	|Done|	Bc. Michael Kročka|
+|873	|Task|	Nezaradené hrany a uzly	|Done|	Bc. Michael Kročka|
+|891	|Task|	Branch, Commit, Merge Gitlab	|Done|	Bc. Michael Kročka|
+|894	|Task|	Zlyhanie CI testov	|Done|	Bc. Michael Kročka|
+|850	|Product Backlog Item|	luametrics	|Done|	Bc. Ivana Frankovičová|
+|882	|Task|	kratky	|Done|	Bc. Ivana Frankovičová|
+|914	|Product Backlog Item|	Zápisy zo stretnutí	|Done|	Bc. Ivana Frankovičová|
+|920	|Task|	Tímové stretnutia	|Done|	Bc. Ivana Frankovičová|
+|921	|Task|	Stretnutia s vedúcim	|Done|	Bc. Ivana Frankovičová|
+|922	|Task|	Doplnenie chýbajúcich častí zápisov	|Done|	Bc. Samuel Šouc|

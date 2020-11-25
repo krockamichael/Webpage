@@ -30,16 +30,22 @@ user stories, na ktorých bude pracovať na tasky, ešte v ten deň**.
 #### 2. stretnutie (bez vedúceho)
 Počas tohto stretnutia pracujeme na priradených taskoch a konzultujeme prípadné problémy.
 
-#### 3. stretnutie (s vedúcim)
+#### 3. stretnutie (bez vedúceho)
+Počas tohto stretnutia ohodnocujeme tasky, pracujeme na priradených taskoch a konzultujeme prípadné problémy.
+
+#### 4. stretnutie (s vedúcim)
 Na tomto stretnutí sa zameriavame na riešenie vzniknutých problémov počas prvej
 časti šprintu. V tejto fáze šprintu by už mali byť všetky user stories aspoň
 začaté. Venujeme sa tiež úprave backlogu. Vymýšľame nove user stories,
 ohodnocujeme ich a prioritizujeme.
 
-#### 4. stretnutie (bez vedúceho)
-Na poslednom stretnutí v iterácii vytvárame pod dohľadom scrum mastera
-retrospektívu, na ktorej zapíše každý člen tímu všetky pozitíva, negatíva
-a nápady na vylepšenie za uplynulý šprint. Po zapísaní týchto informácii do
-dokumentu je uverejnený na tímovej web stránke. Počas tohto stretnutia si tiež
-vyhodnotíme percentuálny podiel práce na jednotlivých user stories za uplynulý
-šprint. Ďalej pokračujeme samostatnou prácou na priradených taskoch.
+#### 5. stretnutie (bez vedúceho)
+Počas tohto stretnutia pracujeme na priradených taskoch a konzultujeme prípadné problémy.
+
+#### 6. stretnutie (bez vedúceho)
+Na poslednom stretnutí v iterácii vytvárame pod dohľadom scrum mastera retrospektívu, 
+na ktorej zapíše každý člen tímu všetky pozitíva, negatíva a nápady na vylepšenie za 
+uplynulý šprint. Po zapísaní týchto informácii do dokumentu je uverejnený na tímovej 
+web stránke. Počas tohto stretnutia si tiež vyhodnotíme percentuálny podiel práce na 
+jednotlivých user stories za uplynulý šprint. Ďalej pokračujeme samostatnou prácou na 
+priradených taskoch.

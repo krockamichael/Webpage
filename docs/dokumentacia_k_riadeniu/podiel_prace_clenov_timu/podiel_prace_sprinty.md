@@ -23,9 +23,9 @@
 ## Šprint 3
 |                    | **Počet naplánovaných taskov** | **Počet dodaných taskov**  | **Počet dodaných story pointov** | **Počet hodín** |	**Percentá** |
 |--------------------|--------------------------------|----------------------------|----------------------------------|-----------------|----------------|
-| Nikodém Adler	     | 10	                          | 7	                       | 2	                              | X               | 8.33%          |
-| Ivana Frankovičová | 5	                          | 5	                       | 1	                              | 7               | 4.16%          |
-| Michael Kročka     | 10	                          | 10                         | 9                                | 14              | 37.5%          |
-| Samuel Šouc        | 11	                          | 11	                       | 2                                | 3               | 8.33%          |
-| Andrej Hoferica	 | 3	                          | 3	                       | 3                      	      | 5               | 12.5%          |
-| Michal Jozefek     | 8	                          | 8                          | 7                                | X               | 29.16%         |
+| Nikodém Adler	     | 10	                          | 7	                       | 2	                              | 6               | 6.98%          |
+| Ivana Frankovičová | 5	                          | 5	                       | 6	                              | 7               | 20.68%         |
+| Michael Kročka     | 10	                          | 10                         | 9                                | 14              | 31.03%         |
+| Samuel Šouc        | 11	                          | 10	                       | 2                                | 3               | 6.98%          |
+| Andrej Hoferica	 | 3	                          | 3	                       | 3                      	      | 5               | 10.34%         |
+| Michal Jozefek     | 8	                          | 8                          | 7                                | 6               | 24.13%         |

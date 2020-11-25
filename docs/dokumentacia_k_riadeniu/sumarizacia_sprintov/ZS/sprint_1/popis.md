@@ -1,7 +1,8 @@
-**Trvanie šprintu: 14.10.-28.10. 2019**
+**Trvanie šprintu: 07.10.-21.10. 2020**
 
-**Doručené story pointy: 16/58**
+**Doručené story pointy: Nedhodnotený**
 
-V šprinte sme sa venovali spoznaniu vyvíjanej aplikácie. Zároveň sme si definovali metodiky, ktoré budú smerovať našu ďalšiu spoluprácu. Zoznamovali sme sa so scrumom ako takým - na začiatku plánovania sme vytvorili back log, ktorý sme následne konzultovali s vedúcim tímu.
-
-Najväčším problémom prvého šprintu, bolo rozbehanie samotnej aplikácie a to hlavne na MacOS zariadení. Napriek tomu, sa nám podarilo vylepšiť používateľskú príručku inštalácie na Windows zariadenia.
+Prvý šprint slúžil najmä na oboznámenie sa s projektom. Rozdelili sme roly v tíme, učili sme sa pracovať ako tím a 
+vytvárať si úlohy v Azure DevOps (TFS). Čítali sme si dokumentáciu k projektu a zároveň sme si všetci rozbehávali 
+projekt na svojom zariadení podľa inštalačnej príručky. Pri problémoch sme kontaktovali členov minuloročného tímu, 
+ktorí na tomto projekte pracovali pred nami. V tomto šprinte sme sa ešte rozhodli vynechať estimáciu taskov.

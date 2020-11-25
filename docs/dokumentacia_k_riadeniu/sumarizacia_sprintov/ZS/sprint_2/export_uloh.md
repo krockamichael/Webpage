@@ -1,78 +1,85 @@
 # Export úloh
 
-|  **ID**  |  **Work Item Type**  |  **Title**  |  **Assigned To**  |  **State**  |  **Effort**  |
-| -------- | -------------------- | ----------- | ----------------- | ----------- | ------------ |
-| 126 | Bug | Metodiky obsahujú podpis commitov | Bc. Martina Hanáková <TFS\xhanakova> | New | 0.5 |
-| 128 | Bug | Číslovanie nadpisov v dokumentácii nesedí s obsahom | Bc. Martina Hanáková <TFS\xhanakova> | New | 0.5 |
-| 45 | Feature | Automatizované testy Lua analyzátora | | New |  |
-| 2 | Product Backlog Item | Administratívne úlohy | Bc. Martina Hanáková <TFS\xhanakova> | In development | 5 |
-| 3 | Product Backlog Item | Migrácia DevOps do DevOps | Bc. Šimon Vároš <TFS\xvaros> | Done | 8 |
-| 16 | Product Backlog Item | Ďalšie metodiky | Bc. Martina Hanáková <TFS\xhanakova> | Done | 3 |
-| 17 | Product Backlog Item | Doplnenie (oprava) existujúcich metodík | Bc. Martina Hanáková <TFS\xhanakova> | Done | 1 |
-| 18 | Product Backlog Item | Definovanie metodík | Bc. Martina Hanáková <TFS\xhanakova> | Done | 2 |
-| 32 | Product Backlog Item | Overiť a zdokumentovať súčasný stav CI (3DSoftViz) | Bc. Marek Krátky <TFS\xkratkym1> | Done | 13 |
-| 40 | Product Backlog Item | Automatický export dokumentácie na stránku | Bc. Eva Nedeliaková <TFS\xnedeliakova> | Review | 8 |
-| 41 | Product Backlog Item | Vytvoriť CI pre LuaDb | Jakub Blažej <TFS\xblazejj> | Done | 5 |
-| 42 | Product Backlog Item | Spojazdniť projekt | Bc. Ladislav Zemko <TFS\xzemko> | Done | 13 |
-| 48 | Product Backlog Item | Zdokumentovanie aktuálneho stavu testov | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done | 8 |
-| 50 | Product Backlog Item | Analýza magnetov | Bc. Šimon Vároš <TFS\xvaros> | Done | 13 |
-| 51 | Product Backlog Item | Analýza obmedzovačov | Matúš Zeleňák <TFS\xzelenakm1> | Done | 13 |
-| 121 | Product Backlog Item | Vytvoriť krízový protokol | | New |  |
-| 122 | Product Backlog Item | Doplnenie metodiky prehliadok kódu | | Planned | 1 |
-| 1 | Task | Spísať retrospektívu 1 | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 1
-| 4 | Task | Simulácia | Bc. Šimon Vároš <TFS\xvaros> | Done |  | 1.5
-| 7 | Task | Analýza | Bc. Šimon Vároš <TFS\xvaros> | Done |  | 1.5
-| 8 | Task | Migrácia | Bc. Šimon Vároš <TFS\xvaros> | Done |  | 0.5
-| 9 | Task | Spísať retrospektívu 2 | Bc. Martina Hanáková <TFS\xhanakova> | To Do | 0.5 | 0.5
-| 10 | Task | Spísať sprint review | Bc. Eva Nedeliaková <TFS\xnedeliakova> | To Do |  | 4.6
-| 11 | Task | Spraviť export úloh | Bc. Eva Nedeliaková <TFS\xnedeliakova> | To Do |  |
-| 12 | Task | Aktualizovať stránku | Bc. Eva Nedeliaková <TFS\xnedeliakova> | To Do |  |
-| 13 | Task | Upraviť zápisky zo stretnutí (7. týždeň) | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 0.5
-| 14 | Task | Upraviť zápisky zo stretnutí (6. týždeň) | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 0.5
-| 15 | Task | Spraviť merge | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 0.5
-| 19 | Task | Metodika na workflow v Azure DevOps | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 1.5
-| 20 | Task | Metodika iterácii | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 1
-| 21 | Task | Upraviť metodiku na prácu s vetvami v gite | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 0.25
-| 22 | Task | Doplniť/upraviť Definitions of Done | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 0.25
-| 23 | Task | Urobiť review dokumentácie | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 2.5
-| 24 | Task | kvalita kódu | Bc. Marek Krátky <TFS\xkratkym1> | Done |  | 1
-| 25 | Task | statická analýza | Bc. Marek Krátky <TFS\xkratkym1> | Done |  | 1
-| 26 | Task | Artefakty - testy | Bc. Marek Krátky <TFS\xkratkym1> | Done |  | 1
-| 27 | Task | Artefakty - dokumentácia | Bc. Marek Krátky <TFS\xkratkym1> | Done |  | 1
-| 28 | Task | Overenie CI | Bc. Marek Krátky <TFS\xkratkym1> | Done |  | 2
-| 29 | Task | zdokumentovanie súčasného CI | Bc. Marek Krátky <TFS\xkratkym1> | Done |  | 3
-| 30 | Task | Naštudovanie súčasného CI | Bc. Marek Krátky <TFS\xkratkym1> | Done |  | 3
-| 31 | Task | Oboznámenie sa s doménou | Bc. Marek Krátky <TFS\xkratkym1> | Done |  | 2
-| 33 | Task | Všeobecný opis (motivácia) | Matúš Zeleňák <TFS\xzelenakm1> | Done |  | 1.5
-| 34 | Task | Testy a odkaz na testy | Matúš Zeleňák <TFS\xzelenakm1> | Done |  | 3
-| 35 | Task | Používateľská príručka | Matúš Zeleňák <TFS\xzelenakm1> | Done |  | 1.5
-| 36 | Task | Diagramy, technická dokumentácia, odkazy na kód | Matúš Zeleňák <TFS\xzelenakm1> | Done |  | 5
-| 37 | Task | Bližšia špecifikácia | Matúš Zeleňák <TFS\xzelenakm1> | Done |  | 3
-| 44 | Task | Nastaviť Pipeline | Jakub Blažej <TFS\xblazejj> | Done |  | 4
-| 46 | Task | Analyzovať vhodný nástroj | Bc. Eva Nedeliaková <TFS\xnedeliakova> | Done |  | 1.5
-| 47 | Task | Zmigrovať aktuálnu dokumentáciu do nového nástroja | Bc. Eva Nedeliaková <TFS\xnedeliakova> | Done |  |
-| 52 | Task | Všeobecný opis (motivácia) | Bc. Šimon Vároš <TFS\xvaros> | Done |  | 1
-| 58 | Task | Bližšia špecifikácia | Bc. Šimon Vároš <TFS\xvaros> | Done |  | 2
-| 59 | Task | Používateľská príručka | Bc. Šimon Vároš <TFS\xvaros> | Done |  | 3
-| 71 | Task | Diagramy, technická dokumentácia, odkazy na kód | Bc. Šimon Vároš <TFS\xvaros> | Done |  | 2.5
-| 74 | Task | Testy a odkaz na testy | Bc. Šimon Vároš <TFS\xvaros> | Done |  | 0.5
-| 103 | Task | Doplnit extensions | Bc. Šimon Vároš <TFS\xvaros> | Done |  | 0.5
-| 104 | Task | "Ďalšie opravy, ktoré sa vynorili ""po ceste""" | Bc. Martina Hanáková <TFS\xhanakova> | Done |  | 0.25
-| 105 | Task | Doplniť do DOD pre dokumentáciu, že má byť vygenerovaná na stránke | Bc. Eva Nedeliaková <TFS\xnedeliakova> | Done |  |
-| 106 | Task | Naštudovanie domény testovania | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done |  | 2.5
-| 107 | Task | Dokumentácia aktuálneho stavu testov | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done |  | 2
-| 108 | Task | Spustenie testov | Bc. Andrej Erdélsky <TFS\xerdelsky> | Done |  | 2
-| 109 | Task | analýza testov | Jakub Blažej <TFS\xblazejj> | Done |  | 4
-| 110 | Task | spustenie testov | Jakub Blažej <TFS\xblazejj> | Done |  | 7
-| 111 | Task | vytvorenie CI na testy | Jakub Blažej <TFS\xblazejj> | Done |  | 5
-| 112 | Task | Integrovať Luapower | Bc. Ladislav Zemko <TFS\xzemko> | Done |  | 6
-| 113 | Task | Upraviť modul LuaInterface | Bc. Ladislav Zemko <TFS\xzemko> | Done |  | 2
-| 114 | Task | Upraviť modul LuaGraph | Bc. Ladislav Zemko <TFS\xzemko> | Done |  | 3
-| 116 | Task | Analýza CMake | Bc. Ladislav Zemko <TFS\xzemko> | Done |  | 6
-| 118 | Task | Ako logovať z kódu, ver.2 | Bc. Marek Krátky <TFS\xkratkym1> | Done |  | 1
-| 119 | Task | Review | Jakub Blažej <TFS\xblazejj> | Done |  | 1
-| 123 | Task | Modifikácia CMake pre 3dsoftvis_remake | Bc. Ladislav Zemko <TFS\xzemko> | Done |  | 8
-| 124 | Task | zdokumentovanie | Jakub Blažej <TFS\xblazejj> | Done |  | 2
-| 125 | Task | Dokumentácia Luapower | Bc. Ladislav Zemko <TFS\xzemko> | Done |  | 1
-| 127 | Task | Upraviť inštalačnú príručku | Bc. Ladislav Zemko <TFS\xzemko> | Done |  | 1
-| 129 | Task | Vytvoriť dokumentáciu k vytvoreným kofiguráciam | Bc. Eva Nedeliaková <TFS\xnedeliakova> | Done |  | 1.8
+|  **ID**  |  **Work Item Type**  |  **Title**  |  **Assigned To**  |  **State**  |
+| -------- | -------------------- | ----------- | ----------------- | ----------- |
+|802|	Product Backlog Item|	Štúdium CI	|Done	|Bc. Michal Jozefek|
+|803|	Task|	Príručka CI na gitlabe	|Done	|Bc. Michal Jozefek|
+|799|	Product Backlog Item|	Analýza repozitára denev	|Done	|Bc. Michal Jozefek|
+|800|	Task|	Analýza repozitára denev	|Done	|Bc. Michal Jozefek|
+|765|	Product Backlog Item|	Analýza CI na GitLabe	|Done	|Bc. Samuel Šouc|
+|767|	Task|	Prečítať príručku k CI/CD na GitLabe	|Done	|Bc. Samuel Šouc|
+|768|	Task|	Zistiť informácie o CI projektu od Jakuba Blažeja	|Done	|Bc. Samuel Šouc|
+|769|	Task|	Naštudovať kód CI na GitLabe	|Done	|Bc. Samuel Šouc|
+|785|	Task|	Tutoriál na GitLab runner	|Done	|Bc. Samuel Šouc|
+|788|	Task|	Napísať report	|Done	|Bc. Samuel Šouc|
+|798|	Task|	Preštudovať dokumentáciu k CI	|Done	|Bc. Samuel Šouc|
+|787|	Product Backlog Item|	Analýza architektúry [Niko]	|Done	|Bc. Nikodém Adler|
+|827|	Task|	Analyzovať architektúru	|Done	|Bc. Nikodém Adler|
+|789|	Product Backlog Item|	Analýza architektúry [Ivka]	|Done	|Bc. Ivana Frankovičová|
+|826|	Task|	Analyzovať architektúru	|Done	|Bc. Ivana Frankovičová|
+|790|	Product Backlog Item|	Luadb	|Done	|Bc. Michael Kročka|
+|791|	Task|	Luadb - Analyzovať pokrytie dokumentácie	|Done	|Bc. Michael Kročka|
+|792|	Task|	Luadb - Analyzovať stav CI	|Done	|Bc. Michael Kročka|
+|793|	Task|	Luadb - Nemergnuté branche	|Done	|Bc. Michael Kročka|
+|794|	Product Backlog Item|	Luametrics	|Done	|Bc. Michael Kročka|
+|796|	Task|	Luametrics - Analyzovať stav CI	|Done	|Bc. Michael Kročka|
+|795|	Task|	Luametrics - Analyzovať pokrytie dokumentácie	|Done	|Bc. Michael Kročka|
+|797|	Task|	Luametrics - Nemergnuté branche	|Done	|Bc. Michael Kročka|
+|720|	Product Backlog Item|	Metodiky - časť 2	|Done	|Bc. Michal Jozefek|
+|730|	Task|	Definitions of |Done	|Done	|Bc. Michal Jozefek|
+|731|	Task|	Definitions of ready	|Done	|Bc. Michal Jozefek|
+|915|	Task|	Metodika záznamov zo stretnutí	|In Progress	|Bc. Andrej Hoferica|
+|783|	Product Backlog Item|	Naklonovanie dokumentácie	|Done	|Bc. Michal Jozefek|
+|784|	Task|	Naklonovať	|Done	|Bc. Michal Jozefek|
+|829|	Product Backlog Item|	Luameg	|Done	|Bc. Andrej Hoferica|
+|834|	Task|	Luameg - Analyzovať dokumentáciu	|Done	|Bc. Andrej Hoferica|
+|835|	Task|	Luameg - Analyzovať CI	|Done	|Bc. Andrej Hoferica|
+|836|	Task|	Luameg - Analyzovať nemergnuté branche	|Done	|Bc. Andrej Hoferica|
+|831|	Product Backlog Item|	Luagit	|Done	|Bc. Andrej Hoferica|
+|838|	Task|	Luagit - Analyzovať dokumentáciu	|Done	|Bc. Andrej Hoferica|
+|841|	Task|	Luagit - Analyzovať CI	|Done	|Bc. Andrej Hoferica|
+|844|	Task|	Luagit - Analyzovať nemergnuté branche	|Done	|Bc. Andrej Hoferica|
+|715|	Product Backlog Item|	Vytvorenie webstránky	|Done	|Bc. Michael Kročka|
+|761|	Task|	Analýza Documentation z Gitlabu	|Done	|Bc. Michael Kročka|
+|762|	Task|	Update obsahu stránky	|Done	|Bc. Michael Kročka|
+|764|	Task|	Naklonovanie repozitára Documentation	|Done	|Bc. Michael Kročka|
+|777|	Task|	Vytvorenie stromovej štruktúry a vloženie obsahu dokumentu	|Done	|Bc. Michael Kročka|
+|763|	Product Backlog Item|	Deployment webstránky	|Done	|Bc. Michael Kročka|
+|781|	Task|	Deployment stránky	|Done	|Bc. Michael Kročka|
+|782|	Task|	Nastavenie správnej domény	|Done	|Bc. Michael Kročka|
+|786|	Task|	Upratanie github-pages	|Done	|Bc. Michael Kročka|
+|713|	Product Backlog Item|	Aktualizácia pri zaheslovanom SSH kľúči	|Done	|Bc. Michael Kročka|
+|775|	Task|	Vytvorenie postupu riešenia problému pri zaheslovanom SSH kľúči	|Done	|Bc. Michael Kročka|
+|832|	Product Backlog Item|	Luatree	|Done	|Bc. Andrej Hoferica|
+|842|	Task|	Luatree - Analyzovať CI	|Done	|Bc. Andrej Hoferica|
+|839|	Task|	Luatree – Analyzovať dokumentáciu	|Done	|Bc. Andrej Hoferica|
+|845|	Task|	Luatree - Analyzovať nemergnuté branche	|Done	|Bc. Andrej Hoferica|
+|778|	Product Backlog Item|	Analýza Lua zdrojových kódov	|Done	|Bc. Andrej Hoferica|
+|779|	Task|	Analyzovať generovanie grafov	|Done	|Bc. Andrej Hoferica|
+|780|	Task|	Analyzoavť účele Lua repozitárov	|Done	|Bc. Andrej Hoferica|
+|804|	Product Backlog Item|	CI Images	|Done	|Bc. Samuel Šouc|
+|806|	Task|	CI Images - Analyzovať stav CI	|Done	|Bc. Samuel Šouc|
+|807|	Task|	CI Images - Analyzovať pokrytie dokumentácie	|Done	|Bc. Samuel Šouc|
+|808|	Task|	CI Images - Nemergnuté branche	|Done	|Bc. Samuel Šouc|
+|812|	Task|	CI Images - Správa o stave	|Done	|Bc. Samuel Šouc|
+|805|	Product Backlog Item|	Documentation	|Done	|Bc. Samuel Šouc|
+|809|	Task|	Documentation - Analyzovať stav CI	|Done	|Bc. Samuel Šouc|
+|810|	Task|	Documentation - Analyzovať pokrytie dokumentácie	|Done	|Bc. Samuel Šouc|
+|811|	Task|	Documentation - Nemergnuté branche	|Done	|Bc. Samuel Šouc|
+|813|	Task|	Documentation - správa o stave	|Done	|Bc. Samuel Šouc|
+|814|	Product Backlog Item|	LuaInterface	|Done	|Bc. Ivana Frankovičová|
+|820|	Task|	LuaInterface - Analyzovať pokrytie dokumentácie	|Done	|Bc. Ivana Frankovičová|
+|821|	Task|	LuaInterface - Analyzovať stav CI	|Done	|Bc. Ivana Frankovičová|
+|822|	Task|	LuaInterface - Nemergnuté branche	|Done	|Bc. Ivana Frankovičová|
+|815|	Product Backlog Item|	LuaGraph	|Done	|Bc. Ivana Frankovičová|
+|817|	Task|	LuaGraph - Analyzovať pokrytie dokumentácie	|Done	|Bc. Ivana Frankovičová|
+|818|	Task|	LuaGraph - Analyzovať stav CI	|Done	|Bc. Ivana Frankovičová|
+|819|	Task|	LuaGraph - Nemergnuté branche	|Done	|Bc. Ivana Frankovičová|
+|816|	Product Backlog Item|	3DSoftviz_remake	|Done	|Bc. Nikodém Adler|
+|823|	Task|	3DSoftviz_remake - Analyzovať pokrytie dokumentácie	|Done	|Bc. Nikodém Adler|
+|824|	Task|	3DSoftviz_remake - Analyzovať stav CI	|Done	|Bc. Nikodém Adler|
+|825|	Task|	3DSoftviz_remake - Nemergnuté branche	|Done	|Bc. Nikodém Adler|
+|830|	Task|	Terra	|Done	|Bc. Andrej Hoferica|
+|837|	Task|	Terra - Analyzovať dokumentáciu	|Done	|Bc. Andrej Hoferica|
+|840|	Task|	Terra - Analyzovať CI	|Done	|Bc. Andrej Hoferica|
+|843|	Task|	Terra - Analyzovať nemergnuté branche	|Done	|Bc. Andrej Hoferica| |
