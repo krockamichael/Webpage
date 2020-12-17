@@ -271,6 +271,11 @@ pravdepodobne kvôli vzniku cyklov vo výslednom grafe, v dôsledku čoho nie je
 prostredníctvom knižnice ZeroMQ, ani CJSON. Po odstránení cyklov by so serializáciou nemal byť problém.  
 Tento problém sa vyskytuje pri priamom volaní funkcie `extractor.extract`, ktorá je súčasťou submodulu `luadb.extraction.extractor`.
 
+## LuaServer
+Aktuálne je v module luaserver využívaná knižnica MessagePack, ZeroMQ na komunikáciu a CJSON na serializáciu správ.
+LuaServer je samostatný repozitár na GitLabe, ktorý je zahrnutý aj vo vývojovom prostredí devenv na vetve 
+feature/krocka-include-luaserver. Väčšina funkcionality sa v tomto momente nachádza na vetve feature/souc-luaserver.
+
 ## Poznámky
 K dipozícii je viacero vývojových rámcov umožňujúcich komunikáciu medzi viacerými uzlami. Jedným z riešení
 môže byť [gRPC](https://grpc.io/), ktoré však nemá k dispozícii oficiálnu knižnicu pre jazyk Lua.  

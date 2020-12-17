@@ -54,6 +54,10 @@ Modul má vybudovanú [infraštruktúru](../infrastruktura/ci/lua/luatree.md) a 
 Modul Luagit slúži na analýzu Git repozitárov, pričom k svojej činnosti využíva moduly Luametrics a Luadb.  
 Modul má vybudovanú [infraštruktúru](../infrastruktura/ci/lua/luagit.md) a vlastný [build systém](../infrastruktura/build/lua/luagit.md).
 
+#### Luaserver
+Modul Luaserver slúži ako server ktorý v budúcnosti nahradí C++ a niektoré C# vrsvy, pričom k svojej činnosti využíva moduly ostatné moduly Lua.  
+Modul zatiaľ nemá vybudovanú infraštruktúru.
+
 ### C++
 
 Druhá vrstva, reprezentovaná programovacím jazykom C++, slúži ako rozhranie pre C# moduly, aby mohli komunikovať s Lua modulmi a získavať

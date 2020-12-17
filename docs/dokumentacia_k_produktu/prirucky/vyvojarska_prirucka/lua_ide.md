@@ -8,7 +8,7 @@ Odporúčame použiť Visual Studio Code, najmä kvôli použitiu docker-u a pro
 
 #### Príprava repozitárov a kontajnera
 
-Na disku na ľubovoľné miesto naklonujeme a repozitár `devenv` a inicializujeme submoduly.
+Na disku na ľubovoľné miesto naklonujeme repozitár `devenv` a inicializujeme submoduly.
 Submoduly jednotlivých submodulov (teda závislosti lua modulov) nie je potrebne sťahovať,
 pretože niektoré sú nainštalované v image a zvyšné ako submoduly devenv repozitára.
 Následne vytvoríme image a spustíme kontajner.
