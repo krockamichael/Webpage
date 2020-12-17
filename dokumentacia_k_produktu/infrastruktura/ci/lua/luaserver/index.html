@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="http://team03-20.studenti.fiit.stuba.sk/docs/dokumentacia_k_produktu/infrastruktura/ci/lua/luametrics/">
+        <link rel="canonical" href="http://team03-20.studenti.fiit.stuba.sk/docs/dokumentacia_k_produktu/infrastruktura/ci/lua/luaserver/">
       
       
       <link rel="shortcut icon" href="../../../../../img/favicon.ico">
@@ -15,7 +15,7 @@
     
     
       
-        <title>LuaMetrics - 3DSoftViz</title>
+        <title>LuaServer - 3DSoftViz</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#luametrics" class="md-skip">
+        <a href="#luaserver" class="md-skip">
           Preskočiť na obsah
         </a>
       
@@ -92,7 +92,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              LuaMetrics
+              LuaServer
             
           </span>
         </div>
@@ -1418,70 +1418,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        LuaMetrics
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../luametrics/" class="md-nav__link">
       LuaMetrics
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Obsah">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Obsah
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#before_script" class="md-nav__link">
-    before_script
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-stage" class="md-nav__link">
-    build stage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-stage" class="md-nav__link">
-    test stage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-stage" class="md-nav__link">
-    deploy stage
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1525,11 +1466,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../luaserver/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       LuaServer
     </a>
+    
   </li>
 
         
@@ -2226,42 +2176,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Obsah
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#before_script" class="md-nav__link">
-    before_script
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-stage" class="md-nav__link">
-    build stage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-stage" class="md-nav__link">
-    test stage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-stage" class="md-nav__link">
-    deploy stage
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2273,31 +2187,8 @@
               
                 
                 
-                <h1 id="luametrics">LuaMetrics<a class="headerlink" href="#luametrics" title="Permanent link">&para;</a></h1>
-<p>Pipeline sa skladá z <code>before_script</code> a 2 stage. Celá pipeline využíva image
-<code>registry.gitlab.com/fiit/common/ci-images/lua</code>, ktorý obsahuje potrebné
-závislosti pre zostavovanie, testovanie a dokumentáciu modulov vytvorených v jazyku Lua.</p>
-<h2 id="before_script"><code>before_script</code><a class="headerlink" href="#before_script" title="Permanent link">&para;</a></h2>
-<ul>
-<li>import SSH klúčov</li>
-</ul>
-<h2 id="build-stage"><code>build</code> stage<a class="headerlink" href="#build-stage" title="Permanent link">&para;</a></h2>
-<ul>
-<li>sťahovanie závislosti</li>
-<li>cmake a následne make</li>
-<li>vygenerovanie dokumentácie zo zdrojového kódu nástrojom <code>ldoc</code> do adresára <code>doc</code> v HTML formáte</li>
-<li>vygenerovanie code snippetov pomocou <a href="../../gitlab_images/doc_extra/">doc-extra/snippet-extract.py</a></li>
-</ul>
-<h2 id="test-stage"><code>test</code> stage<a class="headerlink" href="#test-stage" title="Permanent link">&para;</a></h2>
-<ul>
-<li>spustenie testov vo frameworku busted</li>
-<li>kontrola pokrytia zdrojového kódu nástrojom <code>luacov</code></li>
-<li>statická analýza zdrojového kódu v jazyku Lua</li>
-</ul>
-<h2 id="deploy-stage"><code>deploy</code> stage<a class="headerlink" href="#deploy-stage" title="Permanent link">&para;</a></h2>
-<ul>
-<li>export vygenerovanej dokumentácie na vzdialený server prostredníctvom programu <code>rsync</code></li>
-</ul>
+                <h1 id="luaserver">LuaServer<a class="headerlink" href="#luaserver" title="Permanent link">&para;</a></h1>
+<p>Pre tento repozitár ešte nie je vyotvorená infraštruktúra CI.</p>
                 
               
               
@@ -2316,7 +2207,7 @@ závislosti pre zostavovanie, testovanie a dokumentáciu modulov vytvorených v 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../luadb/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../luatree/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -2325,19 +2216,19 @@ závislosti pre zostavovanie, testovanie a dokumentáciu modulov vytvorených v 
                 <span class="md-footer-nav__direction">
                   Späť
                 </span>
-                LuaDB
+                LuaTree
               </div>
             </div>
           </a>
         
         
-          <a href="../luameg/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../dokumentacia/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Ďalej
                 </span>
-                LuaMeg
+                Dokumentácia
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

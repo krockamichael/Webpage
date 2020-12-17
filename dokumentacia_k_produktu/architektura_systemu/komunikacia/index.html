@@ -1117,6 +1117,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#luaserver" class="md-nav__link">
+    LuaServer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#poznámky" class="md-nav__link">
     Poznámky
   </a>
@@ -1613,6 +1620,18 @@
   <li class="md-nav__item">
     <a href="../../infrastruktura/ci/lua/luatree/" class="md-nav__link">
       LuaTree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/lua/luaserver/" class="md-nav__link">
+      LuaServer
     </a>
   </li>
 
@@ -2156,6 +2175,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/vyvojarska_prirucka/luaserver/" class="md-nav__link">
+      LuaServer
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2409,6 +2440,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luaserver" class="md-nav__link">
+    LuaServer
+  </a>
   
 </li>
       
@@ -2692,6 +2730,10 @@ v IDE Visual Studio zostaviť a spustiť.</p>
 pravdepodobne kvôli vzniku cyklov vo výslednom grafe, v dôsledku čoho nie je možné nad týmito údajmi vykonať serializáciu ani 
 prostredníctvom knižnice ZeroMQ, ani CJSON. Po odstránení cyklov by so serializáciou nemal byť problém.<br />
 Tento problém sa vyskytuje pri priamom volaní funkcie <code>extractor.extract</code>, ktorá je súčasťou submodulu <code>luadb.extraction.extractor</code>.</p>
+<h2 id="luaserver">LuaServer<a class="headerlink" href="#luaserver" title="Permanent link">&para;</a></h2>
+<p>Aktuálne je v module luaserver využívaná knižnica MessagePack, ZeroMQ na komunikáciu a CJSON na serializáciu správ.
+LuaServer je samostatný repozitár na GitLabe, ktorý je zahrnutý aj vo vývojovom prostredí devenv na vetve 
+feature/krocka-include-luaserver. Väčšina funkcionality sa v tomto momente nachádza na vetve feature/souc-luaserver.</p>
 <h2 id="poznámky">Poznámky<a class="headerlink" href="#poznámky" title="Permanent link">&para;</a></h2>
 <p>K dipozícii je viacero vývojových rámcov umožňujúcich komunikáciu medzi viacerými uzlami. Jedným z riešení
 môže byť <a href="https://grpc.io/">gRPC</a>, ktoré však nemá k dispozícii oficiálnu knižnicu pre jazyk Lua.  </p>
