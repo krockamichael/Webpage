@@ -28,7 +28,7 @@
 | 1015	| Task |	Recv()	| Done |	Bc. Michal Jozefek |
 | 1016	| Task |	Vytvor spravu - json()	| Done |	Bc. Michal Jozefek |
 | 1017	| Task |	Spracovat spravu -JSON	| Done |	Bc. Michal Jozefek |
-| 1018	| Product Backlog Item |	Luaserver repozitar setup	To accept	Bc. Michael Kročka |
+| 1018	| Product Backlog Item |	Luaserver repozitar setup |	To accept	| Bc. Michael Kročka |
 | 1019	| Task |	Adresárová štruktúra	| Done |	Bc. Michael Kročka |
 | 1020	| Task |	Potrebné súbory	| Done |	Bc. Michael Kročka |
 | 1021	| Task |	Zaradenie luaserver do devenv	| Done |	Bc. Michael Kročka |
