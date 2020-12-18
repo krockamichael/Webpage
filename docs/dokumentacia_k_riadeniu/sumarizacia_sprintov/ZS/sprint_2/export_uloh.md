@@ -1,6 +1,6 @@
 # Export úloh
 
-|  **ID**  |  **Work Item Type**  |  **Title**  |  **Assigned To**  |  **State**  |
+| **ID** |  **Work Item Type**  | **Title** |    **State**    | **Assigned To** |
 | -------- | -------------------- | ----------- | ----------------- | ----------- |
 |802|	Product Backlog Item|	Štúdium CI	|Done	|Bc. Michal Jozefek|
 |803|	Task|	Príručka CI na gitlabe	|Done	|Bc. Michal Jozefek|

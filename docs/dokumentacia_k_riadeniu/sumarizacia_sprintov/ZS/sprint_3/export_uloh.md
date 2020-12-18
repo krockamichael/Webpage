@@ -1,6 +1,6 @@
 # Export úloh
 
-| **ID** | **Work Item Type** | **Title** | **Assigned To** | **State** |
+| **ID** |  **Work Item Type**  | **Title** |    **State**    | **Assigned To** |
 |--------|--------------------|-----------|-----------------|-----------|
 |868	|Product Backlog Item|	Prvotné spustenie testov	|Done|	Bc. Andrej Hoferica|
 |869	|Task|	Spustiť test 'dir_files_spec.lua' z repozitáru luadb	|Done|	Bc. Andrej Hoferica|

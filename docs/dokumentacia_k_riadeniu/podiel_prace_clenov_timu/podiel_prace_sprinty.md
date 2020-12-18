@@ -29,3 +29,23 @@
 | Samuel Šouc        | 11	                          | 10	                       | 2                                | 3               | 6.98%          |
 | Andrej Hoferica	 | 3	                          | 3	                       | 3                      	      | 5               | 10.34%         |
 | Michal Jozefek     | 8	                          | 8                          | 7                                | 6               | 24.13%         |
+
+## Šprint 4
+|                    | **Počet naplánovaných taskov** | **Počet dodaných taskov**  | **Počet dodaných story pointov** | **Počet hodín** |	**Percentá** |
+|--------------------|--------------------------------|----------------------------|----------------------------------|-----------------|----------------|
+| Nikodém Adler	     | 2	                          | 0	                       | 0	                              | 6               | 0%             |
+| Ivana Frankovičová | 2	                          | 0	                       | 0	                              | 3               | 0%             |
+| Michael Kročka     | 13	                          | 13                         | 4                                | 9.5             | 66.66%         |
+| Samuel Šouc        | 5	                          | 0	                       | 0                                | 3               | 0%             |
+| Andrej Hoferica	 | 5	                          | 5	                       | 2                      	      | 4               | 33.33%         |
+| Michal Jozefek     | 2	                          | 1                          | 0                                | 5               | 0%             |
+
+## Šprint 5
+|                    | **Počet naplánovaných taskov** | **Počet dodaných taskov**  | **Počet dodaných story pointov** | **Počet hodín** |	**Percentá** |
+|--------------------|--------------------------------|----------------------------|----------------------------------|-----------------|----------------|
+| Nikodém Adler	     | 4	                          | 3	                       | 3	                              | 6               | 50%            |
+| Ivana Frankovičová | 5	                          | 5	                       | 2	                              | 3               | 33.33%         |
+| Michael Kročka     | 13	                          | 10                         | 0                                | 13              | 0%             |
+| Samuel Šouc        | 4	                          | 4	                       | 0                                | 7               | 0%             |
+| Andrej Hoferica	 | 4	                          | 1	                       | 1                      	      | 4               | 16.6%          |
+| Michal Jozefek     | 5	                          | 4                          | 0                                | 8               | 0%             |
