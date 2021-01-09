@@ -1624,9 +1624,52 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        LuaServer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       LuaServer
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before_script" class="md-nav__link">
+    before_script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-stage" class="md-nav__link">
+    build stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-stage" class="md-nav__link">
+    test stage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2324,6 +2367,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before_script" class="md-nav__link">
+    before_script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-stage" class="md-nav__link">
+    build stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-stage" class="md-nav__link">
+    test stage
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2336,7 +2408,25 @@
                 
                 
                 <h1 id="luaserver">LuaServer<a class="headerlink" href="#luaserver" title="Permanent link">&para;</a></h1>
-<p>Pre tento repozitár ešte nie je vyotvorená infraštruktúra CI.</p>
+<p>Pipeline sa skladá z <code>before_script</code> a 2 stage. Celá pipeline využíva image
+<code>registry.gitlab.com/fiit/common/ci-images/lua</code>, ktorý obsahuje potrebné
+závislosti pre zostavovanie, testovanie a dokumentáciu modulov vytvorených v jazyku Lua.</p>
+<h2 id="before_script"><code>before_script</code><a class="headerlink" href="#before_script" title="Permanent link">&para;</a></h2>
+<ul>
+<li>import SSH klúčov</li>
+<li>update závislosti</li>
+</ul>
+<h2 id="build-stage"><code>build</code> stage<a class="headerlink" href="#build-stage" title="Permanent link">&para;</a></h2>
+<ul>
+<li>vygenerovanie dokumentácie zo zdrojového kódu nástrojom <code>ldoc</code> do adresára <code>doc</code> v HTML formáte</li>
+<li>vygenerovanie code snippetov pomocou <a href="../../gitlab_images/doc_extra/">doc-extra/snippet-extract.py</a></li>
+</ul>
+<h2 id="test-stage"><code>test</code> stage<a class="headerlink" href="#test-stage" title="Permanent link">&para;</a></h2>
+<ul>
+<li>spustenie testov vo frameworku busted</li>
+<li>kontrola pokrytia zdrojového kódu nástrojom <code>luacov</code></li>
+<li>statická analýza zdrojového kódu v jazyku Lua</li>
+</ul>
                 
               
               
