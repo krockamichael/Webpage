@@ -1,7 +1,8 @@
-**Trvanie šprintu: 17.02.-01.03. 2020**
+**Trvanie šprintu: 21.02.-07.03. 2021**
 
-**Doručené story pointy: 18/28**
+**Doručené story pointy: 20/Y**
 
-Počas prvého šprintu v letnom semestri sme sa zamerali na automatické generovanie dokumentácie zo zdrojových kódov, ako aj ich upload na našu stránku. Ďalej sme sa venovali analýze toho ako sa vytvára náš graf v jednotlivých moduloch projektu. Výstupom tejto analýzy by mal byť graf volaní. Tiež sme analyzovali vytváranie UML diagramov z Luadb grafu.
-
-Tento šprint dopadol pomerne úspešne, zostalo len pár taskov, ktoré neboli dokončené.
+V tomto šprinte sme pracovali na refaktoringu, vytvorili sme si v Unity novú scénu pre tento účel. Zo starého riešenia sme
+preniesli funkcionalitu ovládania layoutovania grafu a vytvorili pre funkčné api pre volanie príkazov z Unity na Lua server.
+Pracovali sme aj na implementácia návhrového štýlu "Data Column", kde sa údaje štruktúry (grafu) prenášajú po stĺpcoch, teda 
+po atribútoch. Implementovali sme to pre rôzne atribúty uzlov (farba, veľkosť, pozícia, ...) a hrán (zdrojový / koncový uzol id, ...).
