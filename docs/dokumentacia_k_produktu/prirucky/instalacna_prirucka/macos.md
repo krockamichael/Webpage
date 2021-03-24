@@ -7,9 +7,12 @@
     - CMake je nástroj na správu procesu zostavovania softvéru, podporuje adresárovú hierarchiu a viacnásobné závislosti.  
 - [Doxygen 1.8.16](http://doxygen.nl/files/Doxygen-1.8.16.dmg)
     - Doxygen je nástroj na generovanie dokumentácie z anotovaného zdrojového kódu aplikácie.
-- [Unity 2018.1.9f2](https://unity3d.com/get-unity/download)
+- [Unity 2018.3.7f1](https://unity3d.com/get-unity/download)
     - Unity je vývojová platforma pre tvorbu real-time 3D aplikácií,
     - Potrebné je stiahnuť a nainštalovať aplikáciu Unity Hub, do ktorého je potom možné pridať požadovanú verziu Unity.  
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+    - Docker je potrebný na spustenie kontajneru s Lua modulmi, najmä pre modul `luaserver`
+    - Detaily o inštalácii dockeru je možné nájsť na [tejto](../vyvojarska_prirucka/luaserver.md) podstránke
 - [Git](https://git-scm.com/download/mac)
     - potrebné je nahrať svoj verejný kľúč na **GitLab**, ale aj **GitHub**
 ## Postup
@@ -40,7 +43,7 @@ Host *
     
 #### Výber vetvy
 
-     - príkazom `git checkout zemko-us-42` vyberieme požadovanú vetvu - v našom
+     - príkazom `git checkout feature/refactor` vyberieme požadovanú vetvu - v našom
        prípade pracovnú vetvu pre platformu macOS
      
 #### Inicializácia sub-modulov
@@ -54,7 +57,7 @@ Host *
     - ako `build binaries` zvolíme priečinok `3dsoftvis_remake/_build`,
     - stlačíme tlačidlo configure,
     - ako generátor použijeme `Unix Makefiles` a vyberieme možnosť `Use default native compilers`,
-    - vyberieme možnosti `BUILD_DOXYGEN_DOCUMENTATION`, `BUILD_SOFTVIZ_MODULES_TESTS`, `BUILD_UNITY`, `USE_TERRA_BINARIES`,
+    - vyberieme možnosti `BUILD_DOXYGEN_DOCUMENTATION`, `BUILD_SOFTVIZ_MODULES_TESTS`, `BUILD_UNITY`
     - ako `CMAKE_INSTALL_PREFIX` zvolíme priečinok `3dsoftvis_remake/_install`,
     - stlačíme tlačidlo configure,
     - ako `UNITY EXECUTABLE` nastavíme cestu k `Unity.app`,
@@ -72,6 +75,10 @@ Host *
     - vyberieme možnosť Add,  
     - vyhľadáme podadresár `3dsoftvis_remake/Projects/3DSoftviz/UnityProject`
     - vyberieme možnosť Open.
+
+### Spustenie projektu
+
+Po kliknutí na Unity projekt sa nám otvorí okno s aplikáciou Unity. V ďalšom kroku treba ešte spustiť Docker kontajner (predpokladáme, že Docker bol nainštalovaný podľa [odporúčanej príručky](../vyvojarska_prirucka/luaserver.md)). Docker spustíme príkazom `docker start -i luadev`. Skript, ktorý funguje ako server a čaká na príkazy z Unity, spustíme príkazom `lua luaserver/src/LuaScripts/app/main.lua`. Keď sa skript spustí, môžeme sa prepnúť do aplikácie Unity a kliknúť na tlačidlo Play, ktoré začne zobrazovať graf.
 
 ### Testy
 
