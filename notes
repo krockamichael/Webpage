@@ -1,8 +1,4 @@
 hidden pages:
-    - docs/dokumentacia_k_riadeniu/podiel_prace_clenov_timu
-    - docs/dokumentacia_k_riadeniu/aplikacie_manazmentov
-    - docs/dokumentacia_k_riadeniu/sumarizacia_sprintov
     - docs/dokumentacia_k_riadeniu/globalna_retrospektiva
-    - docs/dokumentacia_k_riadeniu/metodiky
     --- v každom tomto priečinku zo súboru ".pages" vymazať "hide: true"
     --- taktiež treba dodatočne napísať náš obsah stránok
