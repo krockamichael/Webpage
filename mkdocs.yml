@@ -1,9 +1,12 @@
 site_name: 3DSoftViz
-site_url: http://team03-20.studenti.fiit.stuba.sk/docs
+site_url: http://team03-20.studenti.fiit.stuba.sk/
 plugins:
 - search
 - macros
 - awesome-pages
+- redirects:
+      redirect_maps:
+        'README.md': 'http://team03-20.studenti.fiit.stuba.sk/home.html'
 - pdf-export:
     media_type: print
     combined: true
