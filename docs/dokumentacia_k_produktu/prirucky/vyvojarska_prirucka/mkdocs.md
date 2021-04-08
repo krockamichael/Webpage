@@ -9,17 +9,14 @@ Mkdocs je napísaný v jazyku python, preto je potrebné ho mať nainštalovaný
 Odporúčame verziu 3.6 alebo 3.7, stiahnutý zo stránky [python.org](https://www.python.org/downloads/).
 V čase písania (marec 2020) pod verziou 3.8 nefunguje z dôvodu bugu.
 
-Následne nainštalujeme samotný mkdocs a závislosti.
+Následne nainštalujeme samotný mkdocs a závislosti v konkrétnych verziách z dôvodu podpory pre slovenské vyhľadávanie.
 ``` bash
-pip3 install mkdocs mkdocs-material mkdocs-awesome-pages-plugin pygments mkdocs-pdf-export-plugin
-pip3 install weasyprint
+pip3 install mkdocs==1.0.4 mkdocs-material==4.6.0 mkdocs-awesome-pages-plugin==2.2.0 markdown==3.1.1
+pip3 install pygments==2.5.2 mkdocs-pdf-export-plugin==0.5.5 mkdocs-macros-plugin==0.3.3
+pip3 install weasyprint==50
 ```
 Balík `weasyprint` je obvykle nutné inštalovať zvlášt prípadne na dva krát,
 pretože sa nenainštaluje korektne.
-
-!!! warning "Verzie"
-    Je potrebné inštalovať verziu mkdocs 1.0.4 kvôli nepodpore slovenského vyhľadávania v novej verzii  
-	`pip3 install mkdocs==1.0.4 mkdocs-material==4.5.0 mkdocs-awesome-pages-plugin==2.1.0 pygments==2.4.2 mkdocs-pdf-export-plugin==0.5.5`
 
 ## Nastavenie
 Do vhodného priečinka naklonujeme repozitár
