@@ -1,0 +1,108 @@
+= Architektúra systému
+
+== Celkový pohľad na systém
+
+Kapitola obsahuje opis základnej architektúry projektu, jednotlivé vrstvy a ich moduly. Všetky moduly majú vybudovanú infraštruktúru,
+ktorá zahŕňa kompiláciu, testovanie, coverage, generovanie dokumentácie zo zdrojového kódu a jej export na vzdialený server.
+
+=== Základná architektúra
+
+Architektúra projektu je zložená zo 4 vrstiev. +
+Na najnižšej vrstve sa nachádzajú moduly jazyka Lua. Tieto moduly priamo narábajú s
+reprezentáciou grafových údajov a vykonávajú nad nimi operácie. +
+Druhá vrstva je reprezentovaná programovacím jazykom C++. Na tejto vrstve sú implementované 2 moduly, ktoré slúžia ako rozhranie
+pre moduly jazyka C# pre prácu s najnižšou vrstvou, t.j. modulmi jazyka Lua. +
+Tretia vrstva je tvorená modulmi jazyka C#, ktoré poskytujú rozhranie pre Unity vrstvu, prostredníctvom ktorej je možné pracovať
+s nižšími vrstvami. +
+Najvyššia vrstva je reprezentovaná Unity, ktoré poskytuje grafickú reprezentáciu nižších vrstiev. 
+
+Architektúru projektu je možné vidieť na obrázku nižšie.
+
+image:img/diagram_architektury.JPG[]
+
+=== Lua
+
+Na tejto vrstve sa nachádza reprezentácia grafových údajov. Jednotlivé operácie nad grafom sú teda vykonávané na tejto vrstve.
+Vo všeobecnosti teda dochádza k prepočítavaniu a zmenám súradníc uzlov, analýze zdrojového kódu a počítaniu metrík. Bližšie
+informácie o generovaní grafu je možné nájsť v
+link:../funkcionalita_systemu/generovanie_grafu/analyza_lua3Dsoftviz.adoc[dokumentácii generovania grafu]. +
+S touto vrstvou úzko súvisí tiež jazyk Terra, v ktorom je implementovaný layoutovací algoritmus Fruchterman-Reingold. Na tejto vrstve
+je tiež možné analyzovať Moonscript projekty. Vrstva ďalej poskytuje funkcionalitu pre generovanie UML a sekvenčných diagramov. +
+Vrstva je celkovo tvorená 5 modulmi.
+
+==== Luadb
+
+Logika modulu Luadb priamo súvisí s tvorbou grafu. Obsahuje reprezentáciu hrán, uzlov a metauzlov. V rámci modulu sú tiež implementované operácie,
+ktoré je možné nad grafom vykonávať. Bližší popis modulu a layoutovacieho algoritmu je možné nájsť v
+link:moduly_systemu/lua.adoc[dokumentácii Lua modulov]. +
+Modul má vybudovanú link:../infrastruktura/ci/lua/luadb.adoc[infraštruktúru] a vlastný link:../infrastruktura/build/lua/luadb.adoc[build systém].
+
+==== Luametrics
+
+Modul Luametrics vykonáva analýzu zdrojového kódu a produkuje AST, spolu s metrikami. +
+Modul má vybudovanú link:../infrastruktura/ci/lua/luametrics.adoc[infraštruktúru] a vlastný
+link:../infrastruktura/build/lua/luametrics.adoc[build systém].
+
+==== Luameg
+
+Úlohou modulu je vytváranie UML a sekvenčných diagramov zo zdrojových kódov. Modul podporuje jazyky Lua a Moonscript. Bližšie informácie k
+jednotlivým diagramom je možné nájsť v dokumentácii link:../funkcionalita_systemu/uml_diagramy.adoc[UML diagramov]. +
+Modul má vybudovanú link:../infrastruktura/ci/lua/luameg.adoc[infraštruktúru] a vlastný link:../infrastruktura/build/lua/luameg.adoc[build systém].
+
+==== Luatree
+
+Luatree je balík nástrojov na analýzu a inšpekciu AST, ktoré produkuje modul Luametrics, a grafov volaní funkcií vytváraných modulom Luadb. +
+Modul má vybudovanú link:../infrastruktura/ci/lua/luatree.adoc[infraštruktúru] a vlastný link:../infrastruktura/build/lua/luatree.adoc[build systém].
+
+==== Luagit
+
+Modul Luagit slúži na analýzu Git repozitárov, pričom k svojej činnosti využíva moduly Luametrics a Luadb. +
+Modul má vybudovanú link:../infrastruktura/ci/lua/luagit.adoc[infraštruktúru] a vlastný link:../infrastruktura/build/lua/luagit.adoc[build systém].
+
+==== Luaserver
+
+Modul Luaserver slúži ako server ktorý v budúcnosti nahradí C++ a niektoré C# vrsvy, pričom k svojej činnosti využíva moduly ostatné moduly Lua. +
+Modul zatiaľ nemá vybudovanú infraštruktúru.
+
+=== C++
+
+Druhá vrstva, reprezentovaná programovacím jazykom C++, slúži ako rozhranie pre C# moduly, aby mohli komunikovať s Lua modulmi a získavať
+tak grafové údaje, prípadne nad týmito údajmi vykonávať operácie. Vrstva zahŕňa 2 moduly. Bližšie informácie o týchto moduloch
+je možné nájsť v link:moduly_systemu/cplusplus.adoc[dokumentácii C++ modulov].
+
+==== LuaInterface
+
+Modul slúži ako rozhranie medzi C# a Lua modulmi. Poskytuje metódy pre volanie Lua funkcií a získavanie informácií. +
+Modul má vybudovanú link:../infrastruktura/ci/cplusplus/luainterface.adoc[infraštruktúru] a vlastný
+link:../infrastruktura/build/cplusplus/luainterface.adoc[build systém].
+
+==== LuaGraph
+
+Úlohou modulu je načítať grafové údaje modulu Luadb a poskytovať ich vyšším vrstvám. +
+Modul má vybudovanú link:../infrastruktura/ci/cplusplus/luagraph.adoc[infraštruktúru] a vlastný
+link:../infrastruktura/build/cplusplus/luagraph.adoc[build systém].
+
+=== C#
+
+Programovací jazyk C# predstavuje pomyselnú tretiu vrstvu. C# moduly sú priamo využívané vyššou vrstvou. Tieto moduly zabezpečujú prístup k
+metódam C++ modulov a tiež umožňujú pracovať s grafovými údajmi. Na tejto vrstve obsahuje projekt 2 moduly. Bližší popis modulov
+je možné nájsť v link:moduly_systemu/csharp.adoc[dokumentácii C# modulov]. +
+link:../infrastruktura/ci/3dsoftviz_remake.adoc[Infraštruktúra] a link:../infrastruktura/build/3dsoftvis_remake.adoc[build systém] sú združené pre všetky C# moduly.
+
+==== Lua.Common
+
+Modul poskytuje prístup k C++ metódam, ktoré sú exportované vo forme DLL `LuaGraph` a `LuaInterface`. Modul obsahuje viaceré pomocné metódy,
+ktoré zjednodušujú reprezentáciu údajov, prípadne vykonávajú konverziu. Modul ďalej obsahuje viacero atribútov, ktoré zjednodušujú
+načítavanie polí, štruktúr a reťazcov.
+
+==== GraphCore
+
+V module je obsiahnutá logika súvisiaca s grafovými údajmi. Modul umožňuje prácu s grafom, načítavanie jeho aktuálneho stavu,
+polohy, prípadne iných špecifických vlastností.
+
+=== Unity
+
+Unity predstavuje najvyššiu vrstvu, ktorá slúži na zobrazovanie a manipuláciu grafových údajov prostredníctvom rozhraní nižších
+vrstiev. Údaje nižších vrstiev graficky reprezentuje. Logika práce Unity s grafovými údajmi je popísaná v
+link:../funkcionalita_systemu/generovanie_grafu/analyza_unity.adoc[dokumentácii generovania grafu]. +
+Vrstva zahŕňa viacero modulov. Bližší popis jednotlivých modulov je možné nájsť v link:moduly_systemu/unity.adoc[dokumentácii Unity modulov].

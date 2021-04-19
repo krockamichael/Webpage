@@ -1,0 +1,45 @@
+= Ako logovať z kódu
+
+Aplikácie, ktoré boli nasadené do výroby, sa musia monitorovať. Jedným z najlepších spôsobov,
+ako monitorovať správanie aplikácií, je emitovanie, ukladanie a indexovanie logovacích dát.
+Logy je možné posielať do rôznych aplikácií na indexovanie, kde ich možno vyhľadať v prípade problémov.
+
+**Je potrebné, aby každý log obsahoval informácie o tom, kde v kóde chyba nastala a kedy k nej došlo.**
+
+== Lua
+
+Zdrojové kódy napísané v jazyku `Lua` využívajú na logovanie modul link:https://github.com/LuaDist/lualogging[lualogging]. Všetky moduly, v ktorých je logovanie použité umožňuje buď použitie jednej, globálnej, inštancie logovacieho modulu, alebo vytvorenie vlastnej inštancie. Použitie globálnej inštancie uľahčí následne logovanie v rámci celého projektu, nakoľko je možné zjednotiť konfiguráciu.
+
+=== Deklarácia
+Deklaráciu je možné vidieť na ukážke zdrojového kódu.
+
+```
+local logger = _G.logger or logging.new(function(self, level, message)
+                             print(level, message)
+                             return true
+                           end)
+```
+
+=== Umiestnenie
+Inštancia logovacieho modulu sa spravidla nachádza v submoduloch s názvom `utils` v repozitároch jednotlivých Lua modulov.
+
+=== Severity
+Logovací modul umožňuje nastavenie viacerých úrovní :
+
+ - DEBUG  
+ - INFO  
+ - WARN  
+ - ERROR  
+ - FATAL  
+
+=== Použitie
+Zalogovať udalosť je potom možné volaním funkcie v tvare `logger:severity("message")`, teda napr. `logger:error("server unreachable")`.
+
+=== Moduly pokryté logovaním
+Logovanie je implementované v nasledujúcich moduloch :
+
+ - `Luadb`  
+ - `Luametrics`  
+ - `Luameg`  
+ - `Luagit`  
+ - `Luatree`

@@ -1,0 +1,19 @@
+= C++ testy
+
+Pre písanie nového testu je potrebné vytvoriť nový projekt v Solution. Ako nový projekt je potrebné Native Unit Test Project.
+
+image:img/cpp.JPG[cpp]
+
+Pre povolenie prístupu testovacieho kódu vo funkciách v testovanom projekte je nutné pridať odkaz do projektu v testovacom projekte.
+
+image:img/cpp1.JPG[cpp1]
+
+Je potrebné pridať `#include` pre všetky hlavičkové súbory, ktoré deklarujú typy a funkcie, ktoré chceme testovať.
+
+image:img/cpp2.JPG[cpp2]
+
+== Spustenie testov
+
+Testy sa nachádzajú v repozitároch https://gitlab.com/FIIT/Common/Cpp/LuaInterface/tree/remake/tests[LuaInterface/tree/remake/tests]
+a https://gitlab.com/FIIT/Common/Cpp/LuaGraph/tree/remake/tests[LuaGraph/tree/remake/tests]
+v branchi remake, ktoré sú najaktuálnejšie. Testy sa púšťajú pomocou CI v stage QA.

@@ -1,0 +1,62 @@
+= Definitions of done
+
+==== User story
+
+- Je splnená definition of ready
+- Je priradená členovi teamu, ktorý ma na starosti jej dodanie/vyriešenie
+- Všetky tasky sú v stave Done
+- AC user story sú splnené
+- Výsledok story je odprezentovaný teamu
+- Product owner schválil na stretnutí schválenie user story
+
+
+==== Šprint
+
+- Všetky úlohy v šprinte spĺňajú definition of done
+- Projekt je nasadený
+- Backlog je aktualizovaný
+- Šprint je zdokumentovaný
+- Na webovej stránke tímového projektu je nahrané sprint review, retrospektíva, export úloh a percentuálny podiel práce
+
+
+==== Web
+
+- Na webe sú všetky potrebné informácie o projekte a tíme
+- Na webe sú všetky potrebné súbory (retrospektívy, šprint reporty)
+- Sú splnené akceptačné kritéria webu
+- Web je prístupný cez internet
+
+
+==== Analytická úloha
+
+- Je vytvorená dokumentácia k analyzovanému problému alebo report o nájdených riešeniach
+
+==== Implementačná úloha
+
+- Napísaný a funkčný kód pre určené funkcionality
+- V kóde je logovanie
+- Vytvorené testy
+- Kód prejde jednotkovými/funkcionálnymi testami
+- Splnené akceptačné kritéria
+- Revízia kódu prebehla úspešne
+- Kód je mergnutý do develop branche a schválený product ownerom
+- Kód je zdokumentovaný
+- Ak je to vhodné/potrebné používateľská príručka je aktualizovaná
+
+
+==== Úloha týkajúca sa infraštruktúry
+
+- Je funkčná celá pipeline
+- Je spísaná/upravená dokumentácia
+- V prípade, že pipeline produkuje artefakt/artefakty, je potrebné ich niekde uložiť
+
+==== Testy
+
+- Testy sú napísané podľa metodiky na písanie testov
+
+==== Dokumentačná úloha
+
+- Dokumentácia prešla review
+- Je mergnutá v develop vetve
+- Je vygenerovaná celá dokumentácia
+- Dokumentácia je uplodnutá na webovú stránku tímu

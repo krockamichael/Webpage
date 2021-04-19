@@ -1,0 +1,154 @@
+= Lua moduly
+
+Image slúži na zreťazené spracovanie modulov naprogramovaných v jazyku Lua a taktiež je ho možné použiť na lokálny vývoj, testovanie a ladenie. +
+Image je založený na Ubuntu 18.04 a obsahuje nainštalované závislosti potrebné na zostavenie, testovanie, coverage a dokumentáciu jednotlivých modulov
+vrátane exportu dokumentácie na vzdialený server. Základom pre image je implementácia `Luapower`, obsahujúca interpreter `LuaJIT` a ďalšie
+nástroje potrebné pre prácu s programovacím jazykom `Lua`.
+
+== Argumenty a premenné prostredia
+
+Aby image fungoval správne, je potrebné nastaviť premenné LUA_PATH a LUA_CPATH. +
+Aby bola zabezpečená maximálna možná kompatibilita medzi verziou pre CI a verziou pre lokálny vývoj, premenné majú formu argumentov, ktoré je možné
+prekonať. Až pri zostavovaní dôjde k vytvoreniu výsledných ciest vo forme premenných prostredia, ktoré sú zložené z dvoch argumentov - zo systémových
+(predvolených) ciest a dodatočných ciest (špecifických pre konkrétne prostredie). Predvolená hodnota dodatočných ciest zodpovedá
+použitiu v prostredí CI. Pre lokálny vývoj je možné argumenty prekonať v `docker-compose.yml`. +
+Hodnoty obidvoch premenných je možné zmeniť v `Dockerfile`, pričom je možné zmeniť samostatne ako systémovú, tak aj dodatočnú časť.
+Systémové časti, t.j. argumenty LUA_PATH a LUA_CPATH by sa modifikovať nemali ! Na prispôsobenie podľa prostredia slúžia dodatočné cesty, t.j. argumenty
+LUA_PATH_ADD a LUA_CPATH_ADD, ktoré je možné modifikovať - prekonať - v súbore `docker-compose.yml`.
+
+Pre použitie na lokálny vývoj existuje samostatný repozitár, https://gitlab.com/FIIT/Common/devenv[devenv], ktorý obsahuje `docker-compose.yml` a
+všetky potrebné závislosti. 
+
+Pre správne nastavenie je odporúčané postupovať podľa link:../../../prirucky/vyvojarska_prirucka/lua_ide.adoc[príručky pre vývojára].
+
+Premennou LUA_PATH je možné definovať cesty, na ktorých kompilátor hľadá Lua knižnice. +
+Premenná LUA_CPATH definuje, na akých cestách má kompilátor hľadať knižnice v jazyku C.
+
+----
+ARG LUA_PATH="./?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua; \  
+/usr/local/lib/lua/?.lua;/usr/local/lib/lua/?/init.lua;/usr/local/lib/lua/5.1/?.lua; \  
+/usr/local/lib/lua/5.1/?/init.lua; /usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua"
+ARG LUA_CPATH="./?.so;/usr/local/lib/?.so;/usr/local/lib/lua/?.so;/usr/local/lib/lua/5.1/?.so; \  
+/usr/lib/x86_64-linux-gnu/lua/5.1/?.so;/usr/lib/lua/5.1/?.so;/usr/local/lib/lua/5.1/loadall.so"
+
+# Setting additional LUA_PATH and LUA_CPATH for consistent usage in CI and docker-compose
+ARG LUA_PATH_ADD="src/?.lua;src/?/init.lua;_install/lib/lua/?.lua;_install/lib/lua/?/init.lua"
+ARG LUA_CPATH_ADD="_install/lib/?.so;_install/lib/lua/?.so"
+
+# Setting ENV variables LUA_PATH and LUA_CPATH
+# Values can be modified in docker-compose.yml
+ENV LUA_PATH="${LUA_PATH};${LUA_PATH_ADD}"
+ENV LUA_CPATH="${LUA_CPATH};${LUA_CPATH_ADD}"
+----
+
+== Závislosti
+
+`cmake` - nástroj pre multiplatformové zostavenie projektu - vytvára adresárovú štruktúru a pripravuje zdrojové súbory pre zostavenie kompilátormi
+príslušného operačného systému
+
+`wget` - nástroj na prenos údajov prostredníctvom HTTP, HTTPS, FTP a FTPS
+
+`unzip` - nástroj na rozbaľovanie .zip súborov
+
+`git` - distribuovaný verziovací systém
+
+`libz-dev` - komprimovacia knižnica
+
+`luarocks` - správca balíkov pre programovací jazyk Lua
+
+`make` - nástroj pre automatizované zostavenie vykonateľných programov alebo knižníc zo zdrojových kódov - vstupom je tzv. Makefile súbor,
+ktorý obsahuje pokyny pre vytvorenie výsledného programu
+
+`build-essential` - informatívny zoznam balíkov potrebných na zostavovanie
+
+`openssh-client` - secure-shell klient pre zabezpečený prístup k vzdialeným zariadeniam
+
+`rsync` - nátroj na syschronizáciu a prenos súborov medzi vzdialenými systémami
+
+`libzmq3-dev` - knižnica ZeroMQ pre IPC/RPC
+
+== Lua závislosti
+
+Image obsahuje viaceré závislosti, ktoré sú potrebné pri vývoji, testovaní a nasadení projektu 3DSoftviz. Tieto závislosti sú vo fáze zostavovania
+image skompilované a nainštalované. Inštalované môžu byť vo všeobecnosti 3 spôsobmi :
+
+=== Multigit
+
+Luapower využíva na inštaláciu závislostí z luapower repozitárov wrapper multigit. Jedná sa o wrapper nad verziovacím systémom Git. +
+Jednotlivé moduly je teda možné inštalovať z adresára `/luapower/` príkazom `./mgit clone &lt;url-prislusneho-luapower-repozitara&gt;`. +
+Tieto závislosti sa sťahujú vopred zostavené. Tieto moduly sú následne skopírované do systémových adresárov. Lua moduly je potrebné kopírovať do
+adresára `/usr/local/lib/lua/` - v prípade ak adresár `lua` neexistuje, je potrebné vytvoriť ho pomocou príkazu `mkdir` - a moduly s príponou `.so`
+je potom potrebné kopírovať do adresára `/usr/local/lib/`.
+
+==== Závislosti nainštalované cez Multigit
+
+`luajit` - interpreter a kompilátor programovacieho jazyka Lua
+
+`terra` - knižnica pre prácu s nízkoúrovňovým systémovým programovacím jazykom
+
+`lua-headers` - Lua hlavičkové súbory
+
+`cjson` - knižnica na serializáciu údajov vo formáte JSON
+
+=== Manuálna kompilácia
+
+Jednotlivé moduly sú naklonované z GitHub repozitárov do adresára `/_install`. Následne sú skompilované a nainštalované do systému. Klonovanie,
+kompilácia a inštalácia je vykonávaná nasledujúcimi príkazmi.
+
+----
+cd /_install; \
+git clone https://github.com/LuaDist/lpeg.git && cd lpeg; \
+git checkout 5019d49ce847a87662983acba1e35c9b252bb936; \
+mkdir _build && cd _build; \
+cmake .. && make install; \
+----
+
+=== Luarocks
+
+Na inštaláciu Lua modulov je taktiež použitý správca balíkov Luarocks. Inštalácia je jednoduchá, pričom je možné explicitne špecifikovať požadovanú
+verziu modulu, napríklad príkazom `luarocks install luafilesystem 1.6.2`.
+
+=== Nainštalované Lua závislosti
+
+`busted` - nástroj pre testovanie Lua zdrojových súborov
+
+`lpeg` - lua parser gramatických vzorov
+
+`leg` - lua knižnica exportujúca kompletnú Lua 5.1 gramatiku
+
+`luafilesystem` - knižnica na prácu so súborovým systémom
+
+`luasocket` - knižnica poskytujúca podporu pre TCP a UDP
+
+`lualogging` - knižnica pre logovanie
+
+`luacomments` - gramatiky a parsery na parsovanie komentárov v Lua zdrojových kódoch
+
+`ldoc` - nástroj na automatické generovanie dokumentácie z Lua zdrojového kódu
+
+`luacov` - code coverage analyzátor
+
+`luacheck` - statický analyzátor pre zdrojové kódy v jazyku Lua
+
+`lrdb` - debugger pre jazyk Lua
+
+`lzmq` - knižnica pre IPC/RPC, binding nad knižnicou ZeroMQ
+
+`lua-messagepack` - knižnica na serializáciu údajov
+
+== Poznámky
+
+Pre správnu funkciu Lua modulov je potrebné cez Multigit správne nainštalovať závislosti `luajit`, `terra`, `asdl`, `strict`, `terralib`,
+`terralib_luapower`, `terralist` a `lua-headers`. Tieto artefakty je následne potrebné kopírovať do systémových adresárov. Kopírovanie
+závislostí sa vykonáva pri zostavovaní image.
+
+=== LRDB
+
+Lua Remote Debugger umožňuje umožňuje vzdialené ladenie programov vytvorených v programovacom jazyku Lua. Debugger je potrebné použiť spolu s pluginom +
+pre IDE Visual Studio Code. Tento modul je v projekte použitý kvôli lokálnemu vývoju. Je teda potrebné aby v Docker kontajneri bežal image so správne
+nastavenými cestami LUA_PATH a LUA_CPATH. Ďalej je potrebné podľa konfigurácie namapovať port kontajnera na port hostiteľského stroja. Lokálny vývoj je
+momentálne možný pomocou IDE Visual Studio Code, do ktorého je potrebné nainštalovať plugin https://github.com/kapecp/vscode-lrdb[vscode-lrdb].
+
+Pri inštalácii pluginu je odporúčané postupovať podľa
+link:../../../prirucky/vyvojarska_prirucka/lua_ide.adoc[príručky pre vývojára].
+Projekt využíva vlastný fork, ktorý umožňuje použitie absolútnych ciest.
