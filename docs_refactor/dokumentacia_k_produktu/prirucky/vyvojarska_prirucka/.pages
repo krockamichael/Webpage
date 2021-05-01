@@ -1,0 +1,4 @@
+title: 👨‍💻 Vývojárska príručka
+arrange:
+    - lua_ide.md
+    - mkdocs.md

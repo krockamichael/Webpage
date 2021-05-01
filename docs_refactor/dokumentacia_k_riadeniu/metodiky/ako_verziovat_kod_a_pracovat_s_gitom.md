@@ -1,0 +1,43 @@
+# Ako verziovať kód a pracovať s gitom
+
+Git repozitár pozostáva z 5 typov vetiev:
+
+- master vetva - produkčná verzia, na 100% funkčná
+- develop vetva - funkčná verzia najnovšie pridávanej funkcionality, práve testovaná, je vytvorená z `master` vetvy, neskôr bude spojená s `master` vetvou
+- feature - obsahuje rôznu novú funkcionalitu, na ktorej sa pracuje vrámci šprintu (šprintov), je vytvorená z `develop` vetvy, po dokončení funkcionality je spojená s `develop` vetvou
+- bug - obsahuje opravu funkcionality, ktorá ešte nie je v produkčnej verzii, je vytvorená z `develop` vetvy, po dokončení opravy je spojená s `develop` vetvou
+- hotfix - obsahuje opravu funkcionality, ktorá  je v produkčnej verzii a je potrebné, aby bola čo najskôr opravená, je vytvorená z `master` vetvy, po dokončení opravy je spojená s `develop` aj  `master` vetvou
+
+Pre prácu s gitom postupujte podľa nasledujúcich pokynov:
+
+1. Zosynchronizovanie všetkých vetiev s repozitárom pomocou príkazu `git fetch --prune`.
+2. Vytvorenie novej vetvy z develop vetvy. Pre jednu user story sa vytvára
+   len jedna vetva, do ktorej všetci, ktorí na danej user story participujú
+   pridávajú zmeny. Meno developera v názve vetvy bude podľa toho, komu je daná user story priradená.
+3. Keď je úloha hotová, vytvorí sa merge request podľa code review metodiky.
+4. Po prehliadke kódu, zapracovaní pripomienok a následnom schválení,
+   autor merge requestu vykoná spojenie vetvy s develop vetvou.
+
+#### Pomenovanie vetiev
+
+Pre riešenie novej funkcionality programu je potrebné vytvoriť vetvu podľa nasledovných pravidiel:
+
+- Názov vetvy nech obsahuje typ vetvy (feature, bug, hotfix), priezvisko developera, výstižný popis toho, čo sa na vetve rieši a id položky z Azure DevOps
+- Celý názov branche je napísaný v angličtine a malým písmom
+- Oddeľovanie slov pomocou pomlčky (znak -)
+
+Príklad: `git checkout -b feature/hanakova-created-repository-us-12356`
+
+#### Commit správy
+
+Pri písaní commit správ je potrebné dodržiavať nasledujúce pravidlá:
+
+- Správy prisluchajúce commit-om sú písané v anglickom jazyku
+- Správa sa začína názvom modulu alebo sekcie (v prípade dokumentácie), ktorý je upravovaný a za názvom dvojbodka
+- Nasleduje krátky a výstižný popis toho čo bolo v commite spravené, tento popis môže mať maximálne 70 znakov
+- Správa nie je ukončená bodkou
+- Slovesá sú v správach uvádzané v tvare imperatívu
+- Za krátkym popisom sa nachádza v hranatých zátvorkách T (pre task) alebo B (pre bug), pomlčka a identifikačné číslo z Azure DevOps
+- V prípade, že to je potrebné nasleduje prázdny riadok a za ním obšírnejší popis a objasnenie commitu
+
+Príklad: `git commit -m "methodology: add base structure of document [T-12578]"`

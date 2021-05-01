@@ -1,0 +1,8 @@
+title: 🤖 Gitlab CI/CD
+arrange:
+    - ci_uvod.md
+    - 3dsoftviz_remake.md
+    - cplusplus
+    - lua
+    - dokumentacia.md
+    - gitlab_images

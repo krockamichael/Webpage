@@ -1,6 +1,6 @@
 **Trvanie šprintu: 07.03.-21.03. 2021**
 
-**Doručené story pointy: X/Y**
+**Doručené story pointy: 9/Y**
 
 Pracovali sme na refaktoringu UML/HTML browser okien. Bolo potrebné dorobiť posielanie rôznych metrík (LOC, halstead,
 cyclomatic, infoflow). Dorábali sme menšie chybičky krásy pri zmene layoutovacieho algoritmu na metaforu mesta.

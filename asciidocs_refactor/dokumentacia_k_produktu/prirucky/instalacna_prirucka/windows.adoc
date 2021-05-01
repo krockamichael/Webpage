@@ -1,0 +1,29 @@
+= 🖥️ Windows - Unity klient
+
+=== <font color="red">Iba ked bude refaktor samostatne na vetve</font>
+
+=== Prerekvizity
+
+* https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15[Visual Studio 2019]
+ s nasledovnými komponentmi
+** .net framework v4.7.1
+** Desktop C++ development
+** Visual Studio Tools for Unity
+* https://download.unity3d.com/download_unity/9e14d22a41bb/Windows64EditorInstaller/UnitySetup64-2018.3.7f1.exe?_ga=2.249648837.211372810.1583526895-468966922.1570373423[Unity editor 2018.3.7f2]
+* https://netcologne.dl.sourceforge.net/project/doxygen/rel-1.8.16/doxygen-1.8.16-setup.exe[Doxygen]
+* https://git-scm.com/download/win[Git for Windows]
+* vytvorený nezaheslovaný SSH kľúč a nahraný na GitLabe aj GitHube
+
+=== Postup
+
+==== Stiahnutie zdrojákov
+
+* vo vhodnom priečinku vykonáme `git clone git@gitlab.com:FIIT/3DSoftVis_Remake/3dsoftvis_remake.git`
+* prepneme na develop vetvu `git checkout develop`
+* inicializujeme závislosti `git submodule update --init`
+
+==== Spustenie Unity
+
+* otvoríme `3dsoftvis_remake\Projects\3DSoftviz\UnityProject` v Unity
+* zmeníme nasledovné a reštartujeme Unity +
+ Unity menu &gt; edit &gt; preferences &gt; external tools &gt; editor &gt; VS2019

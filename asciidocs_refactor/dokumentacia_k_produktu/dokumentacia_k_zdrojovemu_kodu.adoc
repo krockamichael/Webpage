@@ -1,0 +1,50 @@
+= 📝 Dokumentácia k zdrojovému kódu
+
+Pre každý modul existuje zoznam všetkých vetiev, pre ktoré bola vygenerované dokumentácia. Medzi týmito dokumentáciami sa dá jednoducho
+prepínať podľa potreby. Za hlavnú dokumentáciu je považovaná dokumentácia na vetve `develop` alebo `master`, v prípade, že pre daný modulul
+nie je vetva `develop` vytvorená.
+
+_Pre niektoré moduly nebola ešte na vetvách `master` alebo `develop` vygenerovaná dokumentácia,
+preto na ne nie je pridaný odkaz._
+
+== 3D SoftViz
+
+https://team05-19.studenti.fiit.stuba.sk/docs/3dsoftviz/[Zoznam všetkých dokumentácií pre 3dsoftviz]
+
+== Lua Graph
+
+https://team05-19.studenti.fiit.stuba.sk/docs/LuaGraph/[Zoznam všetkých dokumentácií pre LuaGraph]
+
+== Lua Interface
+
+https://team05-19.studenti.fiit.stuba.sk/docs/LuaInterface/[Zoznam všetkých dokumentácií pre LuaInterface]
+
+== Luadb
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luadb/develop/[Develop]
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luadb/[Zoznam všetkých dokumentácií pre luadb]
+
+== Luagit
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luagit/master/[Master]
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luagit/[Zoznam všetkých dokumentácií pre luagit]
+
+== Luameg
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luameg/master/[Master]
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luameg/[Zoznam všetkých dokumentácií pre luameg]
+
+== Luametrics
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luametrics/develop/[Develop]
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luametrics/[Zoznam všetkých dokumentácií pre luametrics]
+
+== Luatree
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luatree/develop/[Develop]
+
+https://team05-19.studenti.fiit.stuba.sk/docs/luatree/[Zoznam všetkých dokumentácií pre luatree]

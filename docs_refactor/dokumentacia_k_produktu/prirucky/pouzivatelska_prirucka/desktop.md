@@ -1,0 +1,50 @@
+# 🖥️ Desktop - Refactor
+
+Na interakciu so scénou je možné použiť klávesnicu a myš. Pohyb po scéne je riešený
+klávesami W (dopredu), A (doľava), S (dozadu) a D (doprava). Otáčanie kamery je
+umožnené pohybom myši v smere želaného otočenia.
+
+Táto scéna disponuje grafickým používateľským rozhraním. Jeho zobrazenie a
+skrytie sa vykonáva stlačením klávesy **M**. Toto používateľské rozhranie poskytuje viacero
+funkcií.
+
+## Ovládanie
+
+![](img/menu_layout.png "Legenda používateľského rozhrania")
+
+1. **Layout control** - tlačidlá pre spustenie a zastavenie layoutovania grafu.
+2. **Layout settings** - posuvníky nastavení pre Fruchterman-Reinfoldový layoutovací algoritmus
+  (červený - nastavenie veľkosti príťažlivej sily, modrý - nastavenie odpudivej sily,
+  oranžový - nastavenie minimálnej dĺžky hrán grafu).
+3. **Visual mapping** - nastavenie vizuálneho mapovania jednotlivých typov uzlov - aktuálne nefunguje
+
+Pri zobrazení menu otáčanie kamery zablokované a myšou je možné:
+
+- **LMB** - označit objekt.
+- **CTRL + LMB** - označit viacero objektov.
+- **SRCOLL** - zoomovať k / od onačeného(ných) objekt(ov).
+- <font color="red">**MMB + pohyb myši** krúženie okolo označeného(ných) objekt(ov).</font>
+
+Ďalšie klávesy akcií:
+
+- <font color="red">**P** - zapnutie a vypnutie gravitácie.</font>
+- <font color="red">**G** - zapnutie a vypnutie hýbania grafu za uzol.</font>
+- <font color="red">**F** - zapnutie a vypnutie fyziky.</font>
+- <font color="red">**V** - zmena layoutovania grafu.</font>
+- <font color="red">**B** - layoutovanie grafu na plochu.</font>
+- <font color="red">**K** - prepínanie medzi vizualizovanim uzlov kockou a guľou.</font>
+- <font color="red">**J** - prepínanie medzi vizualizovanim hrán kužeľom a hranolom.</font>
+- <font color="red">**I** - skrytie hrán grafu.</font>
+- <font color="red">**+** - zväčšenie grafu.</font>
+- <font color="red">**-** - zmenšenie grafu.</font>
+- <font color="red">**O** - označenie všektých popiskov.</font>
+- <font color="red">**PgUp** - priblíženie sa k zdrojovému uzlu.</font>
+- <font color="red">**PgDn** - priblíženie sa k cieľovému uzlu.</font>
+- <font color="red">**Home** - priblíženie sa k označenému uzlu.</font>
+- <font color="red">**Z** - zoom-to-fit (priblíženie / oddialenie kamery tak, aby bol viditeľný celý graf).</font>
+- V menu (**M**)
+  - <font color="red">**5** - zobrazenie class / sequence diagram označeného uzla</font>
+  - <font color="red">**O** - zobrazenie Metrics window pre označený uzol</font>
+  - <font color="red">**U** - zobrazenie okna porovnávajúceho metriky medzi viacerými zvolenými uzlami</font>
+  - **I** - zobrazenie Comment window pre označený uzol
+  - **P** - zobrazenie Code browser pre označený uzol

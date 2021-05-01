@@ -1,0 +1,6 @@
+= Terra testy
+
+Do funkcie sa zadeklaruje `local test = require(&quot;test&quot;)`
+Následne tento test testuje spravnosť pomocou eq. viď ukážku:
+
+image:img/terra.JPG[]

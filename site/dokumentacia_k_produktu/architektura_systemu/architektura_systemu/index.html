@@ -1,0 +1,3060 @@
+
+
+
+
+<!doctype html>
+<html lang="sk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="http://team03-20.studenti.fiit.stuba.sk/dokumentacia_k_produktu/architektura_systemu/architektura_systemu/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Kopírovať do schránky">
+      
+        <meta name="lang:clipboard.copied" content="Skopírované do schránky">
+      
+        <meta name="lang:search.language" content="sk">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Žiadne vyhovujúce dokumenty">
+      
+        <meta name="lang:search.result.one" content="Vyhovujúci dokument: 1">
+      
+        <meta name="lang:search.result.other" content="Vyhovujúce dokumenty: #">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Architektúra systému - 3DSoftViz</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#architektúra-systému" tabindex="1" class="md-skip">
+        Preskočiť na obsah
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://team03-20.studenti.fiit.stuba.sk/" title="3DSoftViz" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              3DSoftViz
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Architektúra systému
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Hľadať" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Pre vyhľadávanie začni písať
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://team03-20.studenti.fiit.stuba.sk/" title="3DSoftViz" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    3DSoftViz
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="🏠 Domov" class="md-nav__link">
+      🏠 Domov
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      📅 Dokumentácia k riadeniu
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        📅 Dokumentácia k riadeniu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/uvod/" title="1️⃣ Úvod" class="md-nav__link">
+      1️⃣ Úvod
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/roly_clenov_timu/" title="👥 Roly členov tímu" class="md-nav__link">
+      👥 Roly členov tímu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      💯 Podiel práce členov tímu
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        💯 Podiel práce členov tímu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/podiel_prace_clenov_timu/podiel_prace_na_dokumentacii_k_riadeniu_projektu/" title="📅 Podiel práce na dokumentácii k riadeniu projektu" class="md-nav__link">
+      📅 Podiel práce na dokumentácii k riadeniu projektu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/podiel_prace_clenov_timu/podiel_prace_na_dokumentacii_k_inzinierskemu_dielu/" title="📦 Podiel práce na dokumentácii k inžinierskemu dielu" class="md-nav__link">
+      📦 Podiel práce na dokumentácii k inžinierskemu dielu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/podiel_prace_clenov_timu/podiel_prace_sprinty_ZS/" title="🎒 Podiel práce za jednotlivé šprinty v zimnom semestri" class="md-nav__link">
+      🎒 Podiel práce za jednotlivé šprinty v zimnom semestri
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/podiel_prace_clenov_timu/podiel_prace_sprinty_LS/" title="🎒 Podiel práce za jednotlivé šprinty v letnom semestri" class="md-nav__link">
+      🎒 Podiel práce za jednotlivé šprinty v letnom semestri
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      ✅ Aplikácie manažmentov
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        ✅ Aplikácie manažmentov
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/aplikacie_manazmentov/manazment_iteracii/" title="Manažment iterácií" class="md-nav__link">
+      Manažment iterácií
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/aplikacie_manazmentov/manazment_riadenia_uloh/" title="Manažment riadenia úloh" class="md-nav__link">
+      Manažment riadenia úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/aplikacie_manazmentov/manazment_prehliadok_kodu/" title="Manažment prehliadok kódu" class="md-nav__link">
+      Manažment prehliadok kódu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/aplikacie_manazmentov/manazment_verziovania_kodu/" title="Manažment verziovania kódu" class="md-nav__link">
+      Manažment verziovania kódu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/aplikacie_manazmentov/manazment_dokumentovania/" title="Manažment dokumentovania" class="md-nav__link">
+      Manažment dokumentovania
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      🏃 Sumarizácia šprintov
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        🏃 Sumarizácia šprintov
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-1" type="checkbox" id="nav-2-5-1">
+    
+    <label class="md-nav__link" for="nav-2-5-1">
+      Zimný semester
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-1">
+        Zimný semester
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-1-1" type="checkbox" id="nav-2-5-1-1">
+    
+    <label class="md-nav__link" for="nav-2-5-1-1">
+      ZS - Šprint 1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-1-1">
+        ZS - Šprint 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_1/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_1/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_1/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-1-2" type="checkbox" id="nav-2-5-1-2">
+    
+    <label class="md-nav__link" for="nav-2-5-1-2">
+      ZS - Šprint 2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-1-2">
+        ZS - Šprint 2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_2/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_2/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_2/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-1-3" type="checkbox" id="nav-2-5-1-3">
+    
+    <label class="md-nav__link" for="nav-2-5-1-3">
+      ZS - Šprint 3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-1-3">
+        ZS - Šprint 3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_3/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_3/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_3/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-1-4" type="checkbox" id="nav-2-5-1-4">
+    
+    <label class="md-nav__link" for="nav-2-5-1-4">
+      ZS - Šprint 4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-1-4">
+        ZS - Šprint 4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_4/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_4/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_4/burndownchart/" title="Burn down chart" class="md-nav__link">
+      Burn down chart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_4/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-1-5" type="checkbox" id="nav-2-5-1-5">
+    
+    <label class="md-nav__link" for="nav-2-5-1-5">
+      ZS - Šprint 5
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-1-5">
+        ZS - Šprint 5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_5/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_5/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_5/burndownchart/" title="Burn down chart" class="md-nav__link">
+      Burn down chart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/ZS/sprint_5/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-2" type="checkbox" id="nav-2-5-2">
+    
+    <label class="md-nav__link" for="nav-2-5-2">
+      Letný semester
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-5-2">
+        Letný semester
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-2-1" type="checkbox" id="nav-2-5-2-1">
+    
+    <label class="md-nav__link" for="nav-2-5-2-1">
+      LS - Šprint 1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-2-1">
+        LS - Šprint 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_1/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_1/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_1/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-2-2" type="checkbox" id="nav-2-5-2-2">
+    
+    <label class="md-nav__link" for="nav-2-5-2-2">
+      LS - Šprint 2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-2-2">
+        LS - Šprint 2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_2/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_2/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_2/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-2-3" type="checkbox" id="nav-2-5-2-3">
+    
+    <label class="md-nav__link" for="nav-2-5-2-3">
+      LS - Šprint 3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-2-3">
+        LS - Šprint 3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_3/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_3/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_3/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-2-4" type="checkbox" id="nav-2-5-2-4">
+    
+    <label class="md-nav__link" for="nav-2-5-2-4">
+      LS - Šprint 4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-2-4">
+        LS - Šprint 4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_4/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_4/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_4/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-2-5" type="checkbox" id="nav-2-5-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5-2-5">
+      LS - Šprint 5
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-5-2-5">
+        LS - Šprint 5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_5/popis/" title="Popis" class="md-nav__link">
+      Popis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_5/export_uloh/" title="Export úloh" class="md-nav__link">
+      Export úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/sumarizacia_sprintov/LS/sprint_5/retrospektiva/" title="Retrospektíva" class="md-nav__link">
+      Retrospektíva
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      ✉️ Motivačný dokument
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        ✉️ Motivačný dokument
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/motivacny_dokument/predstavenie_timu/" title="👥 Predstavenie tímu" class="md-nav__link">
+      👥 Predstavenie tímu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/motivacny_dokument/motivacia_pre_jednotlive_temy/" title="⭐ Motivácie pre jednotlivé témy" class="md-nav__link">
+      ⭐ Motivácie pre jednotlivé témy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/motivacny_dokument/preferencie_tem/" title="🔢 Príloha A - Preferencie tém" class="md-nav__link">
+      🔢 Príloha A - Preferencie tém
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/motivacny_dokument/rozvrh/" title="🔢 Príloha B - Rozvrh tímu" class="md-nav__link">
+      🔢 Príloha B - Rozvrh tímu
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7">
+      🗃️ Metodiky
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        🗃️ Metodiky
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/definitions_of_done/" title="Definitions of done" class="md-nav__link">
+      Definitions of done
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/definitions_of_ready/" title="Definitions of ready" class="md-nav__link">
+      Definitions of ready
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/ako_popisovat_polozky_v_azure_devops/" title="Ako popisovať položky v Azure DevOps" class="md-nav__link">
+      Ako popisovať položky v Azure DevOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/ako_komunikovat_v_time/" title="Ako komunikovať v tíme" class="md-nav__link">
+      Ako komunikovať v tíme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/konvencie/" title="Konvencie" class="md-nav__link">
+      Konvencie
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/ako_logovat_z_kodu/" title="Ako logovať z kódu" class="md-nav__link">
+      Ako logovať z kódu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/ako_verziovat_kod_a_pracovat_s_gitom/" title="Ako verziovať kód a pracovať s gitom" class="md-nav__link">
+      Ako verziovať kód a pracovať s gitom
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/ako_pisat_testy/" title="Ako písať testy" class="md-nav__link">
+      Ako písať testy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/ako_pisat_dokumentaciu/" title="Ako písať dokumentáciu" class="md-nav__link">
+      Ako písať dokumentáciu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/ako_vykonat_code_review/" title="Ako vykonať code review" class="md-nav__link">
+      Ako vykonať code review
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/metodika_iteracii/" title="Metodika iterácií" class="md-nav__link">
+      Metodika iterácií
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/metodika_riadenia_uloh/" title="Metodika riadenia úloh" class="md-nav__link">
+      Metodika riadenia úloh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dokumentacia_k_riadeniu/metodiky/metodika_zaznamov_zo_stretnuti/" title="Metodika záznamov zo stretnutí" class="md-nav__link">
+      Metodika záznamov zo stretnutí
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      📦 Dokumentácia k produktu
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        📦 Dokumentácia k produktu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uvod/" title="1️⃣ Úvod" class="md-nav__link">
+      1️⃣ Úvod
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      📐 Architektúra systému
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        📐 Architektúra systému
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Architektúra systému
+      </label>
+    
+    <a href="./" title="Architektúra systému" class="md-nav__link md-nav__link--active">
+      Architektúra systému
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Obsah</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#celkový-pohľad-na-systém" class="md-nav__link">
+    Celkový pohľad na systém
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#základná-architektúra" class="md-nav__link">
+    Základná architektúra
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    Lua
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luadb" class="md-nav__link">
+    Luadb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luametrics" class="md-nav__link">
+    Luametrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luameg" class="md-nav__link">
+    Luameg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luatree" class="md-nav__link">
+    Luatree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luagit" class="md-nav__link">
+    Luagit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luaserver" class="md-nav__link">
+    Luaserver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C++
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luainterface" class="md-nav__link">
+    LuaInterface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luagraph" class="md-nav__link">
+    LuaGraph
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    C#
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luacommon" class="md-nav__link">
+    Lua.Common
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphcore" class="md-nav__link">
+    GraphCore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity" class="md-nav__link">
+    Unity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../komunikacia/" title="Možnosti komunikácie medzi procesmi" class="md-nav__link">
+      Možnosti komunikácie medzi procesmi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+    
+    <label class="md-nav__link" for="nav-3-2-3">
+      Moduly systému
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-3">
+        Moduly systému
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../moduly_systemu/lua/" title="Lua" class="md-nav__link">
+      Lua
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../moduly_systemu/cplusplus/" title="C++ Core" class="md-nav__link">
+      C++ Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../moduly_systemu/csharp/" title="C# Core" class="md-nav__link">
+      C# Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../moduly_systemu/unity/" title="Unity" class="md-nav__link">
+      Unity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../moduly_systemu/luaserver/" title="Luaserver" class="md-nav__link">
+      Luaserver
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      🛠️ Infraštruktúra
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        🛠️ Infraštruktúra
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1">
+    
+    <label class="md-nav__link" for="nav-3-3-1">
+      🏗️ Build system
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-1">
+        🏗️ Build system
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/build_system/" title="Build system" class="md-nav__link">
+      Build system
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/cmake/" title="CMake" class="md-nav__link">
+      CMake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/3dsoftvis_remake/" title="3DSoftvis_Remake" class="md-nav__link">
+      3DSoftvis_Remake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-1-4" type="checkbox" id="nav-3-3-1-4">
+    
+    <label class="md-nav__link" for="nav-3-3-1-4">
+      C++
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-3-1-4">
+        C++
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/cplusplus/luainterface/" title="LuaInterface" class="md-nav__link">
+      LuaInterface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/cplusplus/luagraph/" title="LuaGraph" class="md-nav__link">
+      LuaGraph
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-1-5" type="checkbox" id="nav-3-3-1-5">
+    
+    <label class="md-nav__link" for="nav-3-3-1-5">
+      Lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-3-1-5">
+        Lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/lua/luadb/" title="LuaDB" class="md-nav__link">
+      LuaDB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/lua/luametrics/" title="LuaMetrics" class="md-nav__link">
+      LuaMetrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/lua/luameg/" title="LuaMeg" class="md-nav__link">
+      LuaMeg
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/lua/luagit/" title="LuaGit" class="md-nav__link">
+      LuaGit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/build/lua/luatree/" title="LuaTree" class="md-nav__link">
+      LuaTree
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2">
+    
+    <label class="md-nav__link" for="nav-3-3-2">
+      🤖 Gitlab CI/CD
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-2">
+        🤖 Gitlab CI/CD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/ci_uvod/" title="Úvod" class="md-nav__link">
+      Úvod
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/3dsoftviz_remake/" title="3DSoftVis_Remake" class="md-nav__link">
+      3DSoftVis_Remake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2-3" type="checkbox" id="nav-3-3-2-3">
+    
+    <label class="md-nav__link" for="nav-3-3-2-3">
+      C++
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-3-2-3">
+        C++
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/cplusplus/luainterface/" title="LuaInterface" class="md-nav__link">
+      LuaInterface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/cplusplus/luagraph/" title="LuaGraph" class="md-nav__link">
+      LuaGraph
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2-4" type="checkbox" id="nav-3-3-2-4">
+    
+    <label class="md-nav__link" for="nav-3-3-2-4">
+      Lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-3-2-4">
+        Lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/lua/luadb/" title="LuaDB" class="md-nav__link">
+      LuaDB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/lua/luametrics/" title="LuaMetrics" class="md-nav__link">
+      LuaMetrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/lua/luameg/" title="LuaMeg" class="md-nav__link">
+      LuaMeg
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/lua/luagit/" title="LuaGit" class="md-nav__link">
+      LuaGit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/lua/luatree/" title="LuaTree" class="md-nav__link">
+      LuaTree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/lua/luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/dokumentacia/" title="Dokumentácia" class="md-nav__link">
+      Dokumentácia
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2-6" type="checkbox" id="nav-3-3-2-6">
+    
+    <label class="md-nav__link" for="nav-3-3-2-6">
+      CI GitLab Images
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-3-2-6">
+        CI GitLab Images
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/gitlab_images/cpp/" title="C++ moduly" class="md-nav__link">
+      C++ moduly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/gitlab_images/lua/" title="Lua moduly" class="md-nav__link">
+      Lua moduly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/gitlab_images/doc_extra/" title="Doc extra" class="md-nav__link">
+      Doc extra
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2-6-4" type="checkbox" id="nav-3-3-2-6-4">
+    
+    <label class="md-nav__link" for="nav-3-3-2-6-4">
+      3DSoftVis_Remake
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-3-2-6-4">
+        3DSoftVis_Remake
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/gitlab_images/3dsoftviz_remake/image-basic/" title="Basic" class="md-nav__link">
+      Basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/gitlab_images/3dsoftviz_remake/image-mono/" title="Mono" class="md-nav__link">
+      Mono
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/ci/gitlab_images/3dsoftviz_remake/image-unity/" title="Unity" class="md-nav__link">
+      Unity
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-3" type="checkbox" id="nav-3-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3-3">
+      🧪 Testy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-3">
+        🧪 Testy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/testy/uvod/" title="Úvod" class="md-nav__link">
+      Úvod
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/testy/cpp_testy/" title="C++ testy" class="md-nav__link">
+      C++ testy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/testy/csharp_testy/" title="C# testy" class="md-nav__link">
+      C# testy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/testy/lua_testy/" title="Lua testy" class="md-nav__link">
+      Lua testy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/testy/terra_testy/" title="Terra testy" class="md-nav__link">
+      Terra testy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-4" type="checkbox" id="nav-3-3-4">
+    
+    <label class="md-nav__link" for="nav-3-3-4">
+      🛠️ Podporné nástroje
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-4">
+        🛠️ Podporné nástroje
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/podporne_nastroje/devenv/" title="Vývojárske prostredie" class="md-nav__link">
+      Vývojárske prostredie
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/podporne_nastroje/mkdocs/" title="Mkdocs" class="md-nav__link">
+      Mkdocs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      🧮 Funkcionalita systému
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        🧮 Funkcionalita systému
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-1" type="checkbox" id="nav-3-4-1">
+    
+    <label class="md-nav__link" for="nav-3-4-1">
+      🔍 Generovanie grafu
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-1">
+        🔍 Generovanie grafu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../funkcionalita_systemu/generovanie_grafu/analyza_lua3Dsoftviz/" title="Lua v 3DSoftViz" class="md-nav__link">
+      Lua v 3DSoftViz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../funkcionalita_systemu/generovanie_grafu/analyza_unity/" title="Unity" class="md-nav__link">
+      Unity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../funkcionalita_systemu/generovanie_grafu/analyza_luadb/" title="LuaDB" class="md-nav__link">
+      LuaDB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../funkcionalita_systemu/generovanie_grafu/analyza_luametrics/" title="Luametrics" class="md-nav__link">
+      Luametrics
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../funkcionalita_systemu/magnety/" title="🧲 Magnety" class="md-nav__link">
+      🧲 Magnety
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../funkcionalita_systemu/obmedzovace/" title="⛓️ Obmedzovače a gizmá" class="md-nav__link">
+      ⛓️ Obmedzovače a gizmá
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../funkcionalita_systemu/uml_diagramy/" title="📊 UML diagramy" class="md-nav__link">
+      📊 UML diagramy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      🗂️ Príručky
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        🗂️ Príručky
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      💽 Inštalačná príručka
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        💽 Inštalačná príručka
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/instalacna_prirucka/windows/" title="🖥️ Windows" class="md-nav__link">
+      🖥️ Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/instalacna_prirucka/macos/" title="🍎 MacOS" class="md-nav__link">
+      🍎 MacOS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      👨‍💻 Vývojárska príručka
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        👨‍💻 Vývojárska príručka
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/vyvojarska_prirucka/lua_ide/" title="IDE pre Lua" class="md-nav__link">
+      IDE pre Lua
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/vyvojarska_prirucka/mkdocs/" title="Lokálny mkdocs" class="md-nav__link">
+      Lokálny mkdocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/vyvojarska_prirucka/luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      👤 Používateľská príručka
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        👤 Používateľská príručka
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/pouzivatelska_prirucka/desktop/" title="🖥️ Desktop" class="md-nav__link">
+      🖥️ Desktop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/pouzivatelska_prirucka/ar_a_vr/" title="🥽 AR + VR" class="md-nav__link">
+      🥽 AR + VR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/pouzivatelska_prirucka/magnety/" title="🧲 Magnety" class="md-nav__link">
+      🧲 Magnety
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/pouzivatelska_prirucka/obmedzovace/" title="⛓️ Obmedzovače" class="md-nav__link">
+      ⛓️ Obmedzovače
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/pouzivatelska_prirucka/moonscript_projekty/" title="🌓 Analýza Moonscript projektov" class="md-nav__link">
+      🌓 Analýza Moonscript projektov
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dokumentacia_k_zdrojovemu_kodu/" title="📝 Dokumentácia k zdrojovému kódu" class="md-nav__link">
+      📝 Dokumentácia k zdrojovému kódu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../caste_problemy/" title="🐞 Časté problémy" class="md-nav__link">
+      🐞 Časté problémy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Obsah</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#celkový-pohľad-na-systém" class="md-nav__link">
+    Celkový pohľad na systém
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#základná-architektúra" class="md-nav__link">
+    Základná architektúra
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    Lua
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luadb" class="md-nav__link">
+    Luadb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luametrics" class="md-nav__link">
+    Luametrics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luameg" class="md-nav__link">
+    Luameg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luatree" class="md-nav__link">
+    Luatree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luagit" class="md-nav__link">
+    Luagit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luaserver" class="md-nav__link">
+    Luaserver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C++
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luainterface" class="md-nav__link">
+    LuaInterface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luagraph" class="md-nav__link">
+    LuaGraph
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    C#
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luacommon" class="md-nav__link">
+    Lua.Common
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphcore" class="md-nav__link">
+    GraphCore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity" class="md-nav__link">
+    Unity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="architektúra-systému">Architektúra systému<a class="headerlink" href="#architektúra-systému" title="Permanent link">&para;</a></h1>
+<h2 id="celkový-pohľad-na-systém">Celkový pohľad na systém<a class="headerlink" href="#celkový-pohľad-na-systém" title="Permanent link">&para;</a></h2>
+<p>Kapitola obsahuje opis základnej architektúry projektu, jednotlivé vrstvy a ich moduly. Všetky moduly majú vybudovanú infraštruktúru,
+ktorá zahŕňa kompiláciu, testovanie, coverage, generovanie dokumentácie zo zdrojového kódu a jej export na vzdialený server.</p>
+<h3 id="základná-architektúra">Základná architektúra<a class="headerlink" href="#základná-architektúra" title="Permanent link">&para;</a></h3>
+<p>Architektúra projektu je zložená zo 4 vrstiev.<br />
+Na najnižšej vrstve sa nachádzajú moduly jazyka Lua. Tieto moduly priamo narábajú s
+reprezentáciou grafových údajov a vykonávajú nad nimi operácie.<br />
+Druhá vrstva je reprezentovaná programovacím jazykom C++. Na tejto vrstve sú implementované 2 moduly, ktoré slúžia ako rozhranie
+pre moduly jazyka C# pre prácu s najnižšou vrstvou, t.j. modulmi jazyka Lua.<br />
+Tretia vrstva je tvorená modulmi jazyka C#, ktoré poskytujú rozhranie pre Unity vrstvu, prostredníctvom ktorej je možné pracovať
+s nižšími vrstvami.<br />
+Najvyššia vrstva je reprezentovaná Unity, ktoré poskytuje grafickú reprezentáciu nižších vrstiev.  </p>
+<p>Architektúru projektu je možné vidieť na obrázku nižšie.</p>
+<p><img alt="" src="../img/diagram_architektury.JPG" title="Základné komponenty systému" /></p>
+<h3 id="lua">Lua<a class="headerlink" href="#lua" title="Permanent link">&para;</a></h3>
+<p>Na tejto vrstve sa nachádza reprezentácia grafových údajov. Jednotlivé operácie nad grafom sú teda vykonávané na tejto vrstve.
+Vo všeobecnosti teda dochádza k prepočítavaniu a zmenám súradníc uzlov, analýze zdrojového kódu a počítaniu metrík. Bližšie
+informácie o generovaní grafu je možné nájsť v
+<a href="../../funkcionalita_systemu/generovanie_grafu/analyza_lua3Dsoftviz/">dokumentácii generovania grafu</a>.<br />
+S touto vrstvou úzko súvisí tiež jazyk Terra, v ktorom je implementovaný layoutovací algoritmus Fruchterman-Reingold. Na tejto vrstve
+je tiež možné analyzovať Moonscript projekty. Vrstva ďalej poskytuje funkcionalitu pre generovanie UML a sekvenčných diagramov.<br />
+Vrstva je celkovo tvorená 5 modulmi.</p>
+<h4 id="luadb">Luadb<a class="headerlink" href="#luadb" title="Permanent link">&para;</a></h4>
+<p>Logika modulu Luadb priamo súvisí s tvorbou grafu. Obsahuje reprezentáciu hrán, uzlov a metauzlov. V rámci modulu sú tiež implementované operácie,
+ktoré je možné nad grafom vykonávať. Bližší popis modulu a layoutovacieho algoritmu je možné nájsť v
+<a href="../moduly_systemu/lua/">dokumentácii Lua modulov</a>.<br />
+Modul má vybudovanú <a href="../../infrastruktura/ci/lua/luadb/">infraštruktúru</a> a vlastný <a href="../../infrastruktura/build/lua/luadb/">build systém</a>.</p>
+<h4 id="luametrics">Luametrics<a class="headerlink" href="#luametrics" title="Permanent link">&para;</a></h4>
+<p>Modul Luametrics vykonáva analýzu zdrojového kódu a produkuje AST, spolu s metrikami.<br />
+Modul má vybudovanú <a href="../../infrastruktura/ci/lua/luametrics/">infraštruktúru</a> a vlastný
+<a href="../../infrastruktura/build/lua/luametrics/">build systém</a>.</p>
+<h4 id="luameg">Luameg<a class="headerlink" href="#luameg" title="Permanent link">&para;</a></h4>
+<p>Úlohou modulu je vytváranie UML a sekvenčných diagramov zo zdrojových kódov. Modul podporuje jazyky Lua a Moonscript. Bližšie informácie k
+jednotlivým diagramom je možné nájsť v dokumentácii <a href="../../funkcionalita_systemu/uml_diagramy/">UML diagramov</a>.<br />
+Modul má vybudovanú <a href="../../infrastruktura/ci/lua/luameg/">infraštruktúru</a> a vlastný <a href="../../infrastruktura/build/lua/luameg/">build systém</a>.</p>
+<h4 id="luatree">Luatree<a class="headerlink" href="#luatree" title="Permanent link">&para;</a></h4>
+<p>Luatree je balík nástrojov na analýzu a inšpekciu AST, ktoré produkuje modul Luametrics, a grafov volaní funkcií vytváraných modulom Luadb.<br />
+Modul má vybudovanú <a href="../../infrastruktura/ci/lua/luatree/">infraštruktúru</a> a vlastný <a href="../../infrastruktura/build/lua/luatree/">build systém</a>.</p>
+<h4 id="luagit">Luagit<a class="headerlink" href="#luagit" title="Permanent link">&para;</a></h4>
+<p>Modul Luagit slúži na analýzu Git repozitárov, pričom k svojej činnosti využíva moduly Luametrics a Luadb.<br />
+Modul má vybudovanú <a href="../../infrastruktura/ci/lua/luagit/">infraštruktúru</a> a vlastný <a href="../../infrastruktura/build/lua/luagit/">build systém</a>.</p>
+<h4 id="luaserver">Luaserver<a class="headerlink" href="#luaserver" title="Permanent link">&para;</a></h4>
+<p>Modul Luaserver slúži ako server ktorý v budúcnosti nahradí C++ a niektoré C# vrsvy, pričom k svojej činnosti využíva moduly ostatné moduly Lua.<br />
+Modul zatiaľ nemá vybudovanú infraštruktúru.</p>
+<h3 id="c">C++<a class="headerlink" href="#c" title="Permanent link">&para;</a></h3>
+<p>Druhá vrstva, reprezentovaná programovacím jazykom C++, slúži ako rozhranie pre C# moduly, aby mohli komunikovať s Lua modulmi a získavať
+tak grafové údaje, prípadne nad týmito údajmi vykonávať operácie. Vrstva zahŕňa 2 moduly. Bližšie informácie o týchto moduloch
+je možné nájsť v <a href="../moduly_systemu/cplusplus/">dokumentácii C++ modulov</a>.</p>
+<h4 id="luainterface">LuaInterface<a class="headerlink" href="#luainterface" title="Permanent link">&para;</a></h4>
+<p>Modul slúži ako rozhranie medzi C# a Lua modulmi. Poskytuje metódy pre volanie Lua funkcií a získavanie informácií.<br />
+Modul má vybudovanú <a href="../../infrastruktura/ci/cplusplus/luainterface/">infraštruktúru</a> a vlastný
+<a href="../../infrastruktura/build/cplusplus/luainterface/">build systém</a>.</p>
+<h4 id="luagraph">LuaGraph<a class="headerlink" href="#luagraph" title="Permanent link">&para;</a></h4>
+<p>Úlohou modulu je načítať grafové údaje modulu Luadb a poskytovať ich vyšším vrstvám.<br />
+Modul má vybudovanú <a href="../../infrastruktura/ci/cplusplus/luagraph/">infraštruktúru</a> a vlastný
+<a href="../../infrastruktura/build/cplusplus/luagraph/">build systém</a>.</p>
+<h3 id="c_1">C#<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h3>
+<p>Programovací jazyk C# predstavuje pomyselnú tretiu vrstvu. C# moduly sú priamo využívané vyššou vrstvou. Tieto moduly zabezpečujú prístup k
+metódam C++ modulov a tiež umožňujú pracovať s grafovými údajmi. Na tejto vrstve obsahuje projekt 2 moduly. Bližší popis modulov
+je možné nájsť v <a href="../moduly_systemu/csharp/">dokumentácii C# modulov</a>.<br />
+<a href="../../infrastruktura/ci/3dsoftviz_remake/">Infraštruktúra</a> a <a href="../../infrastruktura/build/3dsoftvis_remake/">build systém</a> sú združené pre všetky C# moduly.</p>
+<h4 id="luacommon">Lua.Common<a class="headerlink" href="#luacommon" title="Permanent link">&para;</a></h4>
+<p>Modul poskytuje prístup k C++ metódam, ktoré sú exportované vo forme DLL <code>LuaGraph</code> a <code>LuaInterface</code>. Modul obsahuje viaceré pomocné metódy,
+ktoré zjednodušujú reprezentáciu údajov, prípadne vykonávajú konverziu. Modul ďalej obsahuje viacero atribútov, ktoré zjednodušujú
+načítavanie polí, štruktúr a reťazcov.</p>
+<h4 id="graphcore">GraphCore<a class="headerlink" href="#graphcore" title="Permanent link">&para;</a></h4>
+<p>V module je obsiahnutá logika súvisiaca s grafovými údajmi. Modul umožňuje prácu s grafom, načítavanie jeho aktuálneho stavu,
+polohy, prípadne iných špecifických vlastností.</p>
+<h3 id="unity">Unity<a class="headerlink" href="#unity" title="Permanent link">&para;</a></h3>
+<p>Unity predstavuje najvyššiu vrstvu, ktorá slúži na zobrazovanie a manipuláciu grafových údajov prostredníctvom rozhraní nižších
+vrstiev. Údaje nižších vrstiev graficky reprezentuje. Logika práce Unity s grafovými údajmi je popísaná v
+<a href="../../funkcionalita_systemu/generovanie_grafu/analyza_unity/">dokumentácii generovania grafu</a>.<br />
+Vrstva zahŕňa viacero modulov. Bližší popis jednotlivých modulov je možné nájsť v <a href="../moduly_systemu/unity/">dokumentácii Unity modulov</a>.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../uvod/" title="1️⃣ Úvod" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Späť
+                </span>
+                1️⃣ Úvod
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../komunikacia/" title="Možnosti komunikácie medzi procesmi" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Ďalej
+                </span>
+                Možnosti komunikácie medzi procesmi
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
