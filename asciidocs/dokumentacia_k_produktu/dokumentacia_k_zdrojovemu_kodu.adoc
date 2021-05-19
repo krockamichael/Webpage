@@ -1,11 +1,8 @@
-= 📝 Dokumentácia k zdrojovému kódu
+= Dokumentácia k zdrojovému kódu
 
-Pre každý modul existuje zoznam všetkých vetiev, pre ktoré bola vygenerované dokumentácia. Medzi týmito dokumentáciami sa dá jednoducho
-prepínať podľa potreby. Za hlavnú dokumentáciu je považovaná dokumentácia na vetve `develop` alebo `master`, v prípade, že pre daný modulul
-nie je vetva `develop` vytvorená.
+Pre každý modul existuje zoznam všetkých vetiev, pre ktoré bola vygenerované dokumentácia. Medzi týmito dokumentáciami sa dá jednoducho prepínať podľa potreby. Za hlavnú dokumentáciu je považovaná dokumentácia na vetve `develop` alebo `master`, v prípade, že pre daný modul nie je vetva `develop` vytvorená.
 
-_Pre niektoré moduly nebola ešte na vetvách `master` alebo `develop` vygenerovaná dokumentácia,
-preto na ne nie je pridaný odkaz._
+_Pre niektoré moduly nebola ešte na vetvách `master` alebo `develop` vygenerovaná dokumentácia, preto na ne nie je pridaný odkaz._
 
 == 3D SoftViz
 

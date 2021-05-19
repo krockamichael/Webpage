@@ -1,4 +1,4 @@
-= 📊 UML diagramy
+= UML diagramy
 
 == Motivácia
 

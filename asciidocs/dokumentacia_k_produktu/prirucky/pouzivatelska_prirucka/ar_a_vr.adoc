@@ -1,4 +1,4 @@
-= 🥽 AR + VR
+= AR + VR
 
 V AR a VR prostredí je možné sa pohybovať prirodzeným spôsobom, tak ako v reálnom prostredí. Headset sa stará o mapovanie pozície v reálnom prostredí do virtuálneho prostredia. Interakcia s prostredím je riešená sledovaním rúk používateľa a ich mapovaním do virtuálneho prostredia. Ovládacie menu je možné otvoriť natočením ľavej dlane smerom k tvári.
 

@@ -1,4 +1,4 @@
-= 🍎 MacOS
+= MacOS
 
 == Prerekvizity
 

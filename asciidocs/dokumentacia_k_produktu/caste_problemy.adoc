@@ -1,8 +1,8 @@
-= 🐞 Časté problémy
+= Časté problémy
 
 == Vytváranie objektov starou syntaxou
 
-Niektoré Lua moduly využívajú starú syntax vytvárania objektov v tvare `module(_nazov_modulu_)` namiesto novej syntaxe, ktorá vracia vybrané funkcie a premenné modulu prostredníctvom návratovej hodnoty vo forme tabuľky v nižšie uvedenom tvare.
+Niektoré Lua moduly využívajú starú syntax vytvárania objektov v tvare `module(\_nazov_modulu_)` namiesto novej syntaxe, ktorá vracia vybrané funkcie a premenné modulu prostredníctvom návratovej hodnoty vo forme tabuľky v nižšie uvedenom tvare.
 
 === Vytváranie objektov novou syntaxou
 

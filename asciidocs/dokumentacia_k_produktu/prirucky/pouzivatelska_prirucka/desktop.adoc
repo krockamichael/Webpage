@@ -1,4 +1,4 @@
-= 🖥️ Desktop
+= Desktop
 
 Na interakciu so scénou je možné použiť klávesnicu a myš. Pohyb po scéne je riešený
 klávesami W (dopredu), A (doľava), S (dozadu) a D (doprava). Otáčanie kamery je

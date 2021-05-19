@@ -12,7 +12,7 @@ end
 
 Okrem toho obsahujú funkcie aj na vyhľadanie daných objektov podľa zadaného argumentu, ktorým sú napríklad meno alebo typ. Väčšina takýchto funkcií sa nachádza v súbore _graph.lua_. Napríklad funkcia nižšie zavolaná nad určitým grafom s argumentom _typ_ vráti všetky uzly v danom grafe daného typu. 
 
-[source,lua hl_lines="5 9"]
+[source,lua]
 ----
  -- get all nodes with selected type
 function pGraph:findNodesByType(type)
@@ -36,7 +36,8 @@ V priečinku _src/luadb/extraction_ sa extrahuje graf z lua súborov a to násle
 .. Ak súbor nebol priečinok tak sa ešte overí, či ide o _.lua_ súbor a ak áno pridá sa do množiny lua-uzlov v grafe s typom súbor (file).
 .. Ako posledné sa vytvorí hrana medzi súborom a jeho rodičom. Pri prvoúrovňovom volaní je to novovytvorený root, čiže rodičovký repozitár. V prípade, že už bola zavolaná funkcia rekurzívne, ako argument jej bol poslaný aktuálne iterovaný uzol (súbor), tak je hrane priradený ako rodič repozitár s ktorým bola funkcia volaná.
 .. V poslednom kroku sa do grafu pridá uzol a jeho hrana.
-[source,lua hl_lines="3 4 13 22 27 33 37 38 39 40 41 43 44"]
+
+[source,lua]
 ----
 local function extractFilesTree(graph, path, parent)
   -- root node
@@ -85,7 +86,6 @@ local function extractFilesTree(graph, path, parent)
     end
   end
 end
-
 ----
 
 Súbor _luadb/extraction/functioncalls/extractor.lua_ obsahuje funkcie, ktoré extrahujú funkcie a volania, pričom ich delia na globálne a modulové. 
@@ -98,7 +98,8 @@ Súbor _luadb/extraction/functioncalls/extractor.lua_ obsahuje funkcie, ktoré e
 .. Ak hrana (volanie) nevolá nijakú funkciu, tak je roztriedená podľa toho, či je globálna alebo modulová do príslušných polí v grafe. (graph.moduleCalls alebo graph.globalCalls)
 .. Nová hrana sa nastaví ako orientovaná a je pridaná do grafu.
 .. Funkcia extract, ktorá volá zvyšné funkcie, vracia hrany(volania funkcií) a uzly(funkcie).
-[source,lua hl_lines="4 6 7 16 17 20 22 25 26"]
+
+[source,lua]
 ----
 local function extractFunctionCalls(AST, graph, nodes)
   local edges = {}

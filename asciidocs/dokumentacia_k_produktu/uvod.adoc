@@ -1,4 +1,4 @@
-= 1️⃣ Úvod
+= Úvod
 
 Keď si predstavíme projekt, ktorý je napísaný v programovacom jazyku, vybavia sa nám funkcie, premenné a závislosti týchto funkcií. Práve tieto dve veci, teda funkcie a závislosti sa dajú zobrazovať graficky vo forme grafov, kde funkcie predstavujú vrcholy a ich volania zase hrany. Náš tím sa venujeme zobrazovaniu práve takýchto grafov pomocou virtuálnej alebo rozšírenej reality. Vizualizovanie týchto grafov nám dokáže pomáhať pri analýze kódu, chápaní závislosti jednotlivých modulov alebo na prezentačné účely.
 

@@ -8,6 +8,7 @@
 | 1236	| How to	| Task |	Done	| Bc. Michael Kročka 
 | 1237	| Doplnenie komentarov v Lua	| Product Backlog Item |	Done	| Bc. Samuel Šouc 
 | 1238	| return values vo funkciach v moduloch	| Task |	Done	| Bc. Samuel Šouc 
+| 1242  | Rozbehanie viacerých testov za sebou | Task | Done | Bc. Andrej Hoferica
 | 1248	| Rozbehanie Antory	| Product Backlog Item |	Review	| Bc. Michal Jozefek 
 | 1250	| Antroa generovanie dokumentacie	| Product Backlog Item |	Review	| Bc. Michal Jozefek 
 | 1251	| Generovanie dokumentacie (html)	| Task |	Done	| Bc. Michal Jozefek 
@@ -26,3 +27,11 @@
 | 1279	| Vysokourovnovy opis modulov	| Task |	Done	| Bc. Samuel Šouc 
 | 1280	| Prerobenie netHandler na objekt	| Product Backlog Item |	Done	| Bc. Samuel Šouc 
 | 1281	| netHandler objekt	| Task |	Done	| Bc. Samuel Šouc 
+| 1315  | Vytvorenie skriptu, ktorý bude nahrádzať busted|	Task|	Done|	Bc. Andrej Hoferica
+| 1375  | Magnety	|Product Backlog Item	|To accept	|Bc. Ivana Frankovičová
+| 1376  | Súbory s magnetmi dostať do refactoru	|Task|	Done|	Bc. Ivana Frankovičová
+| 1377  | synchrónne volania	|Product Backlog Item	|In development|	Bc. Nikodém Adler
+| 1378  | Refactoring api calls to async|	Task	|Done|	Bc. Nikodém Adler
+| 1379  | Git	|Product Backlog Item	|In development	|Bc. Nikodém Adler
+| 1380  | Oprava gitu - Unity, refactor vetva	|Task|	Done	|Bc. Nikodém Adler
+| 1381  | Napísať na GitHub issues - busted|	Task|	Done	|Bc. Andrej Hoferica

@@ -1,4 +1,4 @@
-= 🌓 Analýza Moonscript projektov
+= Analýza Moonscript projektov
 
 Bežne sa softvér 3DSoftViz používa na analyzovanie Lua projektov. Jeho implementácia však umožňuje analyzovanie aj Moonscript projektov.
 

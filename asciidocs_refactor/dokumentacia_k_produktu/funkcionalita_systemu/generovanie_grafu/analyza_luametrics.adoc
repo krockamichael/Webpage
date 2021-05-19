@@ -28,7 +28,7 @@ V tomto súbore sa počíta základná metrika, ktorou je počet riadkov kódu. 
 V tomto súbore je počítaná metrika toku informácií pre funkciu. Pri výpočte tohto druhu metriky je potrebné analyzovať vzťahy danej funkcie k dátam na jej
 vstupe, pri jej výstupe a vzťah k dátam s ktorými funkcia pracuje. V tomto súbore sú využívané výstupy zo súboru block.lua Na ukážke nižšie sa do uzlu zapisuje, či ide o premennú, z ktorej sa číta alebo do ktorej sa zapisuje, táto informácia je dôležitá pri výpočte metriky toku informácií.
 
-[source,lua hl_lines="7 8 9 10 11"]
+[source,lua]
 ----
 local function newVariable(node, text, secondary_nodes, isRead)
         
@@ -57,7 +57,7 @@ end
 
 Na riadku 2 je zvýraznené priradenia konkrétnej metriky na príslušné miesto _infoflow.information_flow_ v abstraktnom syntaktickom strome funkcii. Je vypočítaná podľa vzťahu pre vyvážený tok informácii _infoflow = počet_premmených_do_kt_sa_zapisuje ∗ (počet_premmených_z_kt_sa_číta + pocet_výstupov_z_funkcie)<sup>2</sup>_ V _metrics_ sa takisto uchovávajú aj všetky počítadlá využité na výpočet metrík. Komplexita rozhrania je vypočítaná ako ako súčet argumentov a return statementov.
 
-[source,lua hl_lines="2 5"]
+[source,lua]
 ----
     funcAST.metrics.infoflow = {}
     funcAST.metrics.infoflow.information_flow = (#v_in * (#v_out + return_counter))^2
@@ -97,7 +97,7 @@ Horné a dolné ohraničenie pre uzol je zapísané vo funkciách _setUpperBound
 
 V tomto súbore sa do metrík zapísajú tzv. Halsteadove metriky. 
 
-[source,lua hl_lines="4"]
+[source,lua]
 ----
     if (node.metrics == nil) then node.metrics = {} end
     if (node.metrics.halstead == nil) then node.metrics.halstead = {} end
@@ -161,7 +161,7 @@ return data
 
 Počty zdokumentovaných rsp. nezdokumentovaných funkcii sa počíta pomocou jednoduchých cyklov ako je vidieť nižšie. 
 
-[source,lua hl_lines="3 4 5 6"]
+[source,lua]
 ----
 if(data.metrics.functionDefinitions ~=nil) then
         for k,v in pairs(data.metrics.functionDefinitions) do

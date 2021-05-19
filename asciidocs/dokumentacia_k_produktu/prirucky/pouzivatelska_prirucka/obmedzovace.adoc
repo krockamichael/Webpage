@@ -1,4 +1,4 @@
-= ⛓️ Obmedzovače
+= Obmedzovače
 
 Obmedzovač je do scény možné pridať prostredníctvom menu. V ňom sa nachádza sekcia Spawn restriction a v rámci nej už konkrétne typy obmedzovačov. Po zvolení sa daný typ obmedzovača zjaví pri našich rukách.
 

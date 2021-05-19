@@ -1,4 +1,4 @@
-= 🧲 Magnety
+= Magnety
 
 Metauzly sú uzly, ktoré nie sú priamo súčasťou grafu, ale môžu ovplyvňovať výsledné rozloženie grafu.
 Tieto uzly majú fixné pozície a môžu byť pridané do scény napríklad používateľom.

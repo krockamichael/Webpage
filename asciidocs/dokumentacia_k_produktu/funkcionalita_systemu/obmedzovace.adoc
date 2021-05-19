@@ -1,4 +1,4 @@
-= ⛓️ Obmedzovače a gizmá
+= Obmedzovače a gizmá
 
 == Všeobecný opis (motivácia)
 
