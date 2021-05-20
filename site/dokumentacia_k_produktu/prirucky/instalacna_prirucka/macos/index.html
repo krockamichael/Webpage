@@ -1408,8 +1408,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../architektura_systemu/komunikacia/" title="Možnosti komunikácie medzi procesmi" class="md-nav__link">
-      Možnosti komunikácie medzi procesmi
+    <a href="../../../architektura_systemu/komunikacia/" title="Komunikácia LuaServer - Unity" class="md-nav__link">
+      Komunikácia LuaServer - Unity
     </a>
   </li>
 
@@ -2117,6 +2117,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../infrastruktura/testy/luaserver_testy/" title="Luaserver testy" class="md-nav__link">
+      Luaserver testy
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2243,6 +2255,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../funkcionalita_systemu/generovanie_grafu/unity_refactor/" title="Unity - Refactor" class="md-nav__link">
+      Unity - Refactor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../funkcionalita_systemu/generovanie_grafu/analyza_luadb/" title="LuaDB" class="md-nav__link">
       LuaDB
     </a>
@@ -2257,6 +2281,18 @@
   <li class="md-nav__item">
     <a href="../../../funkcionalita_systemu/generovanie_grafu/analyza_luametrics/" title="Luametrics" class="md-nav__link">
       Luametrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../funkcionalita_systemu/generovanie_grafu/analyza_luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
     </a>
   </li>
 
@@ -2486,6 +2522,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2530,18 +2578,6 @@
   <li class="md-nav__item">
     <a href="../../vyvojarska_prirucka/mkdocs/" title="Lokálny mkdocs" class="md-nav__link">
       Lokálny mkdocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../vyvojarska_prirucka/luaserver/" title="LuaServer" class="md-nav__link">
-      LuaServer
     </a>
   </li>
 
@@ -2798,7 +2834,7 @@
 </li>
 <li><a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a><ul>
 <li>Docker je potrebný na spustenie kontajneru s Lua modulmi, najmä pre modul <code>luaserver</code></li>
-<li>Detaily o inštalácii dockeru je možné nájsť na <a href="../../vyvojarska_prirucka/luaserver/">tejto</a> podstránke</li>
+<li>Detaily o inštalácii dockeru je možné nájsť na <a href="../vyvojarska_prirucka/luaserver.md">tejto</a> podstránke</li>
 </ul>
 </li>
 <li><a href="https://github.com/Kitware/CMake/releases/download/v3.15.4/cmake-3.15.4-Darwin-x86_64.dmg">CMake 3.15.4</a><ul>
@@ -2885,7 +2921,7 @@
 
 
 <h3 id="spustenie-projektu">Spustenie projektu<a class="headerlink" href="#spustenie-projektu" title="Permanent link">&para;</a></h3>
-<p>Po kliknutí na Unity projekt sa nám otvorí okno s aplikáciou Unity. V ďalšom kroku treba ešte spustiť Docker kontajner (predpokladáme, že Docker bol nainštalovaný podľa <a href="../../vyvojarska_prirucka/luaserver/">odporúčanej príručky</a>). Je potrebné, aby bola spustená aplikácia Docker Desktop, samotný kontajner potom spustíme z Terminálu príkazom <code>docker start -i luadev</code>. Skript, ktorý funguje ako server a čaká na príkazy z Unity, spustíme príkazom <code>lua luaserver/src/LuaScripts/app/main.lua</code>. Keď sa skript spustí, môžeme sa prepnúť do aplikácie Unity a kliknúť na tlačidlo Play, ktoré začne zobrazovať graf.</p>
+<p>Po kliknutí na Unity projekt sa nám otvorí okno s aplikáciou Unity. V ďalšom kroku treba ešte spustiť Docker kontajner (predpokladáme, že Docker bol nainštalovaný podľa <a href="../vyvojarska_prirucka/luaserver.md">odporúčanej príručky</a>). Je potrebné, aby bola spustená aplikácia Docker Desktop, samotný kontajner potom spustíme z Terminálu príkazom <code>docker start -i luadev</code>. Skript, ktorý funguje ako server a čaká na príkazy z Unity, spustíme príkazom <code>lua luaserver/src/LuaScripts/app/main.lua</code>. Keď sa skript spustí, môžeme sa prepnúť do aplikácie Unity a kliknúť na tlačidlo Play, ktoré začne zobrazovať graf.</p>
                 
                   
                 
@@ -2922,13 +2958,13 @@
           </a>
         
         
-          <a href="../../vyvojarska_prirucka/lua_ide/" title="IDE pre Lua" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../luaserver/" title="LuaServer" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Ďalej
                 </span>
-                IDE pre Lua
+                LuaServer
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -1408,8 +1408,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../architektura_systemu/komunikacia/" title="Možnosti komunikácie medzi procesmi" class="md-nav__link">
-      Možnosti komunikácie medzi procesmi
+    <a href="../../../architektura_systemu/komunikacia/" title="Komunikácia LuaServer - Unity" class="md-nav__link">
+      Komunikácia LuaServer - Unity
     </a>
   </li>
 
@@ -2117,6 +2117,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../infrastruktura/testy/luaserver_testy/" title="Luaserver testy" class="md-nav__link">
+      Luaserver testy
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2256,6 +2268,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../unity_refactor/" title="Unity - Refactor" class="md-nav__link">
+      Unity - Refactor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../analyza_luadb/" title="LuaDB" class="md-nav__link">
       LuaDB
     </a>
@@ -2270,6 +2294,18 @@
   <li class="md-nav__item">
     <a href="../analyza_luametrics/" title="Luametrics" class="md-nav__link">
       Luametrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../analyza_luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
     </a>
   </li>
 
@@ -2382,6 +2418,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prirucky/instalacna_prirucka/luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2426,18 +2474,6 @@
   <li class="md-nav__item">
     <a href="../../../prirucky/vyvojarska_prirucka/mkdocs/" title="Lokálny mkdocs" class="md-nav__link">
       Lokálny mkdocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../prirucky/vyvojarska_prirucka/luaserver/" title="LuaServer" class="md-nav__link">
-      LuaServer
     </a>
   </li>
 
@@ -2595,18 +2631,18 @@
                 
                 <h1 id="unity">Unity<a class="headerlink" href="#unity" title="Permanent link">&para;</a></h1>
 <p>Celá logika načítavania grafu v Unity sa začína v triede <code>GraphLoader</code>. Tento objekt sa nachádza v scéne v Unity a pri načítaní scény, sa podobne ako pri ostatných objektoch, ktoré dedia od triedy MonoBehaviour, zavolá funkcia <code>Awake()</code>. V tejto metóde sa najprv do listu konfigurácií, zapíše jedna alebo viacero konfigurácií, ktoré zabezpečujú aký graf sa načíta, kde je uložený, aký algoritmus sa použije a ďalšie iné nastaviteľné parametre.</p>
-<div class="codehilite"><pre><span></span><span class="n">Configurations</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">GraphConfiguration</span>
-<span class="p">{</span>
-    <span class="n">Algorithm</span> <span class="p">=</span> <span class="n">LayoutAlgorithmsEnum</span><span class="p">.</span><span class="n">FruchtermanReingold</span><span class="p">,</span>
-    <span class="n">Path</span> <span class="p">=</span> <span class="err">$</span><span class="s">&quot;{Application.streamingAssetsPath}/LuaScripts/Modules/say&quot;</span><span class="p">,</span>
-    <span class="n">GraphExtractor</span> <span class="p">=</span> <span class="n">GraphExtractor</span><span class="p">.</span><span class="n">ModuleGraph</span><span class="p">,</span>
-    <span class="n">OptionalParameters</span> <span class="p">=</span> <span class="k">new</span> <span class="n">OptionalParameters</span>
-    <span class="p">{</span>
-        <span class="n">BuildingLayout</span> <span class="p">=</span> <span class="n">BuildingLayoutAlgorithmEnum</span><span class="p">.</span><span class="n">RowAlgorithm</span><span class="p">,</span>
-        <span class="n">FunctionType</span> <span class="p">=</span> <span class="n">FunctionTypeEnum</span><span class="p">.</span><span class="n">Cyclomatic</span><span class="p">,</span>
-        <span class="n">VariableType</span> <span class="p">=</span> <span class="n">VariableTypeEnum</span><span class="p">.</span><span class="n">None</span>
-    <span class="p">}</span>
-<span class="p">});</span>
+<div class="codehilite"><pre><span></span>Configurations.Add(new GraphConfiguration
+{
+    Algorithm = LayoutAlgorithmsEnum.FruchtermanReingold,
+    Path = $&quot;{Application.streamingAssetsPath}/LuaScripts/Modules/say&quot;,
+    GraphExtractor = GraphExtractor.ModuleGraph,
+    OptionalParameters = new OptionalParameters
+    {
+        BuildingLayout = BuildingLayoutAlgorithmEnum.RowAlgorithm,
+        FunctionType = FunctionTypeEnum.Cyclomatic,
+        VariableType = VariableTypeEnum.None
+    }
+});
 </pre></div>
 
 
@@ -2895,13 +2931,13 @@
           </a>
         
         
-          <a href="../analyza_luadb/" title="LuaDB" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../unity_refactor/" title="Unity - Refactor" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Ďalej
                 </span>
-                LuaDB
+                Unity - Refactor
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

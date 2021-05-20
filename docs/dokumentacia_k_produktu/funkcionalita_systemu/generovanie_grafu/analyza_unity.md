@@ -2,7 +2,7 @@
 
 Celá logika načítavania grafu v Unity sa začína v triede `GraphLoader`. Tento objekt sa nachádza v scéne v Unity a pri načítaní scény, sa podobne ako pri ostatných objektoch, ktoré dedia od triedy MonoBehaviour, zavolá funkcia `Awake()`. V tejto metóde sa najprv do listu konfigurácií, zapíše jedna alebo viacero konfigurácií, ktoré zabezpečujú aký graf sa načíta, kde je uložený, aký algoritmus sa použije a ďalšie iné nastaviteľné parametre.
 
-``` c#
+``` cs
 Configurations.Add(new GraphConfiguration
 {
     Algorithm = LayoutAlgorithmsEnum.FruchtermanReingold,

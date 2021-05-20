@@ -20,6 +20,10 @@ Architektúru projektu je možné vidieť na obrázku nižšie.
 
 ![](img/diagram_architektury.JPG "Základné komponenty systému")
 
+Refactor architektúra je uvedená na nasledujúcom obrázku.
+
+![refactor_architecture](img/diagram_architektury_refactor.png "Refactor architecture")
+
 ### Lua
 
 Na tejto vrstve sa nachádza reprezentácia grafových údajov. Jednotlivé operácie nad grafom sú teda vykonávané na tejto vrstve.
@@ -55,8 +59,7 @@ Modul Luagit slúži na analýzu Git repozitárov, pričom k svojej činnosti vy
 Modul má vybudovanú [infraštruktúru](../infrastruktura/ci/lua/luagit.md) a vlastný [build systém](../infrastruktura/build/lua/luagit.md).
 
 #### Luaserver
-Modul Luaserver slúži ako server ktorý v budúcnosti nahradí C++ a niektoré C# vrsvy, pričom k svojej činnosti využíva moduly ostatné moduly Lua.  
-Modul zatiaľ nemá vybudovanú infraštruktúru.
+Modul Luaserver slúži ako server, ktorý k svojej činnosti využíva moduly ostatné moduly Lua. Jeho hlavnou funkcionalitou je komunikácia s Unity klientom, ale mimo toho sú v rámci tohto modulu implementované layoutovacie algoritmy ako Fruchterman-Reingold, City, CityFR alebo Street. Zároveň obsahuje operátory na zmenu atribútov pre uzly a hrany. Modul má vybudovanú [infraštruktúru](../infrastruktura/ci/lua/luaserver.md).
 
 ### C++
 

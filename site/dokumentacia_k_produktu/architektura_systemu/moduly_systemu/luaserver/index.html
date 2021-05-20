@@ -1410,8 +1410,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../komunikacia/" title="Možnosti komunikácie medzi procesmi" class="md-nav__link">
-      Možnosti komunikácie medzi procesmi
+    <a href="../../komunikacia/" title="Komunikácia LuaServer - Unity" class="md-nav__link">
+      Komunikácia LuaServer - Unity
     </a>
   </li>
 
@@ -1542,6 +1542,53 @@
   <a href="#ďalšie-skripty" class="md-nav__link">
     Ďalšie skripty
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    Lua
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layouter" class="md-nav__link">
+    Layouter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-manager" class="md-nav__link">
+    Layout Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmus-fruchterman-reingold" class="md-nav__link">
+    Algoritmus Fruchterman-Reingold
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luadb" class="md-nav__link">
+    LuaDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2180,6 +2227,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../infrastruktura/testy/luaserver_testy/" title="Luaserver testy" class="md-nav__link">
+      Luaserver testy
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2306,6 +2365,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../funkcionalita_systemu/generovanie_grafu/unity_refactor/" title="Unity - Refactor" class="md-nav__link">
+      Unity - Refactor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../funkcionalita_systemu/generovanie_grafu/analyza_luadb/" title="LuaDB" class="md-nav__link">
       LuaDB
     </a>
@@ -2320,6 +2391,18 @@
   <li class="md-nav__item">
     <a href="../../../funkcionalita_systemu/generovanie_grafu/analyza_luametrics/" title="Luametrics" class="md-nav__link">
       Luametrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../funkcionalita_systemu/generovanie_grafu/analyza_luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
     </a>
   </li>
 
@@ -2432,6 +2515,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../prirucky/instalacna_prirucka/luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2476,18 +2571,6 @@
   <li class="md-nav__item">
     <a href="../../../prirucky/vyvojarska_prirucka/mkdocs/" title="Lokálny mkdocs" class="md-nav__link">
       Lokálny mkdocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../prirucky/vyvojarska_prirucka/luaserver/" title="LuaServer" class="md-nav__link">
-      LuaServer
     </a>
   </li>
 
@@ -2663,6 +2746,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    Lua
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layouter" class="md-nav__link">
+    Layouter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-manager" class="md-nav__link">
+    Layout Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmus-fruchterman-reingold" class="md-nav__link">
+    Algoritmus Fruchterman-Reingold
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luadb" class="md-nav__link">
+    LuaDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -2697,6 +2827,16 @@
 - operators.lua
 - diagrams.lua
 - util.lua</p>
+<h2 id="lua">Lua<a class="headerlink" href="#lua" title="Permanent link">&para;</a></h2>
+<h3 id="layouter">Layouter<a class="headerlink" href="#layouter" title="Permanent link">&para;</a></h3>
+<p>Tento modul zodpovedá za výpočet rozloženia grafu a správu layoutov grafu.</p>
+<h4 id="layout-manager">Layout Manager<a class="headerlink" href="#layout-manager" title="Permanent link">&para;</a></h4>
+<p>Zodpovedá za spravovanie layoutov grafu. Každý graf má svoj vlastný layout manager. Obsahuje základne funkcie pre kontrolu layoutovania ako sú štart, stop, pauza. Zabezpečuje to, ktorý algoritmus je v súčasnosti aktívny a zabezpečuje prenos dát z a do algoritmu.</p>
+<p>Vo funkcii <code>updateNodes</code> dochádza k aktualizovaniu uzlov LuaDB grafu z práve aktívneho algoritmu. Z algoritmu sa načíta pozícia každého uzla, a prípadne ďalšie atribúty uzla, ktoré algoritmus môže obsahovať, ako napríklad veľkosť uzla, a táto pozícia sa nastaví zodpovedajúcemu uzlu v LuaDB grafe.</p>
+<h4 id="algoritmus-fruchterman-reingold">Algoritmus Fruchterman-Reingold<a class="headerlink" href="#algoritmus-fruchterman-reingold" title="Permanent link">&para;</a></h4>
+<p>Jeho implementácia je v jazyku terra, ktorého rýchlosť je porovnateľná s jazykom C. Algoritmus si na začiatku vytvorí kópiu LuaDB grafov. Z lua tabuliek obsahujúcich uzly a hrany si vytvorí pole terra štruktúr <code>TNode</code> a <code>TEdge</code>, ktoré reprezentujú graf a obsahujú všetky atribúty, ktoré sú potrebné pre výpočet rozloženia grafu. Vo funkcii <code>initialize</code>, sa vypočíta počiatočné rozloženie grafu. Po zavolaní funkcie <code>runLayouting</code> sa vytvorí nové vlákno, kde iteratívne prebieha výpočet nového rozloženia grafu.</p>
+<h3 id="luadb">LuaDB<a class="headerlink" href="#luadb" title="Permanent link">&para;</a></h3>
+<p>Modul je napísaný v programovacom jazyku Lua. Jeho hlavnou úlohou je analýza zdrojového kódu, ktorý je modulu poskytnutý zatiaľ zadaním priamej cesty, analyzuje volania funkcií, komplexitu, a rôzne metriky, na základe ktorých sa neskôr ostatné moduly rozhodujú o vlastnostiach vykreslenia uzlu, napríklad veľkosť uzlu.</p>
                 
                   
                 

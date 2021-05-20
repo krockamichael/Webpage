@@ -12,19 +12,20 @@
 
 #### Bc. Ivana Frankovičová
 - Manažér dokumentácie
+- Unity developer
 - Dokumentaristka
 
 #### Bc. Andrej Hoferica
 - Manažér testov
-- Tester
+- Backend developer
 
 #### Bc. Michal Jozefek
 - Scrum master
-- Backend developer
+- Dokumentarista
 
 #### Bc. Michael Kročka
 - Manažér webového sídla
-- Unity developer
+- Backend developer
 
 #### Bc. Samuel Šouc
 - Dokumentarista

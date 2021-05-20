@@ -17,13 +17,14 @@ Serializer je implementovaný ako objekt a obsahuje atribút cjson, na ktorý je
 ===== Ďalšie skripty
 
 V adresári `/src/LuaScripts/Modules/server` sú umiestnené ďalšie sktipty, ktoré obsahujú definície funkcií uložených v tabuľke v _main.lua_. Využívajú inštanciu objektu `core` na prístup ku grafu, layoutovaču a ďalším potrebným modulom. Jedná sa o:
-- `nodeDataColumn.lua`
-- `edgeDataColumn.lua`
-- `layouting.lua`
-- `magnets.lua`
-- `operators.lua`
-- `diagrams.lua`
-- `util.lua`
+
+* `nodeDataColumn.lua`
+* `edgeDataColumn.lua`
+* `layouting.lua`
+* `magnets.lua`
+* `operators.lua`
+* `diagrams.lua`
+* `util.lua`
 
 == Lua
 

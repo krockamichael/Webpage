@@ -1577,8 +1577,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../komunikacia/" title="Možnosti komunikácie medzi procesmi" class="md-nav__link">
-      Možnosti komunikácie medzi procesmi
+    <a href="../komunikacia/" title="Komunikácia LuaServer - Unity" class="md-nav__link">
+      Komunikácia LuaServer - Unity
     </a>
   </li>
 
@@ -2286,6 +2286,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastruktura/testy/luaserver_testy/" title="Luaserver testy" class="md-nav__link">
+      Luaserver testy
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2412,6 +2424,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../funkcionalita_systemu/generovanie_grafu/unity_refactor/" title="Unity - Refactor" class="md-nav__link">
+      Unity - Refactor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../funkcionalita_systemu/generovanie_grafu/analyza_luadb/" title="LuaDB" class="md-nav__link">
       LuaDB
     </a>
@@ -2426,6 +2450,18 @@
   <li class="md-nav__item">
     <a href="../../funkcionalita_systemu/generovanie_grafu/analyza_luametrics/" title="Luametrics" class="md-nav__link">
       Luametrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../funkcionalita_systemu/generovanie_grafu/analyza_luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
     </a>
   </li>
 
@@ -2538,6 +2574,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../prirucky/instalacna_prirucka/luaserver/" title="LuaServer" class="md-nav__link">
+      LuaServer
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2582,18 +2630,6 @@
   <li class="md-nav__item">
     <a href="../../prirucky/vyvojarska_prirucka/mkdocs/" title="Lokálny mkdocs" class="md-nav__link">
       Lokálny mkdocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../prirucky/vyvojarska_prirucka/luaserver/" title="LuaServer" class="md-nav__link">
-      LuaServer
     </a>
   </li>
 
@@ -2909,6 +2945,8 @@ s nižšími vrstvami.<br />
 Najvyššia vrstva je reprezentovaná Unity, ktoré poskytuje grafickú reprezentáciu nižších vrstiev.  </p>
 <p>Architektúru projektu je možné vidieť na obrázku nižšie.</p>
 <p><img alt="" src="../img/diagram_architektury.JPG" title="Základné komponenty systému" /></p>
+<p>Refactor architektúra je uvedená na nasledujúcom obrázku.</p>
+<p><img alt="refactor_architecture" src="../img/diagram_architektury_refactor.png" title="Refactor architecture" /></p>
 <h3 id="lua">Lua<a class="headerlink" href="#lua" title="Permanent link">&para;</a></h3>
 <p>Na tejto vrstve sa nachádza reprezentácia grafových údajov. Jednotlivé operácie nad grafom sú teda vykonávané na tejto vrstve.
 Vo všeobecnosti teda dochádza k prepočítavaniu a zmenám súradníc uzlov, analýze zdrojového kódu a počítaniu metrík. Bližšie
@@ -2937,8 +2975,7 @@ Modul má vybudovanú <a href="../../infrastruktura/ci/lua/luatree/">infraštruk
 <p>Modul Luagit slúži na analýzu Git repozitárov, pričom k svojej činnosti využíva moduly Luametrics a Luadb.<br />
 Modul má vybudovanú <a href="../../infrastruktura/ci/lua/luagit/">infraštruktúru</a> a vlastný <a href="../../infrastruktura/build/lua/luagit/">build systém</a>.</p>
 <h4 id="luaserver">Luaserver<a class="headerlink" href="#luaserver" title="Permanent link">&para;</a></h4>
-<p>Modul Luaserver slúži ako server ktorý v budúcnosti nahradí C++ a niektoré C# vrsvy, pričom k svojej činnosti využíva moduly ostatné moduly Lua.<br />
-Modul zatiaľ nemá vybudovanú infraštruktúru.</p>
+<p>Modul Luaserver slúži ako server, ktorý k svojej činnosti využíva moduly ostatné moduly Lua. Jeho hlavnou funkcionalitou je komunikácia s Unity klientom, ale mimo toho sú v rámci tohto modulu implementované layoutovacie algoritmy ako Fruchterman-Reingold, City, CityFR alebo Street. Zároveň obsahuje operátory na zmenu atribútov pre uzly a hrany. Modul má vybudovanú <a href="../../infrastruktura/ci/lua/luaserver/">infraštruktúru</a>.</p>
 <h3 id="c">C++<a class="headerlink" href="#c" title="Permanent link">&para;</a></h3>
 <p>Druhá vrstva, reprezentovaná programovacím jazykom C++, slúži ako rozhranie pre C# moduly, aby mohli komunikovať s Lua modulmi a získavať
 tak grafové údaje, prípadne nad týmito údajmi vykonávať operácie. Vrstva zahŕňa 2 moduly. Bližšie informácie o týchto moduloch
@@ -3004,13 +3041,13 @@ Vrstva zahŕňa viacero modulov. Bližší popis jednotlivých modulov je možn�
           </a>
         
         
-          <a href="../komunikacia/" title="Možnosti komunikácie medzi procesmi" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../komunikacia/" title="Komunikácia LuaServer - Unity" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Ďalej
                 </span>
-                Možnosti komunikácie medzi procesmi
+                Komunikácia LuaServer - Unity
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
