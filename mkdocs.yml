@@ -1,5 +1,4 @@
 site_name: 3DSoftViz
-site_url: http://team03-20.studenti.fiit.stuba.sk/
 plugins:
 - search
 - macros
